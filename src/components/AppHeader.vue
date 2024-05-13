@@ -49,18 +49,27 @@ export default {
 </template>
 
 <style scoped>
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+
 img {
-  width: 150px;
+  width: 100px;
 }
 
 a {
   text-decoration: none;
   color: #101e39;
   font-size: 1.2rem;
-  border-bottom: 1px solid transparent;
+  border-bottom: 3px solid transparent;
 }
 
 .nav-link:hover {
-  border-bottom-color: black;
+  border-bottom-color: #f1e400;
+  transition: 0.5s;
 }
 </style>
