@@ -9,20 +9,19 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <img
-            src="../assets/db548ce9-9c0d-4174-8d4d-0e5146bffbe0.jpeg"
-            alt="logo footer"
-          />
+          <img src="../assets/output-onlinepngtools.png" alt="logo footer" />
           <div class="row footer-informations">
             <div class="col-md-12 col-xs-12 col-lg-4 section-footer">
-              <h5>Indirizzo:</h5>
+              <h5><b>Indirizzo:</b></h5>
               <p>
                 <i class="fa-solid fa-location-dot fa-xl"></i> Viale Europa -
-                Via delle Baleari, Alghero (SS), Italy
+                Via delle Baleari<br />
+                Alghero (SS)<br />
+                Italy
               </p>
             </div>
-            <div class="col-lg-4 col-xs-12 section-footer">
-              <h5>Informazioni:</h5>
+            <div class="col-lg-4 col-xs-12 section-footer border-left-right">
+              <h5><b>Informazioni:</b></h5>
               <p>
                 <i class="fa-solid fa-envelope fa-xl"></i>
                 padelalghero@gmail.com
@@ -30,10 +29,12 @@ export default {
               <p><i class="fa-solid fa-phone fa-xl"></i> +39 350 142 1000</p>
             </div>
             <div class="col-lg-3 col-xs-12 section-footer">
-              <h5>Seguici:</h5>
+              <h5><b>Seguici sui social:</b></h5>
+
               <a href="https://www.instagram.com/padelalghero/">
                 <i class="fa-brands fa-instagram fa-xl"></i
               ></a>
+
               <a href="https://www.facebook.com/padelalghero/?locale=it_IT"
                 ><i class="fa-brands fa-facebook fa-xl"></i
               ></a>
@@ -47,7 +48,13 @@ export default {
 
 <style scoped>
 .my-container-footer {
-  margin: 50px 0;
+  padding-top: 30px;
+  margin: 50px 0 0 0;
+  background-color: #080e1be4;
+
+  h5 {
+    color: white;
+  }
 }
 a {
   padding-right: 10px;
@@ -55,32 +62,62 @@ a {
 
 p {
   margin: 10px 0;
+  color: white;
+}
+
+i {
+  text-decoration: none;
+  color: #f1e400;
 }
 
 img {
   width: 40%;
 }
+
+p:hover {
+  i {
+    transform: translateY(-5px);
+    transition: 0.3s;
+  }
+}
+
+p:not(:hover) {
+  i {
+    transition: transform 0.3s ease;
+  }
+}
+
 i:hover {
-  transform: scale(1.2);
+  transform: translateY(-5px);
   transition: 0.3s;
+}
+
+i:not(:hover) {
+  transition: transform 0.3s ease;
 }
 
 .footer-informations {
   padding: 50px 0;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .section-footer {
   padding: 20px;
-  border: 1px solid yellow;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  border-radius: 10px;
+  /* border-left: 2px solid #f1e400;
+  border-right: 2px solid #f1e400; */
+}
+
+.border-left-right {
+  border-left: 1px solid #f1e400;
+  border-right: 1px solid #f1e400;
 }
 
 @media only screen and (max-width: 991px) {
   img {
     width: 80%;
+  }
+  .border-left-right {
+    border: none;
   }
 }
 </style>

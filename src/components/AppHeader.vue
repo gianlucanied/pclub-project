@@ -88,5 +88,6 @@ a {
 
 .navbar .navbar-nav .nav-item.active .nav-link {
   border-bottom-color: #f1e400 !important;
+  color: black;
 }
 </style>

@@ -5,8 +5,8 @@ export default {
     return {
       jumbotronImages: [
         "src/assets/eac49fce-761a-4354-8438-9c211bba0c1d.jpeg",
-        "src/assets/a446630-b24c-4e8e-b6c6-dc20da6523d3.jpeg",
         "src/assets/fc2b85a3-5a4c-44d0-9ae1-4c8ad5dc4a62.jpeg",
+        "src/assets/a446630-b24c-4e8e-b6c6-dc20da6523d3.jpeg",
         "src/assets/90a4c679-75f3-42e5-b0f1-cbdc17ad427a.jpeg",
       ],
       currentImageIndex: 0,
@@ -31,29 +31,30 @@ export default {
       <h2 class="text-center">Il Club</h2>
       <div class="col-lg-6">
         <p>
-          Collocati in una posizione unica ed invidiabile sul lungomare di “Su
-          Siccu”, all’ interno dell’Area Porto Turistico di Sant’Elmo di
-          Cagliari e, confinante col nuovo e riqualificato parco “Nervi” unico
-          esempio di architettura industriale dell’area portuale, sta diventando
-          un nuovo riferimento per il tempo libero, per lo sport, per la
-          cultura, ma anche punto di partenza per le escursioni alla scoperta,
-          attraverso il canale navigabile San Bartolomeo e la pista ciclabile,
-          dell’oasi naturalistica di Molentargius, della storia delle saline e
-          delle attività industriali e commerciali ad essa connesse. Facilmente
-          raggiungibile sia da V.le Cristoforo Colombo che da Viale Armando Diaz
-          passando dal quartiere fieristico “Piazza Marco Polo”, si arriva
-          facilmente a “Calata della Fiera”, a Sant’Elmo e “parco Nervi”, dove
-          c’è, appunto, L’ORANGE MARINA PADEL CLUB” accessibile liberamente a
-          tutti. Con tutti i servizi (moderni e confortevoli spogliatoi, Bar,
-          Ristorante, ProShop, Terrazza, WiFi, servizio di noleggio bici,
-          monopattino e canoe, aree verdi, parco giochi per bambini, Camp Estivo
-          per Bambini ecc) Orange Marina Padel Club 10.000mq di aggregazione
-          sportiva, sociale, culturale, familiare, commerciale è l´esperienza
-          padel più spettacolare: 8 Campi panoramici con illuminazione LED e
-          fondo drenante area tecnica ed illuminazione Led superiore a 450 lux
-          Campi 1 e 2 sono coperti Prenotazioni online H24 tramite wh al numero
-          Via web Via App Orangeclub disponibile a breve per Apple ed Android
-          Sistema Playtomic! per la creazione e organizzazione di partite
+          <b>Benvenuti al Padel Alghero:</b> il luogo perfetto per divertirsi e
+          giocare a padel! Situato in una posizione privilegiata ad Alghero,
+          lungo il suggestivo Viale Europa e Via delle Baleari, il Padel Alghero
+          offre un'esperienza unica nel mondo del padel. <br /><br />
+          Immerso nella bellezza della costa sarda e affacciato sul mare
+          cristallino, il nostro centro padel è il luogo ideale per gli amanti
+          dello sport e del relax. Con una vista mozzafiato sulle acque blu e
+          una brezza marina rinfrescante, ogni partita diventa un'esperienza
+          indimenticabile. <br /><br />
+          Presso il Padel Alghero troverete tre campi all'aperto, perfetti per
+          sfidare gli amici o partecipare a tornei emozionanti. I nostri campi,
+          ben tenuti e dotati delle più moderne attrezzature, vi offriranno
+          un'esperienza di gioco senza pari. <br /><br />Dopo una partita
+          intensa, potrete rilassarvi e godervi un drink sulla nostra
+          incantevole terrazza panoramica. Confortevole e accogliente, la nostra
+          terrazza vi permetterà di rigenerare le energie ammirando il tramonto
+          sul mare. <br /><br />E se avete fame o sete, il nostro bar sarà
+          sempre pronto ad accogliervi con bevande rinfrescanti e deliziosi
+          spuntini. Con un'ampia selezione di cocktail, birre artigianali e
+          stuzzichini, il nostro bar è il luogo perfetto per socializzare e
+          rilassarsi dopo una partita. Venite a trovarci al Padel Alghero e
+          scoprite l'emozione di giocare a padel in uno dei luoghi più belli
+          della Sardegna. <br /><br />Vi aspettiamo per un'esperienza
+          indimenticabile di sport, divertimento e relax!
         </p>
       </div>
       <div class="col-lg-6">
