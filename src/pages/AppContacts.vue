@@ -14,10 +14,7 @@ export default {
   </div>
   <div class="container contacts-container">
     <div class="row">
-      <div class="col-6">
-        <img src="../assets/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg" alt="" />
-      </div>
-      <div class="col-6">
+      <div class="col-lg-6 col-xs-12">
         <h3><b>Come possiamo aiutarti?</b></h3>
         <p>
           Contattaci per richiedere informazioni sui campi prenotabili o per
@@ -59,6 +56,9 @@ export default {
           </div>
         </div>
       </div>
+      <div class="col-lg-6 col-xs-12">
+        <img src="../assets/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -87,13 +87,14 @@ export default {
 .text-center {
   position: relative;
   z-index: 1;
+  border-bottom: 1px solid white;
 }
 
 .contacts-container {
   margin-top: 100px;
 }
 
-.col-6 {
+.col-lg-6 {
   img {
     width: 80%;
   }
@@ -150,5 +151,12 @@ i:hover {
 
 i:not(:hover) {
   transition: transform 0.3s ease;
+}
+
+@media only screen and (max-width: 991px) {
+  img {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 </style>
