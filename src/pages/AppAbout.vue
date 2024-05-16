@@ -5,7 +5,17 @@ export default {
 </script>
 
 <template>
-  <h1>Ciao da About</h1>
+  <div class="container text-center about-container">
+    <h1>Chi siamo:</h1>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.about-container {
+  margin-top: 25vh;
+}
+
+img {
+  width: 100%;
+}
+</style>

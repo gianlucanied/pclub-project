@@ -48,9 +48,9 @@ export default {
               About us
             </router-link>
           </li>
-          <li class="nav-item" :class="{ active: currentPage === 'teams' }">
-            <router-link :to="{ name: 'teams' }" class="nav-link">
-              Teams
+          <li class="nav-item" :class="{ active: currentPage === 'contacts' }">
+            <router-link :to="{ name: 'contacts' }" class="nav-link">
+              Contatti
             </router-link>
           </li>
         </ul>

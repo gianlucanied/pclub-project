@@ -14,10 +14,13 @@ export default {
             <div class="col-md-12 col-xs-12 col-lg-4 section-footer">
               <h5><b>Indirizzo:</b></h5>
               <p>
-                <i class="fa-solid fa-location-dot fa-xl"></i> Viale Europa -
-                Via delle Baleari<br />
-                Alghero (SS)<br />
-                Italy
+                <i class="fa-solid fa-location-dot fa-xl"></i>
+                <a
+                  href="https://www.google.it/maps/place/Padel+Club+Alghero/@40.575007,8.3162001,18z/data=!4m15!1m8!3m7!1s0x12dcf1f9e7851add:0xbf96a93a594c1d9c!2sViale+Europa,+07041+Alghero+SS!3b1!8m2!3d40.577633!4d8.3155993!16s%2Fg%2F1v79yj6_!3m5!1s0x12dcf1f65ab63d2b:0x72a4e977da2d13db!8m2!3d40.5748764!4d8.3176214!16s%2Fg%2F11qqvp8y6d?entry=ttu"
+                  >Viale Europa - Via delle Baleari<br />
+                  Alghero (SS)<br />
+                  Italy</a
+                >
               </p>
             </div>
             <div class="col-lg-4 col-xs-12 section-footer border-left-right">
@@ -50,7 +53,7 @@ export default {
 .my-container-footer {
   padding-top: 30px;
   margin: 50px 0 0 0;
-  background-color: #080e1be4;
+  background-color: #042a3b;
 
   h5 {
     color: white;
@@ -63,6 +66,12 @@ a {
 p {
   margin: 10px 0;
   color: white;
+
+  a {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+  }
 }
 
 i {

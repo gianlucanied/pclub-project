@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import AppHome from "./pages/AppHome.vue";
 import AppAbout from "./pages/AppAbout.vue";
-import AppTeam from "./pages/AppTeam.vue";
+import AppContacts from "./pages/AppContacts.vue";
 import NotFound from "./pages/NotFound.vue";
 
 const router = createRouter({
@@ -19,9 +19,9 @@ const router = createRouter({
       component: AppAbout,
     },
     {
-      path: "/team",
-      name: "teams",
-      component: AppTeam,
+      path: "/contacts",
+      name: "contacts",
+      component: AppContacts,
     },
     {
       path: "/:pathMatch(.*)*",
