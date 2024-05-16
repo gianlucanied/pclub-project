@@ -25,11 +25,13 @@ export default {
         </p>
         <h6>
           <i class="fa-solid fa-envelope fa-xl"></i>
-          <span>padelalghero@gmail.com</span>
+          <span
+            ><a href="mailto:padelalghero@gmail.com">padelalghero@gmail.com</a>
+          </span>
         </h6>
         <h6>
           <i class="fa-solid fa-phone fa-xl"></i>
-          <span>+39 350 142 1000</span>
+          <span><a href="tel:+393501421000"> +39 350 142 1000</a></span>
         </h6>
         <div class="container-fluid">
           <div class="row">
@@ -109,6 +111,8 @@ h5 {
 }
 
 a {
+  color: black;
+  text-decoration: none;
   i {
     margin-right: 20px;
     color: #f1e400;
@@ -120,8 +124,13 @@ a {
   }
 }
 
-a {
-  text-decoration: none;
+a:hover {
+  color: #f1e400;
+  transition: 0.5s;
+}
+
+a:not(:hover) {
+  transition: transform 0.3s ease;
 }
 
 b {
