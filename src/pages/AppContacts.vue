@@ -92,11 +92,12 @@ export default {
 
 .contacts-container {
   margin-top: 100px;
+  padding: 0 10%;
 }
 
 .col-lg-6 {
   img {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -141,6 +142,13 @@ b {
 .my-container {
   p {
     margin-top: 20px;
+  }
+}
+
+a:hover {
+  p {
+    color: #f1e400;
+    transition: 0.5s;
   }
 }
 
