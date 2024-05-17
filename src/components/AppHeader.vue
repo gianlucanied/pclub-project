@@ -45,7 +45,7 @@ export default {
           </li>
           <li class="nav-item" :class="{ active: currentPage === 'about' }">
             <router-link :to="{ name: 'about' }" class="nav-link">
-              About us
+              Chi siamo
             </router-link>
           </li>
           <li class="nav-item" :class="{ active: currentPage === 'contacts' }">

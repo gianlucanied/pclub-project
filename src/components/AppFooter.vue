@@ -27,9 +27,14 @@ export default {
               <h5><b>Informazioni:</b></h5>
               <p>
                 <i class="fa-solid fa-envelope fa-xl"></i>
-                padelalghero@gmail.com
+                <a href="mailto:padelalghero@gmail.com"
+                  >padelalghero@gmail.com</a
+                >
               </p>
-              <p><i class="fa-solid fa-phone fa-xl"></i> +39 350 142 1000</p>
+              <p>
+                <i class="fa-solid fa-phone fa-xl"></i>
+                <a href="tel:+393501421000">+39 350 142 1000</a>
+              </p>
             </div>
             <div class="col-lg-3 col-xs-12 section-footer">
               <h5><b>Seguici sui social:</b></h5>
@@ -61,6 +66,7 @@ export default {
 }
 a {
   padding-right: 10px;
+  font-size: 1.2rem;
 }
 
 p {

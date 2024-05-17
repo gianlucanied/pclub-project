@@ -26,7 +26,7 @@ export default {
     <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
   </div>
 
-  <div class="container">
+  <div class="container my-container-homepage">
     <div class="row">
       <h2 class="text-center">Il Club</h2>
       <div class="col-lg-6">
@@ -77,6 +77,10 @@ export default {
     width: 100%;
     object-fit: cover;
   }
+}
+
+.my-container-homepage {
+  padding: 0 10%;
 }
 
 h2 {

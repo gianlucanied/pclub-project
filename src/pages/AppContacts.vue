@@ -15,7 +15,7 @@ export default {
   <div class="container contacts-container">
     <div class="row">
       <div class="col-lg-6 col-xs-12">
-        <h3><b>Come possiamo aiutarti?</b></h3>
+        <h2>Come possiamo aiutarti?</h2>
         <p>
           Contattaci per richiedere informazioni sui campi prenotabili o per
           delle lezioni private, ti risponderemo nel più breve tempo possibile!
@@ -95,6 +95,10 @@ export default {
   padding: 0 10%;
 }
 
+p {
+  font-size: 1.3rem;
+}
+
 .col-lg-6 {
   img {
     width: 100%;
@@ -112,9 +116,14 @@ h5 {
   margin-top: 80px;
 }
 
+h2 {
+  text-decoration: underline;
+}
+
 a {
   color: black;
   text-decoration: none;
+  font-size: 1.3rem;
   i {
     margin-right: 20px;
     color: #f1e400;
@@ -137,11 +146,13 @@ a:not(:hover) {
 
 b {
   border-bottom: 1px solid black;
+  font-size: 1.5rem;
 }
 
 .my-container {
   p {
     margin-top: 20px;
+    font-size: 1.3rem;
   }
 }
 
@@ -165,6 +176,10 @@ i:not(:hover) {
   img {
     width: 100%;
     margin-top: 50px;
+  }
+
+  .text-center {
+    font-size: 3rem;
   }
 }
 </style>
