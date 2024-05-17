@@ -1,4 +1,7 @@
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "AppHome",
   data() {
@@ -17,6 +20,8 @@ export default {
       this.currentImageIndex =
         (this.currentImageIndex + 1) % this.jumbotronImages.length;
     }, 4000);
+
+    AOS.init();
   },
 };
 </script>
@@ -28,9 +33,9 @@ export default {
 
   <div class="container my-container-homepage">
     <div class="row">
-      <h2 class="text-center">Il Club</h2>
+      <h2 data-aos="fade-up" class="text-center">Il Club</h2>
       <div class="col-lg-6">
-        <p>
+        <p data-aos="fade-up" data-aos-delay="100">
           <b>Benvenuti al Padel Alghero:</b> il luogo perfetto per divertirsi e
           giocare a padel! Situato in una posizione privilegiata ad Alghero,
           lungo il suggestivo Viale Europa e Via delle Baleari, il Padel Alghero
@@ -58,7 +63,12 @@ export default {
         </p>
       </div>
       <div class="col-lg-6">
-        <img src="..\assets\44dea813-c467-45cf-a491-6b45f7ad7c5a.jpeg" alt="" />
+        <img
+          data-aos="fade-up"
+          data-aos-delay="100"
+          src="..\assets\44dea813-c467-45cf-a491-6b45f7ad7c5a.jpeg"
+          alt=""
+        />
       </div>
     </div>
   </div>

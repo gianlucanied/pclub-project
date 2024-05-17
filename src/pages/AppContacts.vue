@@ -9,12 +9,18 @@ export default {
     class="jumbotron container-fluid d-flex align-items-center justify-content-center"
   >
     <div class="row">
-      <div class="col-12 text-center">CONTATTI</div>
+      <div data-aos="fade-up" data-aos-delay="100" class="col-12 text-center">
+        CONTATTI
+      </div>
     </div>
   </div>
   <div class="container contacts-container">
     <div class="row">
-      <div class="col-lg-6 col-xs-12">
+      <div
+        data-aos="fade-right"
+        data-aos-delay="200"
+        class="col-lg-6 col-xs-12"
+      >
         <h2>Come possiamo aiutarti?</h2>
         <p>
           Contattaci per richiedere informazioni sui campi prenotabili o per
@@ -56,7 +62,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-xs-12">
+      <div data-aos="flip-left" class="col-lg-6 col-xs-12">
         <img src="../assets/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg" alt="" />
       </div>
     </div>
@@ -67,7 +73,7 @@ export default {
 .jumbotron {
   position: relative;
   background-image: url("..\assets\55cc2107-fa8b-47c9-a568-3d7a4401c0ce.jpeg");
-  height: 800px;
+  height: 600px;
   color: white;
   font-size: 4rem;
   background-size: cover;
