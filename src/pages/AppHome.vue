@@ -86,6 +86,7 @@ export default {
 h2 {
   margin: 30px 0;
 }
+
 .col-lg-6 {
   img {
     width: 100%;
