@@ -25,9 +25,9 @@ export default {
   },
 };
 </script>
-
 <template>
   <div class="container-fluid jumbotron">
+    <div class="overlay-text">HOMEPAGE</div>
     <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
   </div>
 
@@ -76,17 +76,42 @@ export default {
 
 <style scoped>
 .jumbotron {
+  position: relative;
   padding: 0;
   height: 1000px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    height: 1000px;
-    width: 100%;
-    object-fit: cover;
-  }
+}
+
+.jumbotron img {
+  height: 1000px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.jumbotron::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1; /* Ensure it is above the image but below the text */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem; /* Adjust the size as needed */
+  z-index: 2; /* Ensure it is above the jumbotron images */
+  text-align: center;
+  border-bottom: 1px solid white;
 }
 
 .my-container-homepage {
@@ -97,13 +122,11 @@ h2 {
   margin: 30px 0;
 }
 
-.col-lg-6 {
-  img {
-    width: 100%;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
+.col-lg-6 img {
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 </style>
