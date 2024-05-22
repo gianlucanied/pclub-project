@@ -58,6 +58,10 @@ export default {
 .my-container-footer {
   padding-top: 30px;
   background-color: #042a3b;
+  background-image: url("..\assets\stacked-waves-haikei-4.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   h5 {
     color: white;

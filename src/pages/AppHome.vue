@@ -26,7 +26,13 @@ export default {
 };
 </script>
 <template>
-  <div class="container-fluid jumbotron">
+  <div
+    data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-back"
+    data-aos-delay="300"
+    data-aos-offset="0"
+    class="container-fluid jumbotron"
+  >
     <div class="overlay-text">PADEL CLUB ALGHERO</div>
     <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
   </div>
@@ -120,7 +126,7 @@ export default {
 }
 
 .my-macro-container {
-  background-image: url("..\assets\wave.svg");
+  background-image: url("..\assets\Animated-Shape-2.svg");
   height: auto;
   background-size: cover;
   background-position: center;
