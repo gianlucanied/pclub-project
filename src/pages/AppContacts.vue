@@ -14,56 +14,64 @@ export default {
       </div>
     </div>
   </div>
-  <div class="container contacts-container">
-    <div class="row">
-      <div
-        data-aos="fade-right"
-        data-aos-delay="200"
-        class="col-lg-6 col-xs-12"
-      >
-        <h2>Come possiamo aiutarti?</h2>
-        <p>
-          Contattaci per richiedere informazioni sui campi prenotabili o per
-          delle lezioni private, ti risponderemo nel più breve tempo possibile!
-        </p>
-        <h6>
-          <i class="fa-solid fa-envelope fa-xl"></i>
-          <span
-            ><a href="mailto:padelalghero@gmail.com">padelalghero@gmail.com</a>
-          </span>
-        </h6>
-        <h6>
-          <i class="fa-solid fa-phone fa-xl"></i>
-          <span><a href="tel:+393501421000"> +39 350 142 1000</a></span>
-        </h6>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-6 my-container">
-              <h5>
-                <b>Dove siamo:</b>
-              </h5>
-              <a
-                href="https://www.google.it/maps/place/Padel+Club+Alghero/@40.575007,8.3162001,18z/data=!4m15!1m8!3m7!1s0x12dcf1f9e7851add:0xbf96a93a594c1d9c!2sViale+Europa,+07041+Alghero+SS!3b1!8m2!3d40.577633!4d8.3155993!16s%2Fg%2F1v79yj6_!3m5!1s0x12dcf1f65ab63d2b:0x72a4e977da2d13db!8m2!3d40.5748764!4d8.3176214!16s%2Fg%2F11qqvp8y6d?entry=ttu"
-                ><p>Viale Europa - Via delle Baleari <br />Alghero(SS)</p></a
+  <div class="my-container-bubble container-fluid">
+    <div class="container contacts-container">
+      <div class="row">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="200"
+          class="col-lg-6 col-xs-12"
+        >
+          <h2>Come possiamo aiutarti?</h2>
+          <p>
+            Contattaci per richiedere informazioni sui campi prenotabili o per
+            delle lezioni private, ti risponderemo nel più breve tempo
+            possibile!
+          </p>
+          <h6>
+            <i class="fa-solid fa-envelope fa-xl"></i>
+            <span
+              ><a href="mailto:padelalghero@gmail.com"
+                >padelalghero@gmail.com</a
               >
-            </div>
-            <div class="col-6 my-container">
-              <h5><b>Social:</b></h5>
-              <p>
-                <a href="https://www.instagram.com/padelalghero/">
-                  <i class="fa-brands fa-instagram fa-xl"></i
-                ></a>
+            </span>
+          </h6>
+          <h6>
+            <i class="fa-solid fa-phone fa-xl"></i>
+            <span><a href="tel:+393501421000"> +39 350 142 1000</a></span>
+          </h6>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 my-container">
+                <h5>
+                  <b>Dove siamo:</b>
+                </h5>
+                <a
+                  href="https://www.google.it/maps/place/Padel+Club+Alghero/@40.575007,8.3162001,18z/data=!4m15!1m8!3m7!1s0x12dcf1f9e7851add:0xbf96a93a594c1d9c!2sViale+Europa,+07041+Alghero+SS!3b1!8m2!3d40.577633!4d8.3155993!16s%2Fg%2F1v79yj6_!3m5!1s0x12dcf1f65ab63d2b:0x72a4e977da2d13db!8m2!3d40.5748764!4d8.3176214!16s%2Fg%2F11qqvp8y6d?entry=ttu"
+                  ><p>Viale Europa - Via delle Baleari <br />Alghero(SS)</p></a
+                >
+              </div>
+              <div class="col-6 my-container">
+                <h5><b>Social:</b></h5>
+                <p>
+                  <a href="https://www.instagram.com/padelalghero/">
+                    <i class="fa-brands fa-instagram fa-xl"></i
+                  ></a>
 
-                <a href="https://www.facebook.com/padelalghero/?locale=it_IT"
-                  ><i class="fa-brands fa-facebook fa-xl"></i
-                ></a>
-              </p>
+                  <a href="https://www.facebook.com/padelalghero/?locale=it_IT"
+                    ><i class="fa-brands fa-facebook fa-xl"></i
+                  ></a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div data-aos="flip-left" class="col-lg-6 col-xs-12">
-        <img src="../assets/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg" alt="" />
+        <div data-aos="flip-left" class="col-lg-6 col-xs-12">
+          <img
+            src="../assets/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -88,6 +96,13 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.my-container-bubble {
+  background-image: url("..\assets\Animated Shape1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .text-center {
@@ -135,7 +150,7 @@ a {
   font-size: 1.3rem;
   i {
     margin-right: 20px;
-    color: #f1e400;
+    color: #0f1e38;
   }
 
   p {
