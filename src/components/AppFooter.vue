@@ -57,7 +57,6 @@ export default {
 <style scoped>
 .my-container-footer {
   padding-top: 30px;
-  margin: 50px 0 0 0;
   background-color: #042a3b;
 
   h5 {

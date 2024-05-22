@@ -98,7 +98,7 @@ export default {
 
 .contacts-container {
   margin-top: 100px;
-  padding: 0 10%;
+  padding: 50px 10% 80px 10%;
 }
 
 p {
