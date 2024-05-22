@@ -89,5 +89,6 @@ a {
 .navbar .navbar-nav .nav-item.active .nav-link {
   border-bottom-color: #f1e400 !important;
   color: black;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 </style>

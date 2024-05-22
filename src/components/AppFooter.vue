@@ -9,7 +9,10 @@ export default {
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <img src="../assets/output-onlinepngtools.png" alt="logo footer" />
+          <img
+            src="../assets/db548ce9-9c0d-4174-8d4d-0e5146bffbe0-removebg-preview.png"
+            alt="logo footer"
+          />
           <div class="row footer-informations">
             <div class="col-md-12 col-xs-12 col-lg-4 section-footer">
               <h5><b>Indirizzo:</b></h5>
@@ -58,7 +61,7 @@ export default {
 .my-container-footer {
   padding-top: 30px;
   background-color: #042a3b;
-  background-image: url("..\assets\stacked-waves-haikei-4.svg");
+  background-image: url("..\assets\stacked-waves-haikei-8.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
