@@ -23,8 +23,15 @@ export default {
 
     AOS.init();
   },
+  methods: {
+    prenotaPlaytomic() {
+      window.location.href =
+        "https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~";
+    },
+  },
 };
 </script>
+
 <template>
   <div
     data-aos="fade-zoom-in"
@@ -34,6 +41,10 @@ export default {
     class="container-fluid jumbotron"
   >
     <div class="overlay-text">PADEL CLUB ALGHERO</div>
+    <div class="icona-playtomic">
+      <button @click="prenotaPlaytomic">Prenota su Playtomic</button>
+    </div>
+
     <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
   </div>
 
@@ -165,6 +176,30 @@ h2 {
   max-height: 1000px;
 }
 
+.icona-playtomic {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.icona-playtomic button {
+  background-color: #f1e400;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icona-playtomic button:hover {
+  transform: translateY(-3px);
+}
+
 @media (max-width: 768px) {
   .jumbotron {
     height: 800px;
@@ -173,6 +208,10 @@ h2 {
   .jumbotron img {
     height: 800px;
     max-height: none;
+  }
+
+  .icona-playtomic {
+    margin-top: 30px;
   }
 
   .my-macro-container {

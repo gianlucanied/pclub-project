@@ -38,7 +38,20 @@ export default {
           </h6>
           <h6>
             <i class="fa-solid fa-phone fa-xl"></i>
-            <span><a href="tel:+393501421000"> +39 350 142 1000</a></span>
+            <span><a href="tel:+393501421000">+39 350 142 1000</a></span>
+          </h6>
+          <h6 class="playtomic-container">
+            <img
+              id="playtomic-icon"
+              src="../assets/playtomic2.png"
+              alt="logo playtomic"
+            />
+            <span>
+              <a
+                href="https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~"
+                >Prenota su Playtomic</a
+              ></span
+            >
           </h6>
           <div class="container-fluid">
             <div class="row">
@@ -111,6 +124,13 @@ export default {
   border-bottom: 1px solid white;
 }
 
+#playtomic-icon {
+  box-shadow: none;
+  width: 40px;
+  margin-left: -8px;
+  margin-right: 18px;
+}
+
 .contacts-container {
   margin-top: 100px;
   padding: 50px 10% 80px 10%;
@@ -134,6 +154,13 @@ h6 {
   i {
     margin-right: 20px;
   }
+  a {
+    display: inline-block; /* Assicura che l'elemento possa essere spostato */
+    transition: transform 0.3s ease;
+  }
+  a:hover {
+    transform: translateY(-5px);
+  }
 }
 
 h5 {
@@ -152,7 +179,6 @@ a {
     margin-right: 20px;
     color: #0f1e38;
   }
-
   p {
     text-decoration: none;
     color: black;
@@ -160,12 +186,8 @@ a {
 }
 
 a:hover {
-  color: #f1e400;
-  transition: 0.5s;
-}
-
-a:not(:hover) {
-  transition: transform 0.3s ease;
+  color: black;
+  transition: 0.3s;
 }
 
 b {
@@ -180,13 +202,6 @@ b {
   }
 }
 
-a:hover {
-  p {
-    color: #f1e400;
-    transition: 0.5s;
-  }
-}
-
 i:hover {
   transform: translateY(-5px);
   transition: 0.3s;
@@ -196,7 +211,15 @@ i:not(:hover) {
   transition: transform 0.3s ease;
 }
 
+a:hover p {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
 @media only screen and (max-width: 991px) {
+  #playtomic-icon {
+    margin-top: -7px;
+  }
   img {
     width: 100%;
     margin-top: 50px;

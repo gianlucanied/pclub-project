@@ -121,7 +121,7 @@ export default {
 }
 
 .my-container-bubble {
-  background-image: url("..\assets\Animated Shape2.svg");
+  background-image: url("..\assets\Animated Shape10.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
