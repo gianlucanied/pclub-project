@@ -22,16 +22,12 @@ export default {
   methods: {
     handleScroll() {
       if (this.timeout) clearTimeout(this.timeout);
-
-      // Controllo se l'utente è in cima alla pagina
       const isAtTop =
         window.scrollY === 0 || document.documentElement.scrollTop === 0;
 
       if (isAtTop) {
-        // Se l'utente è in cima, mostro immediatamente l'header
         this.isHeaderHidden = false;
       } else {
-        // Altrimenti, nascondo l'header e avvio il timer
         this.isHeaderHidden = true;
         this.timeout = setTimeout(() => {
           this.isHeaderHidden = false;
@@ -96,7 +92,7 @@ export default {
 <style scoped>
 .navbar-hidden {
   transform: translateY(-100%);
-  transition: transform 0.5s ease; /* Aggiungi una transizione */
+  transition: transform 0.5s ease;
 }
 
 .navbar-visible {
