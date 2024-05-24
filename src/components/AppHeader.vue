@@ -20,7 +20,7 @@ export default {
       <a class="navbar-brand" href="#">
         <router-link :to="{ name: 'home' }">
           <img
-            src="../assets/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg"
+            src="../../public/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg"
             alt="Logo Padel"
           />
         </router-link>
