@@ -11,10 +11,13 @@ export default {
   watch: {
     $route(to, from) {
       this.currentPage = to.name;
+
+      window.scrollTo(0, 0);
     },
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
+    window.scrollTo(0, 0);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
