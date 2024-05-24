@@ -97,7 +97,7 @@ export default {
 .jumbotron {
   position: relative;
   padding: 0;
-  height: 1000px;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -108,7 +108,7 @@ export default {
 }
 
 .jumbotron img {
-  height: 1000px;
+  height: 100vh;
   width: 100%;
   object-fit: cover;
 }
@@ -120,7 +120,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -134,9 +134,9 @@ export default {
   z-index: 2;
   text-align: center;
   border: 5px solid white;
-  color: white;
   padding: 20px;
   border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .my-macro-container {

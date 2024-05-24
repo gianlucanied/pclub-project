@@ -91,7 +91,7 @@ export default {
 .jumbotron {
   position: relative;
   background-image: url("/public/55cc2107-fa8b-47c9-a568-3d7a4401c0ce.jpeg");
-  height: 600px;
+  height: 100vh;
   color: white;
   font-size: 4rem;
   background-size: cover;
