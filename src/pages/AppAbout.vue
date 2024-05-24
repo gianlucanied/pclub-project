@@ -102,7 +102,7 @@ export default {
 <style scoped>
 .jumbotron {
   position: relative;
-  background-image: url("..\assets\fc2b85a3-5a4c-44d0-9ae1-4c8ad5dc4a62.jpeg");
+  background-image: url("..\..\public\fc2b85a3-5a4c-44d0-9ae1-4c8ad5dc4a62.jpeg");
   height: 600px;
   color: white;
   font-size: 4rem;
@@ -121,7 +121,7 @@ export default {
 }
 
 .my-container-bubble {
-  background-image: url("..\assets\Animated Shape10.svg");
+  background-image: url("..\..\public\Animated Shape10.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -43,7 +43,7 @@ export default {
           <h6 class="playtomic-container">
             <img
               id="playtomic-icon"
-              src="../assets/playtomic2.png"
+              src="../../public/playtomic2.png"
               alt="logo playtomic"
             />
             <span>
@@ -81,7 +81,7 @@ export default {
         </div>
         <div data-aos="flip-left" class="col-lg-6 col-xs-12">
           <img
-            src="../assets/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg"
+            src="../../public/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg"
             alt=""
           />
         </div>
@@ -93,7 +93,7 @@ export default {
 <style scoped>
 .jumbotron {
   position: relative;
-  background-image: url("..\assets\55cc2107-fa8b-47c9-a568-3d7a4401c0ce.jpeg");
+  background-image: url("..\..\public\55cc2107-fa8b-47c9-a568-3d7a4401c0ce.jpeg");
   height: 600px;
   color: white;
   font-size: 4rem;
@@ -112,7 +112,7 @@ export default {
 }
 
 .my-container-bubble {
-  background-image: url("..\assets\Animated Shape1.svg");
+  background-image: url("..\..\public\Animated Shape1.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
