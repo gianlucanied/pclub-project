@@ -7,10 +7,10 @@ export default {
   data() {
     return {
       jumbotronImages: [
-        "../../public/eac49fce-761a-4354-8438-9c211bba0c1d.jpeg",
-        "../../public/fc2b85a3-5a4c-44d0-9ae1-4c8ad5dc4a62.jpeg",
-        "../../public/a446630-b24c-4e8e-b6c6-dc20da6523d3.jpeg",
-        "../../public/90a4c679-75f3-42e5-b0f1-cbdc17ad427a.jpeg",
+        "/public/eac49fce-761a-4354-8438-9c211bba0c1d.jpeg",
+        "/public/fc2b85a3-5a4c-44d0-9ae1-4c8ad5dc4a62.jpeg",
+        "/public/a446630-b24c-4e8e-b6c6-dc20da6523d3.jpeg",
+        "/public/90a4c679-75f3-42e5-b0f1-cbdc17ad427a.jpeg",
       ],
       currentImageIndex: 0,
     };
@@ -140,7 +140,7 @@ export default {
 }
 
 .my-macro-container {
-  background-image: url("..\..\public\Animated-Shape-2.svg");
+  background-image: url("/public/Animated-Shape-2.svg");
   height: auto;
   background-size: cover;
   background-position: center;

@@ -80,10 +80,7 @@ export default {
           </div>
         </div>
         <div data-aos="flip-left" class="col-lg-6 col-xs-12">
-          <img
-            src="../../public/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg"
-            alt=""
-          />
+          <img src="/public/d68afb99-4a22-4936-b1af-2e07ccd40659.jpeg" alt="" />
         </div>
       </div>
     </div>
@@ -93,7 +90,7 @@ export default {
 <style scoped>
 .jumbotron {
   position: relative;
-  background-image: url("..\..\public\55cc2107-fa8b-47c9-a568-3d7a4401c0ce.jpeg");
+  background-image: url("/public/55cc2107-fa8b-47c9-a568-3d7a4401c0ce.jpeg");
   height: 600px;
   color: white;
   font-size: 4rem;
@@ -112,7 +109,7 @@ export default {
 }
 
 .my-container-bubble {
-  background-image: url("..\..\public\Animated Shape1.svg");
+  background-image: url("/public/Animated-Shape1.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
