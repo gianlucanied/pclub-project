@@ -24,17 +24,14 @@ export default {
 
     AOS.init();
 
-    // Preload the click sound
     this.clickSound = new Audio("/tennis-ball-hit-151257.mp3");
   },
   methods: {
     prenotaPlaytomic() {
-      // Play the click sound
       if (this.clickSound) {
         this.clickSound.play();
       }
 
-      // Redirect to the Playtomic page
       window.location.href =
         "https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~";
     },
@@ -64,30 +61,16 @@ export default {
         <h2 data-aos="fade-up" class="text-center">Il Club</h2>
         <div class="col-lg-6">
           <p data-aos="fade-up" data-aos-delay="100">
-            <b>Benvenuti al Padel Alghero:</b> il luogo perfetto per divertirsi
-            e giocare a padel! Situato in una posizione privilegiata ad Alghero,
-            lungo il suggestivo Viale Europa e Via delle Baleari, il Padel
-            Alghero offre un'esperienza unica nel mondo del padel. <br /><br />
+            <b>Benvenuti al Padel Alghero:</b> Benvenuti al Padel Alghero,
+            situato in una posizione privilegiata ad Alghero, lungo Viale Europa
+            e Via delle Baleari. <br /><br />
             Immerso nella bellezza della costa sarda e affacciato sul mare
-            cristallino, il nostro centro padel è il luogo ideale per gli amanti
-            dello sport e del relax. Con una vista mozzafiato sulle acque blu e
-            una brezza marina rinfrescante, ogni partita diventa un'esperienza
-            indimenticabile. <br /><br />
-            Presso il Padel Alghero troverete tre campi all'aperto, perfetti per
-            sfidare gli amici o partecipare a tornei emozionanti. I nostri
-            campi, ben tenuti e dotati delle più moderne attrezzature, vi
-            offriranno un'esperienza di gioco senza pari. <br /><br />Dopo una
-            partita intensa, potrete rilassarvi e godervi un drink sulla nostra
-            incantevole terrazza panoramica. Confortevole e accogliente, la
-            nostra terrazza vi permetterà di rigenerare le energie ammirando il
-            tramonto sul mare. <br /><br />E se avete fame o sete, il nostro bar
-            sarà sempre pronto ad accogliervi con bevande rinfrescanti e
-            deliziosi spuntini. Con un'ampia selezione di cocktail, birre
-            artigianali e stuzzichini, il nostro bar è il luogo perfetto per
-            socializzare e rilassarsi dopo una partita. Venite a trovarci al
-            Padel Alghero e scoprite l'emozione di giocare a padel in uno dei
-            luoghi più belli della Sardegna. <br /><br />Vi aspettiamo per
-            un'esperienza indimenticabile di sport, divertimento e relax!
+            cristallino, offre tre campi all'aperto con attrezzature moderne per
+            sfide e tornei. <br /><br />Dopo il gioco, rilassatevi sulla
+            terrazza panoramica o al bar con bevande e spuntini.
+            <br /><br />Venite a scoprire l'emozione di giocare a padel in un
+            luogo incantevole della Sardegna per un'esperienza indimenticabile
+            di sport, divertimento e relax!
           </p>
         </div>
         <div class="col-lg-6">
