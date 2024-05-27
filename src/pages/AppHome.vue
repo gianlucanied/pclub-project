@@ -13,6 +13,7 @@ export default {
         "/90a4c679-75f3-42e5-b0f1-cbdc17ad427a.jpeg",
       ],
       currentImageIndex: 0,
+      clickSound: null,
     };
   },
   mounted() {
@@ -22,9 +23,18 @@ export default {
     }, 3000);
 
     AOS.init();
+
+    // Preload the click sound
+    this.clickSound = new Audio("/tennis-ball-hit-151257.mp3");
   },
   methods: {
     prenotaPlaytomic() {
+      // Play the click sound
+      if (this.clickSound) {
+        this.clickSound.play();
+      }
+
+      // Redirect to the Playtomic page
       window.location.href =
         "https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~";
     },
