@@ -17,12 +17,13 @@ export default {
     };
   },
   mounted() {
-    setInterval(() => {
-      this.currentImageIndex =
-        (this.currentImageIndex + 1) % this.jumbotronImages.length;
-    }, 3000);
-
-    AOS.init();
+    this.$nextTick(() => {
+      setInterval(() => {
+        this.currentImageIndex =
+          (this.currentImageIndex + 1) % this.jumbotronImages.length;
+      }, 3000);
+      AOS.init();
+    });
 
     this.clickSound = new Audio("/tennis-ball-hit-151257.mp3");
   },
@@ -51,7 +52,6 @@ export default {
     <div class="icona-playtomic">
       <button @click="prenotaPlaytomic">Prenota su Playtomic</button>
     </div>
-
     <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
   </div>
 
@@ -59,9 +59,9 @@ export default {
     <div class="container my-container-homepage">
       <div class="row">
         <h2 data-aos="fade-up" class="text-center">Il Club</h2>
-        <div class="col-lg-6">
+        <div class="col-lg-12">
           <p data-aos="fade-up" data-aos-delay="100">
-            <b>Benvenuti al Padel Alghero:</b> Benvenuti al Padel Alghero,
+            <b>Benvenuti al Padel Alghero:</b>
             situato in una posizione privilegiata ad Alghero, lungo Viale Europa
             e Via delle Baleari. <br /><br />
             Immerso nella bellezza della costa sarda e affacciato sul mare
@@ -73,13 +73,20 @@ export default {
             di sport, divertimento e relax!
           </p>
         </div>
-        <div class="col-lg-6">
-          <img
-            data-aos="fade-up"
-            data-aos-delay="100"
-            src="\44dea813-c467-45cf-a491-6b45f7ad7c5a.jpeg"
-            alt=""
-          />
+      </div>
+      <div class="row gallery" data-aos="fade-up">
+        <div class="col-12">
+          <div class="grid">
+            <div
+              v-for="(image, index) in jumbotronImages"
+              :key="index"
+              class="grid-item"
+            >
+              <div class="image-wrapper">
+                <img :src="image" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -146,6 +153,10 @@ export default {
   }
 }
 
+.gallery {
+  margin-top: 50px;
+}
+
 .my-container-homepage {
   padding: 0 10%;
 }
@@ -154,20 +165,43 @@ h2 {
   margin: 30px 0;
 }
 
-.col-lg-6 img {
-  width: 100%;
-  height: auto;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
-.jumbotron img {
-  height: 1000px;
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
-  max-width: 100%;
-  max-height: 1000px;
+}
+
+.grid-item .image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.grid-item--tall {
+  grid-row: span 2;
+}
+
+.grid-item--wide {
+  grid-column: span 2;
+}
+
+.grid-item--big {
+  grid-row: span 2;
+  grid-column: span 2;
 }
 
 .icona-playtomic {
@@ -216,6 +250,20 @@ h2 {
   .overlay-text {
     font-size: 2rem;
     padding: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item .image-wrapper {
+    height: 150px;
   }
 }
 </style>

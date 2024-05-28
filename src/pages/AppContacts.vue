@@ -38,12 +38,13 @@ export default {
           </h6>
           <h6>
             <i class="fa-solid fa-phone fa-xl"></i>
-            <span><a href="tel:+393501421000">+39 350 142 1000</a></span>
+            <span><a href="tel:+393454821835">+39 345 482 1835</a></span>
           </h6>
           <h6>
             <i class="fa-solid fa-phone fa-xl"></i>
-            <span><a href="tel:+393454821835">+39 345 482 1835</a></span>
+            <span><a href="tel:+393501421000">+39 350 142 1000</a></span>
           </h6>
+
           <h6 class="playtomic-container">
             <img
               id="playtomic-icon"
