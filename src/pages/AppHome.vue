@@ -13,8 +13,27 @@ export default {
         "/90a4c679-75f3-42e5-b0f1-cbdc17ad427a.jpeg",
       ],
       currentImageIndex: 0,
+      showFullscreenImage: false,
+      selectedImage: null,
       clickSound: null,
     };
+  },
+  methods: {
+    openFullscreenImage(image) {
+      this.selectedImage = image;
+      this.showFullscreenImage = true;
+    },
+    closeFullscreenImage() {
+      this.showFullscreenImage = false;
+    },
+    prenotaPlaytomic() {
+      if (this.clickSound) {
+        this.clickSound.play();
+      }
+
+      window.location.href =
+        "https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~";
+    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -27,63 +46,61 @@ export default {
 
     this.clickSound = new Audio("/tennis-ball-hit-151257.mp3");
   },
-  methods: {
-    prenotaPlaytomic() {
-      if (this.clickSound) {
-        this.clickSound.play();
-      }
-
-      window.location.href =
-        "https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~";
-    },
-  },
 };
 </script>
 
 <template>
-  <div
-    data-aos="fade-zoom-in"
-    data-aos-easing="ease-in-back"
-    data-aos-delay="300"
-    data-aos-offset="0"
-    class="container-fluid jumbotron"
-  >
-    <div class="overlay-text">PADEL CLUB ALGHERO</div>
-    <div class="icona-playtomic">
-      <button @click="prenotaPlaytomic">Prenota su Playtomic</button>
+  <div>
+    <div class="fullscreen-image-overlay" v-if="showFullscreenImage">
+      <span class="close-button" @click="closeFullscreenImage">×</span>
+      <img :src="selectedImage" alt="Fullscreen Image" />
     </div>
-    <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
-  </div>
 
-  <div class="my-macro-container container-fluid">
-    <div class="container my-container-homepage">
-      <div class="row">
-        <h2 data-aos="fade-up" class="text-center">Il Club</h2>
-        <div class="col-lg-12">
-          <p data-aos="fade-up" data-aos-delay="100">
-            <b>Benvenuti al Padel Alghero:</b>
-            situato in una posizione privilegiata ad Alghero, lungo Viale Europa
-            e Via delle Baleari. <br /><br />
-            Immerso nella bellezza della costa sarda e affacciato sul mare
-            cristallino, offre tre campi all'aperto con attrezzature moderne per
-            sfide e tornei. <br /><br />Dopo il gioco, rilassatevi sulla
-            terrazza panoramica o al bar con bevande e spuntini.
-            <br /><br />Venite a scoprire l'emozione di giocare a padel in un
-            luogo incantevole della Sardegna per un'esperienza indimenticabile
-            di sport, divertimento e relax!
-          </p>
-        </div>
+    <div
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+      class="container-fluid jumbotron"
+    >
+      <div class="overlay-text">PADEL CLUB ALGHERO</div>
+      <div class="icona-playtomic">
+        <button @click="prenotaPlaytomic">Prenota su Playtomic</button>
       </div>
-      <div class="row gallery" data-aos="fade-up">
-        <div class="col-12">
-          <div class="grid">
-            <div
-              v-for="(image, index) in jumbotronImages"
-              :key="index"
-              class="grid-item"
-            >
-              <div class="image-wrapper">
-                <img :src="image" alt="" />
+      <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
+    </div>
+
+    <div class="my-macro-container container-fluid">
+      <div class="container my-container-homepage">
+        <div class="row">
+          <h2 data-aos="fade-up" class="text-center">Il Club</h2>
+          <div class="col-lg-12">
+            <p data-aos="fade-up" data-aos-delay="100">
+              <b>Benvenuti al Padel Alghero:</b>
+              situato in una posizione privilegiata ad Alghero, lungo Viale
+              Europa e Via delle Baleari. <br /><br />
+              Immerso nella bellezza della costa sarda e affacciato sul mare
+              cristallino, offre tre campi all'aperto con attrezzature moderne
+              per sfide e tornei. <br /><br />Dopo il gioco, rilassatevi sulla
+              terrazza panoramica o al bar con bevande e spuntini.
+              <br /><br />Venite a scoprire l'emozione di giocare a padel in un
+              luogo incantevole della Sardegna per un'esperienza indimenticabile
+              di sport, divertimento e relax!
+            </p>
+          </div>
+        </div>
+        <div class="row gallery" data-aos="fade-up">
+          <div class="col-12">
+            <div class="grid">
+              <div
+                v-for="(image, index) in jumbotronImages"
+                :key="index"
+                class="grid-item"
+                @click="openFullscreenImage(image)"
+              >
+                <div class="image-wrapper">
+                  <img :src="image" alt="" />
+                </div>
               </div>
             </div>
           </div>
@@ -94,6 +111,38 @@ export default {
 </template>
 
 <style scoped>
+.fullscreen-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.fullscreen-image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  z-index: 1000;
+}
+
+.close-button:hover {
+  color: red;
+}
+
 .jumbotron {
   position: relative;
   padding: 0;

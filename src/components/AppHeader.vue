@@ -42,13 +42,7 @@ export default {
 </script>
 
 <template>
-  <nav
-    class="navbar navbar-expand-lg"
-    :class="{
-      'navbar-hidden': isHeaderHidden,
-      'navbar-visible': !isHeaderHidden,
-    }"
-  >
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
         <router-link :to="{ name: 'home' }">
@@ -93,17 +87,7 @@ export default {
 </template>
 
 <style scoped>
-.navbar-hidden {
-  transform: translateY(-100%);
-  transition: transform 0.5s ease;
-}
-
-.navbar-visible {
-  transform: translateY(0);
-  transition: transform 0.5s ease;
-}
-
-.navbar {
+.navbar-fixed {
   position: fixed;
   top: 0;
   width: 100%;
