@@ -130,6 +130,7 @@ export default {
   padding: 20px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
 }
 
 .my-macro-container {
