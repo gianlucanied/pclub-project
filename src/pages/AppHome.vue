@@ -234,6 +234,10 @@ h2 {
   object-fit: cover;
 }
 
+.grid-item img:hover {
+  cursor: pointer;
+}
+
 .grid-item .image-wrapper {
   width: 100%;
   height: 200px;
