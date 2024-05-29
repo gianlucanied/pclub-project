@@ -60,7 +60,7 @@ export default {
           </h6>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-6 my-container">
+              <div class="col-lg-6 col-xs-12 my-container">
                 <h5>
                   <b>Dove siamo:</b>
                 </h5>
@@ -69,7 +69,7 @@ export default {
                   ><p>Viale Europa - Via delle Baleari <br />Alghero(SS)</p></a
                 >
               </div>
-              <div class="col-6 my-container">
+              <div class="col-lg-6 col-xs-12 my-container">
                 <h5><b>Social:</b></h5>
                 <p>
                   <a href="https://www.instagram.com/padelalghero/">
