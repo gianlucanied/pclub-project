@@ -58,6 +58,18 @@ export default {
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="creator-container col-12 text-center">
+          <p>
+            Sito Web realizzato da
+            <a href="https://www.instagram.com/gianlucanied/"
+              ><b>gianlucanied</b></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -66,7 +78,7 @@ export default {
   padding-top: 30px;
   background-color: #042a3b;
   background-image: url("/public/stacked-waves-haikei-8.svg");
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -86,13 +98,13 @@ p {
   a {
     text-decoration: none;
     color: white;
-    padding-left: 10px;
   }
 }
 
 i {
   text-decoration: none;
   color: #f1e400;
+  padding-right: 10px;
 }
 
 img {
@@ -144,5 +156,29 @@ i:not(:hover) {
   .border-left-right {
     border: none;
   }
+}
+
+@media only screen and (max-width: 480px) {
+}
+
+.creator-container {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.creator-container a {
+  font-size: 15px;
+  padding-left: 0px;
+}
+
+.creator-container a:hover {
+  color: #f1e400;
+  transition: 0.3s;
+}
+
+.creator-container p {
+  color: white;
+  text-align: center;
 }
 </style>

@@ -62,11 +62,11 @@ export default {
             <div class="row">
               <div class="col-lg-6 col-xs-12 my-container">
                 <h5>
-                  <b>Dove siamo:</b>
+                  <b><i class="fa-solid fa-location-dot"></i> Dove siamo:</b>
                 </h5>
                 <a
                   href="https://www.google.it/maps/place/Padel+Club+Alghero/@40.575007,8.3162001,18z/data=!4m15!1m8!3m7!1s0x12dcf1f9e7851add:0xbf96a93a594c1d9c!2sViale+Europa,+07041+Alghero+SS!3b1!8m2!3d40.577633!4d8.3155993!16s%2Fg%2F1v79yj6_!3m5!1s0x12dcf1f65ab63d2b:0x72a4e977da2d13db!8m2!3d40.5748764!4d8.3176214!16s%2Fg%2F11qqvp8y6d?entry=ttu"
-                  ><p>Viale Europa - Via delle Baleari <br />Alghero(SS)</p></a
+                  ><p>Viale Europa - Via delle Baleari <br />Alghero (SS)</p></a
                 >
               </div>
               <div class="col-lg-6 col-xs-12 my-container">
@@ -101,6 +101,9 @@ export default {
   font-size: 4rem;
   background-size: cover;
   background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .jumbotron::before {
