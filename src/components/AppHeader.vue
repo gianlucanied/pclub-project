@@ -42,6 +42,14 @@ export default {
 </script>
 
 <template>
+  <div class="container-header container-fluid">
+    <p>
+      <i class="fa-solid fa-square-phone fa-xl"></i> Contattaci
+      <a class="number" href="tel:+393454821835"
+        ><span>+39 345 482 1835</span></a
+      >
+    </p>
+  </div>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -87,6 +95,28 @@ export default {
 </template>
 
 <style scoped>
+.container-header {
+  background-color: #101e39;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  border-bottom: 1px solid #f1e400;
+  p {
+    padding: 20px 30px 5px 30px;
+  }
+
+  .number {
+    color: white;
+    font-size: 15px;
+  }
+}
+
+.container-header span:hover {
+  color: #f1e400;
+  transition: 0.5s;
+}
+
 .navbar-fixed {
   position: fixed;
   top: 0;
@@ -117,5 +147,11 @@ a {
   border-bottom-color: #f1e400 !important;
   color: black;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+@media (max-width: 768px) {
+  .container-header {
+    display: none;
+  }
 }
 </style>

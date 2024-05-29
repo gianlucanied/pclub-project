@@ -52,7 +52,9 @@ export default {
 <template>
   <div>
     <div class="fullscreen-image-overlay" v-if="showFullscreenImage">
-      <span class="close-button" @click="closeFullscreenImage">×</span>
+      <span class="close-button" @click="closeFullscreenImage"
+        ><i class="fa-regular fa-circle-xmark fa-xl"></i
+      ></span>
       <img :src="selectedImage" alt="Fullscreen Image" />
     </div>
 
@@ -76,7 +78,7 @@ export default {
           <h2 data-aos="fade-up" class="text-center">Il Club</h2>
           <div class="col-lg-12">
             <p data-aos="fade-up" data-aos-delay="100">
-              <b>Benvenuti al Padel Alghero:</b>
+              <b>Benvenuti al Padel Club Alghero:</b>
               situato in una posizione privilegiata ad Alghero, lungo Viale
               Europa e Via delle Baleari. <br /><br />
               Immerso nella bellezza della costa sarda e affacciato sul mare
@@ -146,7 +148,7 @@ export default {
 .jumbotron {
   position: relative;
   padding: 0;
-  height: 100vh;
+  height: 85vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -210,6 +212,12 @@ export default {
   padding: 0 10%;
 }
 
+.grid-item {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 h2 {
   margin: 30px 0;
 }
@@ -259,7 +267,7 @@ h2 {
 
 .icona-playtomic {
   position: absolute;
-  top: 65%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
