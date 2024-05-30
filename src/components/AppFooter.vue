@@ -70,7 +70,13 @@ export default {
         </div>
         <div class="creator-container col-lg-6 col-sm-12 text-center">
           <p>
-            Sito Web realizzato da
+            Made with
+            <i
+              id="heart"
+              class="fa-solid fa-heart fa-lg"
+              style="color: #0000ff"
+            ></i>
+            by
             <a href="https://www.instagram.com/gianlucanied/"
               ><b>gianlucanied</b></a
             >
@@ -188,5 +194,9 @@ i:not(:hover) {
 .creator-container p {
   color: white;
   text-align: center;
+}
+
+#heart {
+  padding: 0px;
 }
 </style>
