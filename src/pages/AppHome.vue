@@ -23,9 +23,9 @@ export default {
         "/FE972626.jpg",
         "/FE972653.jpg",
         "/FE972885.jpg",
+        "/FE972960.jpg",
         "/FE973294.jpg",
         "/FE973710.jpg",
-        "/FE972563.jpg",
         "/FE972959.jpg",
         "/FE973307.jpg",
         "/FE972902.jpg",
@@ -111,6 +111,7 @@ export default {
           </div>
         </div>
         <div class="row gallery" data-aos="fade-up">
+          <div id="gallery-name" class="col-12 text-center">Galleria:</div>
           <div class="col-12">
             <div class="grid">
               <div
@@ -221,6 +222,11 @@ export default {
   h2 {
     font-size: 3rem;
   }
+}
+
+#gallery-name {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
 }
 
 .gallery {
