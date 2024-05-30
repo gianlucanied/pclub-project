@@ -7,10 +7,19 @@ export default {
   data() {
     return {
       jumbotronImages: [
-        "/eac49fce-761a-4354-8438-9c211bba0c1d.jpeg",
-        "/fc2b85a3-5a4c-44d0-9ae1-4c8ad5dc4a62.jpeg",
-        "/a446630-b24c-4e8e-b6c6-dc20da6523d3.jpeg",
-        "/90a4c679-75f3-42e5-b0f1-cbdc17ad427a.jpeg",
+        // "/FE972702.jpg",
+        "/FE973700.jpg",
+        "/FE972540.jpg",
+        "/FE972941.jpg",
+        "/FE973307.jpg",
+        "/FE972959.jpg",
+        "/FE972882.jpg",
+        "/FE973710.jpg",
+        "/FE973089.jpg",
+        "/FE973051.jpg",
+        "/FE972309.jpg",
+        "/FE973226.jpg",
+        "/FE972885.jpg",
       ],
       currentImageIndex: 0,
       showFullscreenImage: false,
@@ -148,7 +157,7 @@ export default {
 .jumbotron {
   position: relative;
   padding: 0;
-  height: 85vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
