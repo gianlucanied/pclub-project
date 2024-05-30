@@ -94,7 +94,6 @@ export default {
     <div class="my-macro-container container-fluid">
       <div class="container my-container-homepage">
         <div class="row">
-          <h2 data-aos="fade-up" class="text-center">Il Club</h2>
           <div class="col-lg-12">
             <p data-aos="fade-up" data-aos-delay="100">
               <b>Benvenuti al Padel Club Alghero:</b>
@@ -111,7 +110,9 @@ export default {
           </div>
         </div>
         <div class="row gallery" data-aos="fade-up">
-          <div id="gallery-name" class="col-12 text-center">Galleria:</div>
+          <div id="gallery-name" class="col-md-6 offset-md-3 text-center">
+            <b>Galleria fotografica</b>
+          </div>
           <div class="col-12">
             <div class="grid">
               <div
@@ -173,6 +174,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 70px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -227,6 +229,7 @@ export default {
 #gallery-name {
   margin-bottom: 30px;
   font-size: 2.5rem;
+  border-bottom: 2px solid black;
 }
 
 .gallery {

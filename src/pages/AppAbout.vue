@@ -18,7 +18,9 @@ export default {
     <div class="container my-container-about">
       <div data-aos="zoom-out-right">
         <div class="row">
-          <div class="col-12"><h2>Qualcosa in più su di noi</h2></div>
+          <div class="col-12">
+            <h2><b>Qualcosa in più su di noi</b></h2>
+          </div>
         </div>
         <br />
         <div class="row">
@@ -46,7 +48,7 @@ export default {
           <div class="col-12">
             <h2>
               <br />
-              Perché scegliere il nostro Circolo di Padel?
+              <b>Perché scegliere il nostro Circolo di Padel?</b>
             </h2>
             <br />
           </div>
