@@ -102,7 +102,7 @@ export default {
 <style scoped>
 .jumbotron {
   position: relative;
-  background-image: url("/public/FE972702.jpg");
+  background-image: url("/public/FE973089.jpg");
   height: 85vh;
   color: white;
   font-size: 4rem;

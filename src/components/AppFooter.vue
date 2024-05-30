@@ -60,7 +60,15 @@ export default {
     </div>
     <div class="container">
       <div class="row">
-        <div class="creator-container col-12 text-center">
+        <div class="creator-container col-lg-6 col-sm-12 text-center">
+          <p>
+            Foto realizzate da:
+            <a href="https://www.instagram.com/campusfederico/"
+              ><b>Federico Campus</b></a
+            >
+          </p>
+        </div>
+        <div class="creator-container col-lg-6 col-sm-12 text-center">
           <p>
             Sito Web realizzato da
             <a href="https://www.instagram.com/gianlucanied/"

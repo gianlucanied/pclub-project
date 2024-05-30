@@ -7,19 +7,29 @@ export default {
   data() {
     return {
       jumbotronImages: [
-        // "/FE972702.jpg",
+        "/FE973048.jpg",
         "/FE973700.jpg",
-        "/FE972540.jpg",
-        "/FE972941.jpg",
-        "/FE973307.jpg",
-        "/FE972959.jpg",
+        "/FE972702.jpg",
+        "/FE972716.jpg",
+        "/FE973723.jpg",
+        "/FE972247.jpg",
+      ],
+      homepageImages: [
+        "/FE972239.jpg",
+        "/FE972342.jpg",
+        "/FE972357.jpg",
         "/FE972882.jpg",
-        "/FE973710.jpg",
         "/FE973089.jpg",
-        "/FE973051.jpg",
-        "/FE972309.jpg",
-        "/FE973226.jpg",
+        "/FE972626.jpg",
+        "/FE972653.jpg",
         "/FE972885.jpg",
+        "/FE973294.jpg",
+        "/FE973710.jpg",
+        "/FE972563.jpg",
+        "/FE972959.jpg",
+        "/FE973307.jpg",
+        "/FE972902.jpg",
+        "/FE973787.jpg",
       ],
       currentImageIndex: 0,
       showFullscreenImage: false,
@@ -104,7 +114,7 @@ export default {
           <div class="col-12">
             <div class="grid">
               <div
-                v-for="(image, index) in jumbotronImages"
+                v-for="(image, index) in homepageImages"
                 :key="index"
                 class="grid-item"
                 @click="openFullscreenImage(image)"
