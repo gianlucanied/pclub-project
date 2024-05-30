@@ -33,17 +33,30 @@ export default {
       ],
       currentImageIndex: 0,
       showFullscreenImage: false,
-      selectedImage: null,
+      selectedImageIndex: null,
       clickSound: null,
     };
   },
   methods: {
-    openFullscreenImage(image) {
-      this.selectedImage = image;
+    openFullscreenImage(index) {
+      this.selectedImageIndex = index;
       this.showFullscreenImage = true;
     },
     closeFullscreenImage() {
       this.showFullscreenImage = false;
+    },
+    nextImage() {
+      if (this.selectedImageIndex !== null) {
+        this.selectedImageIndex =
+          (this.selectedImageIndex + 1) % this.homepageImages.length;
+      }
+    },
+    prevImage() {
+      if (this.selectedImageIndex !== null) {
+        this.selectedImageIndex =
+          (this.selectedImageIndex - 1 + this.homepageImages.length) %
+          this.homepageImages.length;
+      }
     },
     prenotaPlaytomic() {
       if (this.clickSound) {
@@ -71,10 +84,16 @@ export default {
 <template>
   <div>
     <div class="fullscreen-image-overlay" v-if="showFullscreenImage">
-      <span class="close-button" @click="closeFullscreenImage"
-        ><i class="fa-regular fa-circle-xmark fa-xl"></i
-      ></span>
-      <img :src="selectedImage" alt="Fullscreen Image" />
+      <span class="close-button" @click="closeFullscreenImage">
+        <i class="fa-regular fa-circle-xmark fa-xl"></i>
+      </span>
+      <span class="prev-button" @click="prevImage">
+        <i class="fa-solid fa-chevron-left fa-2xl"></i>
+      </span>
+      <span class="next-button" @click="nextImage">
+        <i class="fa-solid fa-chevron-right fa-2xl"></i>
+      </span>
+      <img :src="homepageImages[selectedImageIndex]" alt="Fullscreen Image" />
     </div>
 
     <div
@@ -119,7 +138,7 @@ export default {
                 v-for="(image, index) in homepageImages"
                 :key="index"
                 class="grid-item"
-                @click="openFullscreenImage(image)"
+                @click="openFullscreenImage(index)"
               >
                 <div class="image-wrapper">
                   <img :src="image" alt="" />
@@ -152,18 +171,38 @@ export default {
   max-height: 90%;
 }
 
-.close-button {
+.close-button,
+.prev-button,
+.next-button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
   font-size: 24px;
   cursor: pointer;
-  color: white;
   z-index: 1000;
+}
+
+.close-button {
+  top: 40px;
+  right: 30px;
+}
+
+.prev-button {
+  left: 30px;
+}
+
+.next-button {
+  right: 30px;
 }
 
 .close-button:hover {
   color: red;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  color: #f1e400;
 }
 
 .jumbotron {
