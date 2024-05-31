@@ -1,82 +1,120 @@
 <script>
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/effect-cards";
+
+import "../style.css";
+
+import { EffectCards } from "swiper/modules";
 
 export default {
   name: "AppHome",
-  data() {
-    return {
-      jumbotronImages: [
-        "/FE973048.jpg",
-        "/FE973700.jpg",
-        "/FE972702.jpg",
-        "/FE972716.jpg",
-        "/FE973723.jpg",
-        "/FE972247.jpg",
-      ],
-      homepageImages: [
-        "/FE972239.jpg",
-        "/FE972342.jpg",
-        "/FE972357.jpg",
-        "/FE972882.jpg",
-        "/FE973089.jpg",
-        "/FE972626.jpg",
-        "/FE972653.jpg",
-        "/FE972885.jpg",
-        "/FE972960.jpg",
-        "/FE973294.jpg",
-        "/FE973710.jpg",
-        "/FE972959.jpg",
-        "/FE973307.jpg",
-        "/FE972902.jpg",
-        "/FE973787.jpg",
-      ],
-      currentImageIndex: 0,
-      showFullscreenImage: false,
-      selectedImageIndex: null,
-      clickSound: null,
-    };
+  components: {
+    Swiper,
+    SwiperSlide,
   },
-  methods: {
-    openFullscreenImage(index) {
-      this.selectedImageIndex = index;
-      this.showFullscreenImage = true;
-    },
-    closeFullscreenImage() {
-      this.showFullscreenImage = false;
-    },
-    nextImage() {
-      if (this.selectedImageIndex !== null) {
-        this.selectedImageIndex =
-          (this.selectedImageIndex + 1) % this.homepageImages.length;
+  setup() {
+    const modules = [EffectCards];
+    const jumbotronImages = [
+      "/FE973048.jpg",
+      "/FE973700.jpg",
+      "/FE972702.jpg",
+      "/FE972716.jpg",
+      "/FE973723.jpg",
+      "/FE972247.jpg",
+    ];
+    const homepageImages = [
+      "/FE972239.jpg",
+      "/FE972342.jpg",
+      "/FE972357.jpg",
+      "/FE972882.jpg",
+      "/FE973089.jpg",
+      "/FE972626.jpg",
+      "/FE972653.jpg",
+      "/FE972885.jpg",
+      "/FE972960.jpg",
+      "/FE973294.jpg",
+      "/FE973710.jpg",
+      "/FE972959.jpg",
+      "/FE973307.jpg",
+      "/FE972902.jpg",
+      "/FE973787.jpg",
+    ];
+    const currentImageIndex = ref(0);
+    const showFullscreenImage = ref(false);
+    const selectedImageIndex = ref(null);
+    const clickSound = ref(null);
+    const isSmallScreen = ref(window.innerWidth < 768);
+
+    const openFullscreenImage = (index) => {
+      selectedImageIndex.value = index;
+      showFullscreenImage.value = true;
+    };
+
+    const closeFullscreenImage = () => {
+      showFullscreenImage.value = false;
+    };
+
+    const nextImage = () => {
+      if (selectedImageIndex.value !== null) {
+        selectedImageIndex.value =
+          (selectedImageIndex.value + 1) % homepageImages.length;
       }
-    },
-    prevImage() {
-      if (this.selectedImageIndex !== null) {
-        this.selectedImageIndex =
-          (this.selectedImageIndex - 1 + this.homepageImages.length) %
-          this.homepageImages.length;
+    };
+
+    const prevImage = () => {
+      if (selectedImageIndex.value !== null) {
+        selectedImageIndex.value =
+          (selectedImageIndex.value - 1 + homepageImages.length) %
+          homepageImages.length;
       }
-    },
-    prenotaPlaytomic() {
-      if (this.clickSound) {
-        this.clickSound.play();
+    };
+
+    const prenotaPlaytomic = () => {
+      if (clickSound.value) {
+        clickSound.value.play();
       }
 
       window.location.href =
         "https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~";
-    },
-  },
-  mounted() {
-    this.$nextTick(() => {
+    };
+
+    const handleResize = () => {
+      isSmallScreen.value = window.innerWidth < 768;
+    };
+
+    onMounted(() => {
       setInterval(() => {
-        this.currentImageIndex =
-          (this.currentImageIndex + 1) % this.jumbotronImages.length;
+        currentImageIndex.value =
+          (currentImageIndex.value + 1) % jumbotronImages.length;
       }, 3000);
       AOS.init();
+      clickSound.value = new Audio("/tennis-ball-hit-151257.mp3");
+      window.addEventListener("resize", handleResize);
     });
 
-    this.clickSound = new Audio("/tennis-ball-hit-151257.mp3");
+    onBeforeUnmount(() => {
+      window.removeEventListener("resize", handleResize);
+    });
+
+    return {
+      modules,
+      jumbotronImages,
+      homepageImages,
+      currentImageIndex,
+      showFullscreenImage,
+      selectedImageIndex,
+      clickSound,
+      openFullscreenImage,
+      closeFullscreenImage,
+      nextImage,
+      prevImage,
+      prenotaPlaytomic,
+      isSmallScreen,
+    };
   },
 };
 </script>
@@ -133,7 +171,21 @@ export default {
             <b>Galleria fotografica</b>
           </div>
           <div class="col-12">
-            <div class="grid">
+            <swiper
+              v-if="isSmallScreen"
+              :effect="'cards'"
+              :grabCursor="true"
+              :modules="modules"
+              class="mySwiper"
+            >
+              <swiper-slide
+                v-for="(image, index) in homepageImages"
+                :key="index"
+              >
+                <img :src="image" alt="" />
+              </swiper-slide>
+            </swiper>
+            <div v-else class="grid">
               <div
                 v-for="(image, index) in homepageImages"
                 :key="index"
