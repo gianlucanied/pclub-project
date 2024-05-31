@@ -97,6 +97,70 @@ export default {
           </div>
         </div>
       </div>
+      <div class="sponsor-container container-fluid" data-aos="fade-up">
+        <h3><b>I nostri Sponsor</b></h3>
+        <div class="row justify-content-center">
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/aragon-removebg-preview.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/conad-removebg-preview.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="/public/sponsor/De-filippis-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="/public/sponsor/hotel-florida-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/vibra-removebg-preview.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="/public/sponsor/Rent_a_Car_express_Alghero-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/mec-removebg-preview.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/logudoro.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/nautilus-Logo-02.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/mp-finance-removebg-preview.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -138,6 +202,21 @@ export default {
   border-bottom: 1px solid white;
 }
 
+.sponsor-container {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20%;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    margin: 30px 0px;
+  }
+}
+
 h2 {
   text-decoration: underline;
 }
@@ -161,9 +240,18 @@ h2 {
   }
 }
 
+.sponsor img {
+  width: 100%;
+  max-width: 200px;
+}
+
 @media only screen and (max-width: 991px) {
   .text-center {
     font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 }
 </style>
