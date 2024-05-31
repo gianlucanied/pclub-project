@@ -205,7 +205,7 @@ export default {
 .sponsor-container {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
-  border-radius: 20%;
+  border-radius: 20px;
   margin-top: 50px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
