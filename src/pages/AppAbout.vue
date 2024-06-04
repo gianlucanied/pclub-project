@@ -142,11 +142,6 @@ export default {
           <div
             class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
           >
-            <img src="/public/sponsor/mec-removebg-preview.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
             <img src="/public/sponsor/logudoro.png" alt="" />
           </div>
           <div
