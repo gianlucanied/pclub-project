@@ -231,7 +231,7 @@ h2 {
   i {
     display: inline-block;
     margin-right: 10px;
-    color: #f1e400;
+    color: black;
   }
 }
 
