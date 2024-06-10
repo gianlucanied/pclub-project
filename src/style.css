@@ -17,3 +17,8 @@
   object-fit: cover;
   border-radius: 18px;
 }
+
+body,
+html {
+  overflow-x: hidden;
+}
