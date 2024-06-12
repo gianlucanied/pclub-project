@@ -143,7 +143,7 @@ export default {
     >
       <div class="overlay-text">PADEL CLUB ALGHERO</div>
       <div class="icona-playtomic">
-        <button @click="prenotaPlaytomic">Prenota su Playtomic</button>
+        <button @click="prenotaPlaytomic">{{ $t("buttonPlaytomic") }}</button>
       </div>
       <img :src="jumbotronImages[currentImageIndex]" alt="jumbotron image" />
     </div>
@@ -152,23 +152,12 @@ export default {
       <div class="container my-container-homepage">
         <div class="row">
           <div class="col-lg-12">
-            <p data-aos="fade-up" data-aos-delay="100">
-              <b>Benvenuti al Padel Club Alghero:</b>
-              situato in una posizione privilegiata ad Alghero, lungo Viale
-              Europa e Via delle Baleari. <br /><br />
-              Immerso nella bellezza della costa sarda e affacciato sul mare
-              cristallino, offre tre campi all'aperto con attrezzature moderne
-              per sfide e tornei. <br /><br />Dopo il gioco, rilassatevi sulla
-              terrazza panoramica o al bar con bevande e spuntini.
-              <br /><br />Venite a scoprire l'emozione di giocare a padel in un
-              luogo incantevole della Sardegna per un'esperienza indimenticabile
-              di sport, divertimento e relax!
-            </p>
+            <p v-html="$t('pHome')" data-aos="fade-up" data-aos-delay="100"></p>
           </div>
         </div>
         <div class="row gallery" data-aos="fade-up">
           <div id="gallery-name" class="col-md-6 offset-md-3 text-center">
-            <b>Galleria fotografica</b>
+            <b>{{ $t("gallery") }}</b>
           </div>
           <div class="col-12">
             <swiper
@@ -359,10 +348,12 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease-in-out;
 }
 
 .grid-item img:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
 
 .grid-item .image-wrapper {

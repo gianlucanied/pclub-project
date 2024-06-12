@@ -10,7 +10,7 @@ export default {
   >
     <div class="row">
       <div data-aos="fade-up" data-aos-delay="100" class="col-12 text-center">
-        CONTATTI
+        {{ $t("contacts") }}
       </div>
     </div>
   </div>
@@ -22,11 +22,9 @@ export default {
           data-aos-delay="200"
           class="col-lg-6 col-xs-12"
         >
-          <h2>Come possiamo aiutarti?</h2>
+          <h2>{{ $t("help") }}</h2>
           <p>
-            Contattaci per richiedere informazioni sui campi prenotabili o per
-            delle lezioni private, ti risponderemo nel più breve tempo
-            possibile!
+            {{ $t("infoContacts") }}
           </p>
           <h6>
             <i class="fa-solid fa-envelope fa-xl"></i>
@@ -54,7 +52,7 @@ export default {
             <span>
               <a
                 href="https://playtomic.io/padel-club-alghero/a1eaa271-dbc0-49a8-824b-84c6b9b94252?q=PADEL~2024-05-23~~~"
-                >Prenota su Playtomic</a
+                >{{ $t("buttonPlaytomic") }}</a
               ></span
             >
           </h6>
@@ -62,7 +60,10 @@ export default {
             <div class="row">
               <div class="col-lg-6 col-xs-12 my-container">
                 <h5>
-                  <b><i class="fa-solid fa-location-dot"></i> Dove siamo:</b>
+                  <b
+                    ><i class="fa-solid fa-location-dot"></i>
+                    {{ $t("where") }}</b
+                  >
                 </h5>
                 <a
                   href="https://www.google.it/maps/place/Padel+Club+Alghero/@40.575007,8.3162001,18z/data=!4m15!1m8!3m7!1s0x12dcf1f9e7851add:0xbf96a93a594c1d9c!2sViale+Europa,+07041+Alghero+SS!3b1!8m2!3d40.577633!4d8.3155993!16s%2Fg%2F1v79yj6_!3m5!1s0x12dcf1f65ab63d2b:0x72a4e977da2d13db!8m2!3d40.5748764!4d8.3176214!16s%2Fg%2F11qqvp8y6d?entry=ttu"

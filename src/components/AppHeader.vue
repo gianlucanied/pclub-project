@@ -1,6 +1,11 @@
 <script>
+import LanguageSwitcher from "./LanguageSwitcher.vue";
+
 export default {
   name: "AppHeader",
+  components: {
+    LanguageSwitcher,
+  },
   data() {
     return {
       currentPage: "",
@@ -8,6 +13,7 @@ export default {
       timeout: null,
     };
   },
+
   watch: {
     $route(to, from) {
       this.currentPage = to.name;
@@ -44,7 +50,7 @@ export default {
 <template>
   <div class="container-header container-fluid">
     <p>
-      <i class="fa-solid fa-square-phone fa-xl"></i> Contattaci
+      <i class="fa-solid fa-square-phone fa-xl"></i> {{ $t("contattaci") }}
       <a class="number" href="tel:+393454821835"
         ><span>+39 345 482 1835</span></a
       >
@@ -71,6 +77,9 @@ export default {
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="language-switcher-wrapper">
+        <LanguageSwitcher />
+      </div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item" :class="{ active: currentPage === 'home' }">
@@ -80,12 +89,12 @@ export default {
           </li>
           <li class="nav-item" :class="{ active: currentPage === 'about' }">
             <router-link :to="{ name: 'about' }" class="nav-link">
-              Chi siamo
+              {{ $t("about") }}
             </router-link>
           </li>
           <li class="nav-item" :class="{ active: currentPage === 'contacts' }">
             <router-link :to="{ name: 'contacts' }" class="nav-link">
-              Contatti
+              {{ $t("contacts") }}
             </router-link>
           </li>
         </ul>
@@ -145,6 +154,10 @@ a {
   border-bottom-color: #f1e400 !important;
   color: black;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.language-switcher-wrapper {
+  margin-left: auto; /* Pushes LanguageSwitcher to the right */
 }
 
 @media (max-width: 768px) {

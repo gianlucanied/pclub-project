@@ -15,7 +15,9 @@ export default {
           />
           <div class="row footer-informations">
             <div class="col-md-12 col-xs-12 col-lg-4 section-footer">
-              <h5><b>Indirizzo:</b></h5>
+              <h5>
+                <b>{{ $t("address") }}</b>
+              </h5>
               <p>
                 <i class="fa-solid fa-location-dot fa-xl"></i>
                 <a
@@ -27,7 +29,9 @@ export default {
               </p>
             </div>
             <div class="col-lg-4 col-xs-12 section-footer border-left-right">
-              <h5><b>Informazioni:</b></h5>
+              <h5>
+                <b>{{ $t("information") }}</b>
+              </h5>
               <p>
                 <i class="fa-solid fa-envelope fa-xl"></i>
                 <a href="mailto:padelalghero@gmail.com"
@@ -44,7 +48,9 @@ export default {
               </p>
             </div>
             <div class="col-lg-3 col-xs-12 section-footer">
-              <h5><b>Seguici sui social:</b></h5>
+              <h5>
+                <b>{{ $t("social") }}</b>
+              </h5>
 
               <a href="https://www.instagram.com/padelalghero/">
                 <i class="fa-brands fa-instagram fa-xl"></i
@@ -62,7 +68,7 @@ export default {
       <div class="row">
         <div class="creator-container col-lg-6 col-sm-12 text-center">
           <p>
-            Foto realizzate da:
+            Photos:
             <a href="https://www.instagram.com/campusfederico/"
               ><b>Federico Campus</b></a
             >
