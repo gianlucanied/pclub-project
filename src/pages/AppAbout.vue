@@ -10,7 +10,7 @@ export default {
   >
     <div class="row">
       <div data-aos="fade-up" data-aos-delay="100" class="col-12 text-center">
-        {{ $t("about") }}
+        {{ $t("about2") }}
       </div>
     </div>
   </div>
@@ -103,6 +103,16 @@ export default {
             class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
           >
             <img src="/public/sponsor/mp-finance-removebg-preview.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/businco-removebg-preview.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
+          >
+            <img src="/public/sponsor/trova-removebg-preview.png" alt="" />
           </div>
         </div>
       </div>

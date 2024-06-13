@@ -10,7 +10,7 @@ export default {
   >
     <div class="row">
       <div data-aos="fade-up" data-aos-delay="100" class="col-12 text-center">
-        {{ $t("contacts") }}
+        {{ $t("contacts2") }}
       </div>
     </div>
   </div>

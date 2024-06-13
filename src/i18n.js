@@ -7,7 +7,9 @@ const messages = {
     buttonText: "Change Language",
     buttonPlaytomic: "Book on Playtomic",
     about: "About us",
+    about2: "ABOUT US",
     contacts: "Contacts",
+    contacts2: "CONTACTS",
     pHome:
       "<b> Welcome to Padel Club Alghero: </b> located in a prime spot in Alghero along Viale Europa and Via delle Baleari. <br/> <br/>Nestled in the beauty of the Sardinian coast and overlooking the crystal-clear sea, it offers three outdoor courts with modern equipment for exciting matches and tournaments. <br/> <br/> After playing, unwind on the panoramic terrace or at the bar with drinks and snacks. Come and discover the thrill of playing padel in a stunning Sardinian location for an unforgettable experience of sport, fun, and relaxation!",
     gallery: "Photo Gallery:",
@@ -47,7 +49,9 @@ const messages = {
     buttonText: "Cambia Lingua",
     buttonPlaytomic: "Prenota su Playtomic",
     about: "Chi siamo",
+    about2: "CHI SIAMO",
     contacts: "Contatti",
+    contacts2: "CONTATTI",
     pHome:
       "<b> Benvenuti al Padel Club Alghero: </b> situato in una posizione privilegiata ad Alghero, lungo Viale Europa e Via delle Baleari. <br/><br/> Immerso nella bellezza della costa sarda e affacciato sul mare cristallino, offre tre campi all'aperto con attrezzature moderne per sfide e tornei. <br/><br/> Dopo il gioco, rilassatevi sulla terrazza panoramica o al bar con bevande e spuntini. Venite a scoprire l'emozione di giocare a padel in un luogo incantevole della Sardegna per un'esperienza indimenticabile di sport, divertimento e relax!",
     gallery: "Galleria Fotografica:",
