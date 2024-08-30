@@ -97,6 +97,14 @@ export default {
               {{ $t("contacts") }}
             </router-link>
           </li>
+          <li
+            class="nav-item"
+            :class="{ active: currentPage === 'tournaments' }"
+          >
+            <router-link :to="{ name: 'tournaments' }" class="nav-link">
+              {{ $t("tournaments") }}
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>

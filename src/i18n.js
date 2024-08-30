@@ -3,6 +3,11 @@ import { createI18n } from "vue-i18n";
 
 const messages = {
   en: {
+    tournaments: "Tournaments",
+    tournaments2: "TOURNAMENTS",
+    nextTournaments: "Upcoming tournaments:",
+    descriptionTournaments: "No new tournaments are scheduled.",
+    olderTournaments: "Previous tournaments:",
     contattaci: "Contacts us",
     buttonText: "Change Language",
     buttonPlaytomic: "Book on Playtomic",
@@ -45,6 +50,11 @@ const messages = {
     where: "Where we are: ",
   },
   it: {
+    tournaments: "Tornei",
+    tournaments2: "TORNEI",
+    nextTournaments: "Prossimi Tornei:",
+    descriptionTournaments: "Non sono previsti nuovi tornei.",
+    olderTournaments: "Tornei precedenti:",
     contattaci: "Contattaci",
     buttonText: "Cambia Lingua",
     buttonPlaytomic: "Prenota su Playtomic",
