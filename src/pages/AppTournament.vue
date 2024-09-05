@@ -87,7 +87,11 @@ export default {
     </div>
   </div>
   <div class="my-container-2 container-fluid macro-container">
-    <div class="container container-interno">
+    <div
+      class="container container-interno"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
       <div class="row">
         <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="100">
           <h2>{{ $t("nextTournaments") }}</h2>
@@ -95,7 +99,11 @@ export default {
         </div>
       </div>
     </div>
-    <div class="container container-interno">
+    <div
+      class="container container-interno"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
       <div class="row">
         <div class="col-12 text-center">
           <h2 data-aos="fade-up" data-aos-delay="100">
@@ -206,7 +214,11 @@ h2 {
 }
 
 .container-interno {
-  margin-bottom: 50px;
+  margin: 50px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .container-slider {
