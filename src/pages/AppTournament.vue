@@ -216,7 +216,7 @@ h2 {
 .container-interno {
   margin: 50px 0;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 70px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -242,6 +242,9 @@ h2 {
 @media (max-width: 480px) {
   .jumbotron {
     font-size: 3rem;
+  }
+  .container-interno {
+    padding: 20px;
   }
 }
 </style>
