@@ -160,32 +160,9 @@ export default {
                 <div  data-aos="flip-right"><h2>Novità:</h2>
                   <p>Siamo felici di annunciare che abbiamo installato una copertura per uno dei nostri campi! Questa novità ci permette di offrire un’esperienza di gioco ancora più confortevole in ogni condizione atmosferica. Vi aspettiamo per provarla!</p>
 
-                  <swiper
-  :effect="'cube'"
-  :grabCursor="true"
-  :cubeEffect="{
-    shadow: true,
-    slideShadows: true,
-    shadowOffset: 20,
-    shadowScale: 0.94
-  }"
-  :pagination="true"
-  :modules="modules"
-  class="mySwiper"
->
-  <swiper-slide>
-    <img src="/padelcoperto.jpg" alt="Copertura" />
-  </swiper-slide>
-  <swiper-slide>
-    <img src="/padelcoperto1.jpg" alt="Copertura 1" />
-  </swiper-slide>
-  <swiper-slide>
-    <img src="/copertura.jpg" alt="Copertura 2" />
-  </swiper-slide>
-  <swiper-slide>
-    <img src="/padelcoperto.jpg" alt="Copertura 3" />
-  </swiper-slide>
-</swiper>
+                  <div class="img-lesson" data-aos="flip-left">
+                    <img src="/copertura.jpg" alt="">
+                  </div>
 
 
 
@@ -314,7 +291,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 0; */
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -353,19 +329,6 @@ export default {
   margin-bottom: 30px;
 }
 
-.mySwiper {
-  width: 100%;
-  height: 700px;
-  margin: 100px 0;
-}
-
-
-.mySwiper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 
 .news {
 text-align: center;
@@ -377,10 +340,10 @@ p{
   text-align: left;
 }
 .img-lesson img {
-    margin-top: 100px;
-    width: 69%;
+    margin: 100px 0;
+    width: 80%;
   height: auto;
-  object-fit: contain; /* Assicura che l'immagine si adatti senza distorsioni */
+  object-fit: contain;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 }
