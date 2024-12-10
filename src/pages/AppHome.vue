@@ -24,7 +24,7 @@ export default {
       "/FE972702.jpg",
       "/FE972716.jpg",
       "/FE973723.jpg",
-      "/FE972247.jpg",
+      "/padelcoperto.jpg",
     ];
     const homepageImages = [
       "/FE972239.jpg",
@@ -152,6 +152,34 @@ export default {
       <div class="container my-container-homepage">
         <div class="row">
           <div class="col-lg-12">
+            <div class="news">
+                <div  data-aos="flip-right"><h2>Novità:</h2>
+                  <p>Siamo felici di annunciare che abbiamo installato una copertura per uno dei nostri campi! Questa novità ci permette di offrire un’esperienza di gioco ancora più confortevole in ogni condizione atmosferica. Vi aspettiamo per provarla!</p>
+
+
+                  <h2>Novità lezioni:</h2>
+                  <p>Ciao a tutti 🎾</p>
+
+<p>Siamo felici di annunciare una nuova modalità di organizzazione per le nostre lezioni di padel! Funziona così:</p>
+
+<p>Ogni settimana, nella nostra chat dedicata, pubblichiamo dei sondaggi per scegliere i giorni in cui si terranno gli allenamenti. Al momento, abbiamo deciso di seguire questo programma fisso:</p>
+
+<ul>
+    <li><strong>Allenamento Principianti</strong>: alle 16:00</li>
+    <li><strong>Allenamento Intermedi</strong>: alle 17:00</li>
+    <li><strong>Allenamento Avanzati</strong>: alle 18:00</li>
+
+</ul>
+
+<p>Gli allenamenti si terranno ogni <strong>Martedì</strong> e <strong>Giovedì</strong>. Per confermare un allenamento, è necessario raggiungere almeno 3 o 4 partecipanti. Questo ci permette di organizzare le lezioni in modo ottimale e garantire il massimo divertimento per tutti!</p>
+
+<p>Vuoi partecipare? Unisciti alla chat scansionando il <strong>QR Code</strong>. Vi aspettiamo sul campo!</p>
+</div>
+
+                  <div class="img-lesson" data-aos="flip-left">
+                    <img src="/CORSI-ADULTI.png" alt="">
+                  </div>
+            </div>
             <p v-html="$t('pHome')" data-aos="fade-up" data-aos-delay="100"></p>
           </div>
         </div>
@@ -293,6 +321,24 @@ export default {
   margin-bottom: 30px;
 }
 
+.news {
+text-align: center;
+margin-bottom: 100px;
+
+li{
+list-style: none;}
+p{
+  text-align: left;
+}
+  img {
+    margin-top: 100px;
+    width: 69%;
+  height: auto;
+  object-fit: contain; /* Assicura che l'immagine si adatti senza distorsioni */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+}
+
 .my-macro-container {
   background-image: url("/public/Animated-Shape-2.svg");
   height: auto;
@@ -400,6 +446,16 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
+    .img-lesson {
+      img {
+        width: 100%;
+    height: auto;
+    margin-top: 20px;
+      }
+
+  }
+
   .jumbotron {
     height: 800px;
     margin-bottom: 70px;
@@ -430,6 +486,8 @@ h2 {
 }
 
 @media (max-width: 480px) {
+
+
   .grid {
     grid-template-columns: 1fr;
   }
@@ -438,4 +496,7 @@ h2 {
     height: 150px;
   }
 }
+
+
+
 </style>
