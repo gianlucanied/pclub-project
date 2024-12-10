@@ -334,18 +334,20 @@ export default {
 text-align: center;
 margin-bottom: 100px;
 
-li{
-list-style: none;}
-p{
-  text-align: left;
-}
-.img-lesson img {
+img {
     margin: 100px 0;
     width: 80%;
   height: auto;
   object-fit: contain;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
+
+li{
+list-style: none;}
+
+p{
+  text-align: left;
+}
 }
 
 .my-macro-container {
@@ -456,14 +458,11 @@ h2 {
 
 @media (max-width: 768px) {
 
-    .img-lesson {
-      img {
-        width: 100%;
-    height: auto;
-    margin-top: 20px;
-      }
-
+  .news {
+    img {
+    width: 100%;
   }
+  } 
 
   .mySwiper {
   width: 100%;
