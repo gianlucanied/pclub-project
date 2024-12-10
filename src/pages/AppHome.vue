@@ -157,8 +157,8 @@ export default {
         <div class="row">
           <div class="col-lg-12">
             <div class="news">
-                <div  data-aos="flip-right"><h2>Novità:</h2>
-                  <p>Siamo felici di annunciare che abbiamo installato una copertura per uno dei nostri campi! Questa novità ci permette di offrire un’esperienza di gioco ancora più confortevole in ogni condizione atmosferica. Vi aspettiamo per provarla!</p>
+                <div  data-aos="flip-right"><h2>{{ $t("news") }}</h2>
+                  <p>{{ $t("pNews") }}</p>
 
                   <div class="img-lesson" data-aos="flip-left">
                     <img src="/copertura.jpg" alt="">
@@ -166,23 +166,17 @@ export default {
 
 
 
-                  <h2>Novità lezioni:</h2>
-                  <p>Ciao a tutti 🎾</p>
-
-<p>Siamo felici di annunciare una nuova modalità di organizzazione per le nostre lezioni di padel! Funziona così:</p>
-
-<p>Ogni settimana, nella nostra chat dedicata, pubblichiamo dei sondaggi per scegliere i giorni in cui si terranno gli allenamenti. Al momento, abbiamo deciso di seguire questo programma fisso:</p>
+                  <h2>{{ $t("lessonsNews") }}</h2>
+                  <p>{{ $t("pLessons") }}</p>
 
 <ul>
-    <li><strong>Allenamento Principianti</strong>: alle 16:00</li>
-    <li><strong>Allenamento Intermedi</strong>: alle 17:00</li>
-    <li><strong>Allenamento Avanzati</strong>: alle 18:00</li>
+    <li v-html="$t('first')"></li>
+    <li v-html="$t('second')"></li>
+    <li v-html="$t('third')"></li>
 
 </ul>
 
-<p>Gli allenamenti si terranno ogni <strong>Martedì</strong> e <strong>Giovedì</strong>. Per confermare un allenamento, è necessario raggiungere almeno 3 o 4 partecipanti. Questo ci permette di organizzare le lezioni in modo ottimale e garantire il massimo divertimento per tutti!</p>
-
-<p>Vuoi partecipare? Unisciti alla chat scansionando il <strong>QR Code</strong>. Vi aspettiamo sul campo!</p>
+<p v-html="$t('pTraining')"></p>
 </div>
 
                   <div class="img-lesson" data-aos="flip-left">
