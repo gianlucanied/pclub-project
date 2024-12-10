@@ -5,10 +5,14 @@ import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/effect-cards";
+import 'swiper/css/effect-cube';
+import 'swiper/css/pagination';
+import { EffectCube, Pagination } from 'swiper/modules';
+
 
 import "../style.css";
 
-import { EffectCards } from "swiper/modules";
+import { EffectCards} from "swiper/modules";
 
 export default {
   name: "AppHome",
@@ -17,7 +21,7 @@ export default {
     SwiperSlide,
   },
   setup() {
-    const modules = [EffectCards];
+    const modules = [EffectCards, EffectCube, Pagination];
     const jumbotronImages = [
       "/FE973048.jpg",
       "/FE973700.jpg",
@@ -155,6 +159,34 @@ export default {
             <div class="news">
                 <div  data-aos="flip-right"><h2>Novità:</h2>
                   <p>Siamo felici di annunciare che abbiamo installato una copertura per uno dei nostri campi! Questa novità ci permette di offrire un’esperienza di gioco ancora più confortevole in ogni condizione atmosferica. Vi aspettiamo per provarla!</p>
+
+                  <swiper
+  :effect="'cube'"
+  :grabCursor="true"
+  :cubeEffect="{
+    shadow: true,
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.94
+  }"
+  :pagination="true"
+  :modules="modules"
+  class="mySwiper"
+>
+  <swiper-slide>
+    <img src="/padelcoperto.jpg" alt="Copertura" />
+  </swiper-slide>
+  <swiper-slide>
+    <img src="/padelcoperto1.jpg" alt="Copertura 1" />
+  </swiper-slide>
+  <swiper-slide>
+    <img src="/copertura.jpg" alt="Copertura 2" />
+  </swiper-slide>
+  <swiper-slide>
+    <img src="/padelcoperto.jpg" alt="Copertura 3" />
+  </swiper-slide>
+</swiper>
+
 
 
                   <h2>Novità lezioni:</h2>
@@ -321,6 +353,20 @@ export default {
   margin-bottom: 30px;
 }
 
+.mySwiper {
+  width: 100%;
+  height: 700px;
+  margin: 100px 0;
+}
+
+
+.mySwiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .news {
 text-align: center;
 margin-bottom: 100px;
@@ -330,7 +376,7 @@ list-style: none;}
 p{
   text-align: left;
 }
-  img {
+.img-lesson img {
     margin-top: 100px;
     width: 69%;
   height: auto;
@@ -455,6 +501,12 @@ h2 {
       }
 
   }
+
+  .mySwiper {
+  width: 100%;
+  height: 400px;
+  margin: 100px 0;
+}
 
   .jumbotron {
     height: 800px;
