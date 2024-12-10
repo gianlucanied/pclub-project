@@ -78,7 +78,6 @@ const messages = {
     social: "Seguici sui Social:",
     suDiNoi: "Qualcosa in più su di noi: ",
 
-
     news: "Novità:",
     pNews: "Siamo felici di annunciare che abbiamo installato una copertura per uno dei nostri campi! Questa novità ci permette di offrire un’esperienza di gioco ancora più confortevole in ogni condizione atmosferica. Vi aspettiamo per provarla!",
     lessonsNews: "Novità lezioni:",

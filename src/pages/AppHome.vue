@@ -12,7 +12,7 @@ import { EffectCube, Pagination } from 'swiper/modules';
 
 import "../style.css";
 
-import { EffectCards} from "swiper/modules";
+import { EffectCards } from "swiper/modules";
 
 export default {
   name: "AppHome",
@@ -138,13 +138,8 @@ export default {
       <img :src="homepageImages[selectedImageIndex]" alt="Fullscreen Image" />
     </div>
 
-    <div
-      data-aos="fade-zoom-in"
-      data-aos-easing="ease-in-back"
-      data-aos-delay="300"
-      data-aos-offset="0"
-      class="container-fluid jumbotron"
-    >
+    <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
+      class="container-fluid jumbotron">
       <div class="overlay-text">PADEL CLUB ALGHERO</div>
       <div class="icona-playtomic">
         <button @click="prenotaPlaytomic">{{ $t("buttonPlaytomic") }}</button>
@@ -157,31 +152,31 @@ export default {
         <div class="row">
           <div class="col-lg-12">
             <div class="news">
-                <div  data-aos="flip-right"><h2>{{ $t("news") }}</h2>
-                  <p>{{ $t("pNews") }}</p>
+              <div data-aos="flip-right">
+                <h2>{{ $t("news") }}</h2>
+                <p>{{ $t("pNews") }}</p>
 
-                  <div class="img-lesson" data-aos="flip-left">
-                    <img src="/copertura.jpg" alt="">
-                  </div>
+                <div class="img-lesson" data-aos="flip-left">
+                  <img src="/copertura.jpg" alt="">
+                </div>
 
 
 
-                  <h2>{{ $t("lessonsNews") }}</h2>
-                  <p>{{ $t("pLessons") }}</p>
+                <h2>{{ $t("lessonsNews") }}</h2>
+                <p>{{ $t("pLessons") }}</p>
 
-<ul>
-    <li v-html="$t('first')"></li>
-    <li v-html="$t('second')"></li>
-    <li v-html="$t('third')"></li>
+                <ul>
+                  <li v-html="$t('first')"></li>
+                  <li v-html="$t('second')"></li>
+                  <li v-html="$t('third')"></li>
 
-</ul>
+                </ul>
+                <p v-html="$t('pTraining')"></p>
+              </div>
 
-<p v-html="$t('pTraining')"></p>
-</div>
-
-                  <div class="img-lesson" data-aos="flip-left">
-                    <img src="/CORSI-ADULTI.png" alt="">
-                  </div>
+              <div class="img-lesson" data-aos="flip-left">
+                <img src="/CORSI-ADULTI.png" alt="">
+              </div>
             </div>
             <p v-html="$t('pHome')" data-aos="fade-up" data-aos-delay="100"></p>
           </div>
@@ -191,27 +186,14 @@ export default {
             <b>{{ $t("gallery") }}</b>
           </div>
           <div class="col-12">
-            <swiper
-              v-if="isSmallScreen"
-              :effect="'cards'"
-              :grabCursor="true"
-              :modules="modules"
-              class="mySwiper"
-            >
-              <swiper-slide
-                v-for="(image, index) in homepageImages"
-                :key="index"
-              >
+            <swiper v-if="isSmallScreen" :effect="'cards'" :grabCursor="true" :modules="modules" class="mySwiper">
+              <swiper-slide v-for="(image, index) in homepageImages" :key="index">
                 <img :src="image" alt="" />
               </swiper-slide>
             </swiper>
             <div v-else class="grid">
-              <div
-                v-for="(image, index) in homepageImages"
-                :key="index"
-                class="grid-item"
-                @click="openFullscreenImage(index)"
-              >
+              <div v-for="(image, index) in homepageImages" :key="index" class="grid-item"
+                @click="openFullscreenImage(index)">
                 <div class="image-wrapper">
                   <img :src="image" alt="" />
                 </div>
@@ -325,23 +307,24 @@ export default {
 
 
 .news {
-text-align: center;
-margin-bottom: 100px;
+  text-align: center;
+  margin-bottom: 100px;
 
-img {
+  img {
     margin: 100px 0;
     width: 80%;
-  height: auto;
-  object-fit: contain;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
-li{
-list-style: none;}
+  li {
+    list-style: none;
+  }
 
-p{
-  text-align: left;
-}
+  p {
+    text-align: left;
+  }
 }
 
 .my-macro-container {
@@ -352,6 +335,7 @@ p{
   background-repeat: no-repeat;
   padding-bottom: 50px;
   font-size: 1.3rem;
+
   h2 {
     font-size: 3rem;
   }
@@ -454,15 +438,15 @@ h2 {
 
   .news {
     img {
-    width: 100%;
+      width: 100%;
+    }
   }
-  } 
 
   .mySwiper {
-  width: 100%;
-  height: 400px;
-  margin: 100px 0;
-}
+    width: 100%;
+    height: 400px;
+    margin: 100px 0;
+  }
 
   .jumbotron {
     height: 800px;
@@ -504,7 +488,4 @@ h2 {
     height: 150px;
   }
 }
-
-
-
 </style>
