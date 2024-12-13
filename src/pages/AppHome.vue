@@ -140,7 +140,7 @@ export default {
 
     <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
       class="container-fluid jumbotron">
-      <div class="overlay-text">PADEL CLUB ALGHERO</div>
+      <div class="overlay-text">Padel Club Alghero</div>
       <div class="icona-playtomic">
         <button @click="prenotaPlaytomic">{{ $t("buttonPlaytomic") }}</button>
       </div>
