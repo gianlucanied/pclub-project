@@ -6,7 +6,7 @@ const messages = {
     tournaments: "Tournaments",
     tournaments2: "TOURNAMENTS",
     nextTournaments: "Upcoming tournaments:",
-    descriptionTournaments: "No new tournaments are scheduled.",
+    descriptionTournaments: "Epiphany Tournament",
     olderTournaments: "Previous tournaments:",
     contattaci: "Contacts us",
     buttonText: "Change Language",
@@ -24,14 +24,14 @@ const messages = {
     third: "<strong>Advanced Training</strong>: at 6:00 PM",
     pTraining: "The training sessions will take place every <strong>Tuesday</strong> and <strong>Thursday</strong>. To confirm a session, it is necessary to have at least 3 or 4 participants. This allows us to organize the lessons in the best way possible and ensure maximum fun for everyone!</p><p>Do you want to join? Join the chat by scanning the <strong>QR Code</strong>. See you on the court!",
     pHome:
-      "<b> Welcome to Padel Club Alghero: </b> located in a prime spot in Alghero along Viale Europa and Via delle Baleari. <br/> <br/>Nestled in the beauty of the Sardinian coast and overlooking the crystal-clear sea, it offers three outdoor courts with modern equipment for exciting matches and tournaments. <br/> <br/> After playing, unwind on the panoramic terrace or at the bar with drinks and snacks. Come and discover the thrill of playing padel in a stunning Sardinian location for an unforgettable experience of sport, fun, and relaxation!",
+      "<b>Welcome to Padel Club Alghero:</b> located in a prime position in Alghero, along Viale Europa and Via delle Baleari. <br/><br/> Surrounded by the stunning beauty of the Sardinian coast and overlooking the crystal-clear sea, it features 2 outdoor courts and 1 indoor court equipped with modern facilities for matches and tournaments. <br/><br/> After the game, unwind on the panoramic terrace or at the bar with drinks and snacks. Come and experience the thrill of playing padel in a breathtaking Sardinian setting for an unforgettable blend of sport, fun, and relaxation!",
     gallery: "Photo Gallery:",
     address: "Address:",
     information: "Informations:",
     social: "Follow us on Social Media:",
     suDiNoi: "Something more about us: ",
     pAbout:
-      "<b>Welcome to our Padel Club</b>, the perfect destination for sports enthusiasts and fun seekers! Opened in August 2020, our club quickly became a landmark for padel lovers, thanks to the quality of our facilities and the welcoming atmosphere we offer just steps from the sea. <br /><br />With 3 state-of-the-art outdoor courts, we ensure a unique and engaging playing experience, surrounded by the beauty of our outdoor setting. Our club is more than just a place to play padel: it is a community of passionate individuals who share the same love for this exciting sport. Whether you are a beginner or an experienced player, you will find our club the ideal place to improve your skills and have fun.",
+      "<b>Welcome to our Padel Club</b>, the ultimate destination for sports and fun enthusiasts! Since opening in August 2020, our club has quickly become a go-to spot for padel lovers, thanks to our top-notch facilities and warm, welcoming atmosphere just steps from the sea. <br /><br />With two cutting-edge outdoor courts and one indoor court, we offer a playing experience like no other, surrounded by the stunning beauty of our outdoor setting. But our club is more than just a place to play padel, it’s a vibrant community of passionate players who share a love for this exciting sport. Whether you’re a beginner or a seasoned pro, our club is the perfect place to sharpen your skills and enjoy yourself.",
     why: "Why choose our Padel Club?",
     secondPAbout: `
         <b>High-Quality Facilities:</b> 
@@ -43,9 +43,7 @@ const messages = {
         Our club is the ideal place to make new friends, participate in local tournaments, and enjoy a relaxed and fun atmosphere. </span><br /><br />
 
         <span><b>Quality Instruction:</b> 
-        Our padel coach, Roberto Bassu, is a true expert in the field. 
-        With certifications as a first and second-level padel instructor, Roberto is currently studying to become a National Coach. 
-        His dedication and passion for padel are reflected in every lesson, helping players of all ages and levels improve their skills. </span> <br /><br /> 
+Our padel coaches, Roberto Bassu, National Coach, and Luca Caminiti, Second-Level Instructor, are true experts in the field. Their dedication and passion for padel shine through in every lesson, helping players of all ages and skill levels improve their abilities. </span> <br /><br /> 
 
         <span><b>Activities and Tournaments:</b> 
         We offer a wide range of activities, from private and group lessons to competitive tournaments. 
@@ -61,7 +59,7 @@ const messages = {
     tournaments: "Tornei",
     tournaments2: "TORNEI",
     nextTournaments: "Prossimi Tornei:",
-    descriptionTournaments: "Non sono previsti nuovi tornei.",
+    descriptionTournaments: "Torneo dell'Epifania",
     olderTournaments: "Tornei precedenti:",
     contattaci: "Contattaci",
     buttonText: "Cambia Lingua",
@@ -71,7 +69,7 @@ const messages = {
     contacts: "Contatti",
     contacts2: "CONTATTI",
     pHome:
-      "<b> Benvenuti al Padel Club Alghero: </b> situato in una posizione privilegiata ad Alghero, lungo Viale Europa e Via delle Baleari. <br/><br/> Immerso nella bellezza della costa sarda e affacciato sul mare cristallino, offre tre campi all'aperto con attrezzature moderne per sfide e tornei. <br/><br/> Dopo il gioco, rilassatevi sulla terrazza panoramica o al bar con bevande e spuntini. Venite a scoprire l'emozione di giocare a padel in un luogo incantevole della Sardegna per un'esperienza indimenticabile di sport, divertimento e relax!",
+      "<b> Benvenuti al Padel Club Alghero: </b> situato in una posizione privilegiata ad Alghero, lungo Viale Europa e Via delle Baleari. <br/><br/> Immerso nella bellezza della costa sarda e affacciato sul mare cristallino, offre 2 campi all'aperto e 1 coperto con attrezzature moderne per sfide e tornei. <br/><br/> Dopo il gioco, rilassatevi sulla terrazza panoramica o al bar con bevande e spuntini. Venite a scoprire l'emozione di giocare a padel in un luogo incantevole della Sardegna per un'esperienza indimenticabile di sport, divertimento e relax!",
     gallery: "Galleria Fotografica:",
     address: "Indirizzo:",
     information: "Informazioni:",
@@ -89,11 +87,11 @@ const messages = {
 
 
     pAbout:
-      "<b>Benvenuti al nostro Circolo di Padel</b>, la destinazione perfetta per gli appassionati di sport e divertimento! Aperto nell'agosto del 2020, il nostro circolo è rapidamente diventato un punto di riferimento per gli amanti del padel, grazie alla qualità delle nostre strutture e all'atmosfera accogliente che offriamo a due passi dal mare. <br /><br />Con 3 campi scoperti all'avanguardia, garantiamo un'esperienza di gioco unica e coinvolgente, immersi nella bellezza del nostro ambiente esterno. Il nostro circolo è più di un semplice luogo dove giocare a padel: è una comunità di persone appassionate che condividono la stessa passione per questo sport entusiasmante. Che tu sia un principiante o un giocatore esperto, troverai il nostro circolo il posto ideale per migliorare le tue abilità e divertirti.",
+      "<b>Benvenuti al nostro Circolo di Padel</b>, la destinazione perfetta per gli appassionati di sport e divertimento! Aperto nell'agosto del 2020, il nostro circolo è rapidamente diventato un punto di riferimento per gli amanti del padel, grazie alla qualità delle nostre strutture e all'atmosfera accogliente che offriamo a due passi dal mare. <br /><br />Con 2 campi scoperti all'avanguardia e uno coperto, garantiamo un'esperienza di gioco unica e coinvolgente, immersi nella bellezza del nostro ambiente esterno. Il nostro circolo è più di un semplice luogo dove giocare a padel: è una comunità di persone appassionate che condividono la stessa passione per questo sport entusiasmante. Che tu sia un principiante o un giocatore esperto, troverai il nostro circolo il posto ideale per migliorare le tue abilità e divertirti.",
     why: "Perché scegliere il nostro Circolo di Padel?",
     secondPAbout: `
     <b>Strutture di alta qualità:</b> 
-      I nostri campi scoperti sono mantenuti in condizioni perfette per offrire la migliore esperienza di gioco possibile. 
+      I nostri campi sono mantenuti in condizioni perfette per offrire la migliore esperienza di gioco possibile. 
       La superficie di gioco è realizzata con materiali di prima scelta per garantire prestazioni ottimali e sicurezza. <br /><br /> 
 
       <span><b>Ambiente accogliente e comunità:</b> 
@@ -101,9 +99,8 @@ const messages = {
       Il nostro circolo è il luogo ideale per fare nuove amicizie, partecipare a tornei locali e goderti l'atmosfera rilassata e divertente. </span><br /><br />
 
       <span><b>Insegnamento di qualità:</b> 
-      Il nostro maestro di padel, Roberto Bassu, è una vera eccellenza nel campo. 
-      Con attestati di insegnante di padel di primo e secondo livello, Roberto sta attualmente studiando per diventare Maestro Nazionale. 
-      La sua dedizione e passione per il padel si riflettono in ogni lezione, aiutando i giocatori di tutte le età e livelli a migliorare le proprie abilità. </span> <br /><br /> 
+      I nostri maestri di padel, Roberto Bassu, Maestro Nazionale e Luca Caminiti, Istruttore di Secondo Livello sono una vera eccellenza nel campo. 
+      La loro dedizione e passione per il padel si riflettono in ogni lezione, aiutando i giocatori di tutte le età e livelli a migliorare le proprie abilità. </span> <br /><br /> 
 
       <span><b>Attività e tornei:</b> 
       Offriamo una vasta gamma di attività, dalle lezioni private e di gruppo ai tornei competitivi. 

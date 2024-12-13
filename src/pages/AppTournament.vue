@@ -73,37 +73,25 @@ export default {
 </script>
 
 <template>
-  <div
-    class="jumbotron container-fluid d-flex align-items-center justify-content-center"
-  >
+  <div class="jumbotron container-fluid d-flex align-items-center justify-content-center">
     <div class="row">
-      <div
-        data-aos="fade-up"
-        data-aos-delay="100"
-        class="col-12 text-center text-jumbo"
-      >
+      <div data-aos="fade-up" data-aos-delay="100" class="col-12 text-center text-jumbo">
         {{ $t("tournaments2") }}
       </div>
     </div>
   </div>
   <div class="my-container-2 container-fluid macro-container">
-    <div
-      class="container container-interno"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
+    <div class="container container-interno" data-aos="fade-up" data-aos-delay="100">
       <div class="row">
         <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="100">
           <h2>{{ $t("nextTournaments") }}</h2>
           <p>{{ $t("descriptionTournaments") }}</p>
+          <img class="img-tournament" src="/torneo-epifania1.jpg" alt="locandina torneo">
+          <img class="img-tournament" src="/torneo-epifania2.jpg" alt="locandina torneo 2">
         </div>
       </div>
     </div>
-    <div
-      class="container container-interno"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
+    <div class="container container-interno" data-aos="fade-up" data-aos-delay="100">
       <div class="row">
         <div class="col-12 text-center">
           <h2 data-aos="fade-up" data-aos-delay="100">
@@ -111,15 +99,8 @@ export default {
           </h2>
           <div class="container-slider" data-aos="fade-up" data-aos-delay="100">
             <p>2° OPEN Riviera del corallo</p>
-            <swiper
-              :cssMode="true"
-              :navigation="true"
-              :pagination="true"
-              :mousewheel="true"
-              :keyboard="true"
-              :modules="modules"
-              class="mySwiper"
-            >
+            <swiper :cssMode="true" :navigation="true" :pagination="true" :mousewheel="true" :keyboard="true"
+              :modules="modules" class="mySwiper">
               <swiper-slide v-for="(image, index) in secondOpen" :key="index">
                 <img :src="image" alt="" />
               </swiper-slide>
@@ -127,34 +108,17 @@ export default {
           </div>
           <div class="container-slider" data-aos="fade-up" data-aos-delay="100">
             <p>1° Torneo ALLEANZA ASSICURAZIONI</p>
-            <swiper
-              :cssMode="true"
-              :navigation="true"
-              :pagination="true"
-              :mousewheel="true"
-              :keyboard="true"
-              :modules="modules"
-              class="mySwiper"
-            >
-              <swiper-slide
-                v-for="(image, index) in alleanzaImages"
-                :key="index"
-              >
+            <swiper :cssMode="true" :navigation="true" :pagination="true" :mousewheel="true" :keyboard="true"
+              :modules="modules" class="mySwiper">
+              <swiper-slide v-for="(image, index) in alleanzaImages" :key="index">
                 <img :src="image" alt="" />
               </swiper-slide>
             </swiper>
           </div>
           <div class="container-slider" data-aos="fade-up" data-aos-delay="100">
             <p>1° OPEN Riviera del corallo</p>
-            <swiper
-              :cssMode="true"
-              :navigation="true"
-              :pagination="true"
-              :mousewheel="true"
-              :keyboard="true"
-              :modules="modules"
-              class="mySwiper"
-            >
+            <swiper :cssMode="true" :navigation="true" :pagination="true" :mousewheel="true" :keyboard="true"
+              :modules="modules" class="mySwiper">
               <swiper-slide v-for="(image, index) in primoOpen" :key="index">
                 <img :src="image" alt="" />
               </swiper-slide>
@@ -194,6 +158,15 @@ export default {
   border-bottom: 1px solid white;
 }
 
+.img-tournament {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+}
+
+
 .macro-container {
   background-image: url("/public/Animated-Shape10.svg");
   background-size: cover;
@@ -226,7 +199,8 @@ h2 {
 }
 
 .swiper-slide {
-  height: 70vh; /* Set the desired height of the slide */
+  height: 70vh;
+  /* Set the desired height of the slide */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,6 +217,7 @@ h2 {
   .jumbotron {
     font-size: 3rem;
   }
+
   .container-interno {
     padding: 20px;
   }
