@@ -160,12 +160,18 @@ export default {
 
 .img-tournament {
   display: block;
-  margin: 20px auto;
+  margin: 40px auto;
   width: 80%;
   max-width: 500px;
   height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.img-tournament:hover {
+  transform: scale(1.1);
+}
 
 .macro-container {
   background-image: url("/public/Animated-Shape10.svg");
