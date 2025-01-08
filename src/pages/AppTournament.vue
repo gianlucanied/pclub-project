@@ -62,6 +62,9 @@ export default {
       "/FE973307.jpg",
       "/FE972902.jpg",
     ];
+    const epifaniaImages = [
+      ""
+    ]
     return {
       primoOpen,
       secondOpen,
@@ -86,8 +89,8 @@ export default {
         <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="100">
           <h2>{{ $t("nextTournaments") }}</h2>
           <p>{{ $t("descriptionTournaments") }}</p>
-          <img class="img-tournament" src="/torneo-epifania1.jpg" alt="locandina torneo">
-          <img class="img-tournament" src="/torneo-epifania2.jpg" alt="locandina torneo 2">
+          <img class="img-tournament" src="/torneo-crociera.jpg" alt="locandina torneo">
+          <img class="img-tournament" src="/torneo-crociera1.jpg" alt="locandina torneo 2">
         </div>
       </div>
     </div>
