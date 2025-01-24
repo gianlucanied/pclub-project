@@ -182,6 +182,9 @@ export default {
           </div>
         </div>
         <div class="row gallery" data-aos="fade-up">
+
+          <img class="listino" src="/listino-prezzi.jpg" alt="listino">
+
           <div id="gallery-name" class="col-md-6 offset-md-3 text-center">
             <b>{{ $t("gallery") }}</b>
           </div>
@@ -366,6 +369,23 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.listino {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0;
+  margin-bottom: 70px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.listino:hover {
+  transform: scale(1.1);
+
 }
 
 h2 {
