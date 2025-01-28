@@ -51,30 +51,18 @@ export default {
   <div class="container-header container-fluid">
     <p>
       <i class="fa-solid fa-square-phone fa-xl"></i> {{ $t("contattaci") }}
-      <a class="number" href="tel:+393454821835"
-        ><span>+39 345 482 1835</span></a
-      >
+      <a class="number" href="tel:+393454821835"><span>+39 345 482 1835</span></a>
     </p>
   </div>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
         <router-link :to="{ name: 'home' }">
-          <img
-            src="/public/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg"
-            alt="Logo Padel"
-          />
+          <img src="/public/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg" alt="Logo Padel" />
         </router-link>
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="language-switcher-wrapper">
@@ -97,10 +85,7 @@ export default {
               {{ $t("contacts") }}
             </router-link>
           </li>
-          <li
-            class="nav-item"
-            :class="{ active: currentPage === 'tournaments' }"
-          >
+          <li class="nav-item" :class="{ active: currentPage === 'tournaments' }">
             <router-link :to="{ name: 'tournaments' }" class="nav-link">
               {{ $t("tournaments") }}
             </router-link>
@@ -119,6 +104,7 @@ export default {
   justify-content: flex-end;
   text-align: end;
   border-bottom: 1px solid #f1e400;
+
   p {
     padding: 20px 30px 5px 30px;
   }
@@ -158,19 +144,32 @@ a {
   transition: 0.5s;
 }
 
+.navbar .navbar-nav .nav-item .nav-link {
+  border-bottom: 3px solid transparent;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
 .navbar .navbar-nav .nav-item.active .nav-link {
-  border-bottom-color: #f1e400 !important;
-  color: black;
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  border-bottom-color: #f1e400;
 }
 
 .language-switcher-wrapper {
-  margin-left: auto; /* Pushes LanguageSwitcher to the right */
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
   .container-header {
     display: none;
+  }
+
+  .navbar .navbar-nav .nav-item.active .nav-link {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    border-bottom: 3px solid #f1e400;
   }
 }
 </style>
