@@ -54,6 +54,11 @@ Our padel coaches, Roberto Bassu, National Coach, and Luca Caminiti, Second-Leve
     infoContacts:
       "Contact us to request information on bookable camps or for private lessons, we will reply as soon as possible!",
     where: "Where we are: ",
+    sponsor1: "Become our Sponsor",
+    hSponsor: "Do you want to become a new Sponsor?",
+    h2Sponsor: "Contact us for more information",
+    nameForm: "Name",
+    messageForm: "Message"
   },
   it: {
     tournaments: "Tornei",
@@ -111,6 +116,12 @@ Our padel coaches, Roberto Bassu, National Coach, and Luca Caminiti, Second-Leve
     infoContacts:
       "Contattaci per richiedere informazioni sui campi prenotabili o per delle lezioni private, ti risponderemo nel più breve tempo possibile!",
     where: "Dove siamo: ",
+    sponsor1: "Diventa nostro Sponsor",
+    hSponsor: "Vuoi diventare un nuovo Sponsor?",
+    h2Sponsor: "Contattaci per avere informazioni",
+    nameForm: "Nome",
+    messageForm: "Messaggio"
+
   },
 };
 

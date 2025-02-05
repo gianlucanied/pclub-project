@@ -5,9 +5,7 @@ export default {
 </script>
 
 <template>
-  <div
-    class="jumbotron container-fluid d-flex align-items-center justify-content-center"
-  >
+  <div class="jumbotron container-fluid d-flex align-items-center justify-content-center">
     <div class="row">
       <div data-aos="fade-up" data-aos-delay="100" class="col-12 text-center">
         {{ $t("about2") }}
@@ -45,77 +43,7 @@ export default {
           <div class="col-12"><span v-html="$t('secondPAbout')"></span></div>
         </div>
       </div>
-      <div class="sponsor-container container-fluid" data-aos="fade-up">
-        <h3>
-          <b>{{ $t("sponsor") }}</b>
-        </h3>
-        <div class="row justify-content-center">
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/aragon-removebg-preview.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/conad-removebg-preview.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img
-              src="/public/sponsor/De-filippis-removebg-preview.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img
-              src="/public/sponsor/hotel-florida-removebg-preview.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/vibra-removebg-preview.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img
-              src="/public/sponsor/Rent_a_Car_express_Alghero-removebg-preview.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/logudoro.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/nautilus-Logo-02.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/mp-finance-removebg-preview.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/businco-removebg-preview.png" alt="" />
-          </div>
-          <div
-            class="col-6 col-md-4 col-lg-4 sponsor d-flex align-items-center justify-content-center"
-          >
-            <img src="/public/sponsor/trova-removebg-preview.png" alt="" />
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </template>

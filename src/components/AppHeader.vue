@@ -75,6 +75,7 @@ export default {
               Home
             </router-link>
           </li>
+
           <li class="nav-item" :class="{ active: currentPage === 'about' }">
             <router-link :to="{ name: 'about' }" class="nav-link">
               {{ $t("about") }}
@@ -88,6 +89,11 @@ export default {
           <li class="nav-item" :class="{ active: currentPage === 'tournaments' }">
             <router-link :to="{ name: 'tournaments' }" class="nav-link">
               {{ $t("tournaments") }}
+            </router-link>
+          </li>
+          <li class="nav-item" :class="{ active: currentPage === 'sponsor' }">
+            <router-link :to="{ name: 'sponsor' }" class="nav-link">
+              {{ $t("sponsor1") }}
             </router-link>
           </li>
         </ul>
