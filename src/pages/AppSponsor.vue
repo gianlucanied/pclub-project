@@ -238,5 +238,9 @@ export default {
     .form-container {
         width: 90%;
     }
+
+    .jumbotron {
+        font-size: 3rem;
+    }
 }
 </style>
