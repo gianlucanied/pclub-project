@@ -175,7 +175,7 @@ export default {
               </div>
 
               <div class="img-lesson" data-aos="flip-left">
-                <img src="/CORSI-ADULTI.png" alt="">
+                <img src="/nuovo-corso-luca.jpg" alt="">
               </div>
             </div>
             <p v-html="$t('pHome')" data-aos="fade-up" data-aos-delay="100"></p>
