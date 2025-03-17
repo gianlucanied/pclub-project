@@ -183,7 +183,7 @@ export default {
         </div>
         <div class="row gallery" data-aos="fade-up">
 
-          <img class="listino" src="/listino-prezzi.jpg" alt="listino">
+          <img class="listino" src="/nuova-locandina.jpg" alt="listino">
 
           <div id="gallery-name" class="col-md-6 offset-md-3 text-center">
             <b>{{ $t("gallery") }}</b>
