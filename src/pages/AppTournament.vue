@@ -89,8 +89,8 @@ export default {
         <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="100">
           <h2>{{ $t("nextTournaments") }}</h2>
           <p>{{ $t("descriptionTournaments") }}</p>
-          <img class="img-tournament" src="/torneo-mimose.jpg" alt="locandina torneo">
-          <img class="img-tournament" src="/torneo-mimose2.jpg" alt="locandina torneo">
+          <img class="img-tournament" src="/locandina-finap.jpg" alt="locandina torneo">
+          <img class="img-tournament" src="/locandina-finap-2.jpg" alt="locandina torneo">
 
         </div>
       </div>
