@@ -84,14 +84,14 @@ export default {
     </div>
   </div>
   <div class="my-container-2 container-fluid macro-container">
-    <div class="container container-interno" data-aos="fade-up" data-aos-delay="100">
+    <!-- <div class="container container-interno" data-aos="fade-up" data-aos-delay="100">
       <div class="row">
         <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="100">
           <h2>{{ $t("nextTournaments") }}</h2>
           <p>{{ $t("descriptionTournaments") }}</p>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="container container-interno" data-aos="fade-up" data-aos-delay="100">
       <div class="row">
         <div class="col-12 text-center">
