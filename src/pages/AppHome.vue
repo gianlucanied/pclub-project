@@ -1,14 +1,13 @@
 <script>
-import { ref, onMounted, onBeforeUnmount } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import 'swiper/css/effect-cube';
-import 'swiper/css/pagination';
-import { EffectCube, Pagination } from 'swiper/modules';
-
+import "swiper/css/effect-cube";
+import "swiper/css/pagination";
+import { EffectCube, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
 import "../style.css";
 
@@ -138,8 +137,13 @@ export default {
       <img :src="homepageImages[selectedImageIndex]" alt="Fullscreen Image" />
     </div>
 
-    <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0"
-      class="container-fluid jumbotron">
+    <div
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="0"
+      class="container-fluid jumbotron"
+    >
       <div class="overlay-text">Padel Club Alghero</div>
       <div class="icona-playtomic">
         <button @click="prenotaPlaytomic">{{ $t("buttonPlaytomic") }}</button>
@@ -157,46 +161,41 @@ export default {
                 <p>{{ $t("pNews") }}</p>
 
                 <div class="img-lesson" data-aos="flip-left">
-                  <img src="/copertura.jpg" alt="">
+                  <img src="/copertura.jpg" alt="" />
                 </div>
-
-
-
-                <h2>{{ $t("lessonsNews") }}</h2>
-                <p>{{ $t("pLessons") }}</p>
-
-                <ul>
-                  <li v-html="$t('first')"></li>
-                  <li v-html="$t('second')"></li>
-                  <li v-html="$t('third')"></li>
-
-                </ul>
-                <p v-html="$t('pTraining')"></p>
-              </div>
-
-              <div class="img-lesson" data-aos="flip-left">
-                <img src="/nuovo-corso-luca.jpg" alt="">
               </div>
             </div>
             <p v-html="$t('pHome')" data-aos="fade-up" data-aos-delay="100"></p>
           </div>
         </div>
         <div class="row gallery" data-aos="fade-up">
-
-          <img class="listino" src="/nuova-locandina.jpg" alt="listino">
+          <img class="listino" src="/nuova-locandina.jpg" alt="listino" />
 
           <div id="gallery-name" class="col-md-6 offset-md-3 text-center">
             <b>{{ $t("gallery") }}</b>
           </div>
           <div class="col-12">
-            <swiper v-if="isSmallScreen" :effect="'cards'" :grabCursor="true" :modules="modules" class="mySwiper">
-              <swiper-slide v-for="(image, index) in homepageImages" :key="index">
+            <swiper
+              v-if="isSmallScreen"
+              :effect="'cards'"
+              :grabCursor="true"
+              :modules="modules"
+              class="mySwiper"
+            >
+              <swiper-slide
+                v-for="(image, index) in homepageImages"
+                :key="index"
+              >
                 <img :src="image" alt="" />
               </swiper-slide>
             </swiper>
             <div v-else class="grid">
-              <div v-for="(image, index) in homepageImages" :key="index" class="grid-item"
-                @click="openFullscreenImage(index)">
+              <div
+                v-for="(image, index) in homepageImages"
+                :key="index"
+                class="grid-item"
+                @click="openFullscreenImage(index)"
+              >
                 <div class="image-wrapper">
                   <img :src="image" alt="" />
                 </div>
@@ -308,7 +307,6 @@ export default {
   margin-bottom: 30px;
 }
 
-
 .news {
   text-align: center;
   margin-bottom: 100px;
@@ -320,7 +318,9 @@ export default {
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-fit: contain;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
   li {
@@ -334,7 +334,6 @@ export default {
 
 .news img:hover {
   transform: scale(1.1);
-
 }
 
 .my-macro-container {
@@ -380,12 +379,10 @@ export default {
   padding: 0;
   margin-bottom: 70px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .listino:hover {
   transform: scale(1.1);
-
 }
 
 h2 {
@@ -462,7 +459,6 @@ h2 {
 }
 
 @media (max-width: 768px) {
-
   .news {
     img {
       width: 100%;
@@ -505,8 +501,6 @@ h2 {
 }
 
 @media (max-width: 480px) {
-
-
   .grid {
     grid-template-columns: 1fr;
   }

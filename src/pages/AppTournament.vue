@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
 
 export default {
   name: "AppTournament",
@@ -89,9 +89,6 @@ export default {
         <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="100">
           <h2>{{ $t("nextTournaments") }}</h2>
           <p>{{ $t("descriptionTournaments") }}</p>
-          <img class="img-tournament" src="/locandina-finap.jpg" alt="locandina torneo">
-          <img class="img-tournament" src="/locandina-finap-2.jpg" alt="locandina torneo">
-
         </div>
       </div>
     </div>

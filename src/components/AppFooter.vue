@@ -83,7 +83,7 @@ export default {
               style="color: #0000ff"
             ></i>
             by
-            <a href="https://www.instagram.com/gianlucanied/"
+            <a href="https://gianlucanieddu.netlify.app/"
               ><b>gianlucanied</b></a
             >
           </p>
