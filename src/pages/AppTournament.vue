@@ -228,21 +228,6 @@ export default {
             </swiper>
           </div>
         </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section" data-aos="fade-up" data-aos-delay="100">
-          <div class="cta-content">
-            <h2>Vuoi Partecipare al Prossimo Torneo?</h2>
-            <p>Iscriviti alla nostra newsletter per rimanere aggiornato sulle prossime competizioni</p>
-            <button class="cta-button">
-              Rimani Aggiornato
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-          </div>
-        </section>
       </div>
     </div>
   </div>
