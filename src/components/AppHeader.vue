@@ -227,6 +227,11 @@ export default {
           </ul>
 
           <div class="mobile-menu-footer">
+            <!-- Language Switcher per Mobile -->
+            <div class="mobile-language-switcher">
+              <LanguageSwitcher />
+            </div>
+
             <a href="tel:+393454821835" class="mobile-phone">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -458,8 +463,8 @@ export default {
 
 .mobile-menu-content {
   background: white;
-  width: 85%;
-  max-width: 400px;
+  width: 75%;
+  max-width: 320px;
   height: 100%;
   margin-left: auto;
   box-shadow: -10px 0 50px rgba(0, 0, 0, 0.3);
@@ -468,7 +473,7 @@ export default {
 }
 
 .mobile-menu-header {
-  padding: 2rem;
+  padding: 1.5rem;
   border-bottom: 2px solid #f7931e;
   display: flex;
   justify-content: space-between;
@@ -476,7 +481,7 @@ export default {
 }
 
 .mobile-menu-header img {
-  height: 50px;
+  height: 45px;
   border-radius: 8px;
 }
 
@@ -496,32 +501,33 @@ export default {
 
 .mobile-nav-links {
   list-style: none;
-  padding: 2rem 0;
+  padding: 1rem 0;
   margin: 0;
-  flex: 1;
 }
 
 .mobile-nav-links li a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1.2rem 2rem;
+  padding: 1rem 1.5rem;
   color: #101e39;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  border-left: 4px solid transparent;
+  border-left: 3px solid transparent;
 }
 
 .mobile-nav-links li a svg {
   color: #f7931e;
+  width: 20px;
+  height: 20px;
 }
 
 .mobile-nav-links li a:hover {
   background: rgba(247, 147, 30, 0.1);
   border-left-color: #f7931e;
-  padding-left: 2.5rem;
+  padding-left: 2rem;
 }
 
 .mobile-nav-links li.active a {
@@ -531,8 +537,17 @@ export default {
 }
 
 .mobile-menu-footer {
-  padding: 2rem;
+  padding: 1.5rem;
   border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-language-switcher {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
 }
 
 .mobile-phone {
@@ -540,12 +555,13 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  padding: 1rem;
+  padding: 0.9rem;
   background: linear-gradient(135deg, #f7931e, #ff6b35);
   color: white;
   text-decoration: none;
   border-radius: 12px;
   font-weight: 700;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
 }
 
@@ -612,7 +628,7 @@ export default {
   }
 
   .mobile-menu-content {
-    width: 100%;
+    width: 85%;
   }
 }
 </style>
