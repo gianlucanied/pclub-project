@@ -15,9 +15,9 @@ export default {
       <div class="hero-overlay"></div>
       
       <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-        <h1 class="hero-title">{{ $t("contacts2") || "CONTATTI" }}</h1>
+        <h1 class="hero-title">{{ $t("contacts2") }}</h1>
         <div class="hero-divider"></div>
-        <p class="hero-subtitle">Siamo qui per rispondere a tutte le tue domande</p>
+        <p class="hero-subtitle">{{ $t("contactsSubtitle") }}</p>
       </div>
 
       <div class="scroll-indicator">
@@ -32,12 +32,12 @@ export default {
           <!-- Contact Info Column -->
           <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
             <div class="section-header">
-              <h2>{{ $t("help") || "Come possiamo aiutarti?" }}</h2>
+              <h2>{{ $t("help") }}</h2>
               <div class="header-divider"></div>
             </div>
             
             <p class="intro-text">
-              {{ $t("infoContacts") || "Contattaci per prenotazioni, informazioni sui corsi o qualsiasi altra richiesta. Siamo sempre a tua disposizione!" }}
+              {{ $t("infoContacts") }}
             </p>
 
             <!-- Contact Cards -->
@@ -57,7 +57,7 @@ export default {
                   <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="card-content">
-                  <h4>Telefono 1</h4>
+                  <h4>{{ $t("phone1Label") }}</h4>
                   <p>+39 345 482 1835</p>
                 </div>
               </a>
@@ -67,7 +67,7 @@ export default {
                   <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="card-content">
-                  <h4>Telefono 2</h4>
+                  <h4>{{ $t("phone2Label") }}</h4>
                   <p>+39 350 142 1000</p>
                 </div>
               </a>
@@ -82,8 +82,8 @@ export default {
                   <img src="../../public/playtomic2.png" alt="Playtomic" />
                 </div>
                 <div class="card-content">
-                  <h4>{{ $t("buttonPlaytomic") || "Prenota su Playtomic" }}</h4>
-                  <p>Sistema di prenotazione online</p>
+                  <h4>{{ $t("buttonPlaytomic") }}</h4>
+                  <p>{{ $t("playtomicDescription") }}</p>
                 </div>
               </a>
             </div>
@@ -94,9 +94,9 @@ export default {
                 <div class="info-icon">
                   <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <h4>{{ $t("where") || "Dove siamo" }}</h4>
+                <h4>{{ $t("where") }}</h4>
                 <a href="https://www.google.it/maps/place/Padel+Club+Alghero/@40.575007,8.3162001,18z/data=!4m15!1m8!3m7!1s0x12dcf1f9e7851add:0xbf96a93a594c1d9c!2sViale+Europa,+07041+Alghero+SS!3b1!8m2!3d40.577633!4d8.3155993!16s%2Fg%2F1v79yj6_!3m5!1s0x12dcf1f65ab63d2b:0x72a4e977da2d13db!8m2!3d40.5748764!4d8.3176214!16s%2Fg%2F11qqvp8y6d?entry=ttu">
-                  <p>Viale Europa - Via delle Baleari<br />Alghero (SS)</p>
+                  <p>{{ $t("addressLine1") }}<br />{{ $t("addressLine2") }}</p>
                 </a>
               </div>
 
@@ -124,7 +124,7 @@ export default {
               <div class="image-overlay">
                 <div class="overlay-content">
                   <i class="fa-solid fa-location-dot"></i>
-                  <p>Vieni a trovarci!</p>
+                  <p>{{ $t("visitUsText") }}</p>
                 </div>
               </div>
             </div>

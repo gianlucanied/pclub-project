@@ -15,9 +15,9 @@ export default {
       <div class="hero-overlay"></div>
       
       <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-        <h1 class="hero-title">{{ $t("about2") || "Chi Siamo" }}</h1>
+        <h1 class="hero-title">{{ $t("about2") }}</h1>
         <div class="hero-divider"></div>
-        <p class="hero-subtitle">La nostra storia, la nostra passione</p>
+        <p class="hero-subtitle">{{ $t("aboutSubtitle") }}</p>
       </div>
 
       <div class="scroll-indicator">
@@ -39,10 +39,10 @@ export default {
             </svg>
           </div>
           
-          <h2>{{ $t("suDiNoi") || "Su di Noi" }}</h2>
+          <h2>{{ $t("suDiNoi") }}</h2>
           
           <div class="content-card">
-            <div class="content-text" v-html="$t('pAbout') || 'Siamo un club dedicato alla passione del padel...'"></div>
+            <div class="content-text" v-html="$t('pAbout')"></div>
           </div>
         </section>
 
@@ -56,16 +56,16 @@ export default {
             </svg>
           </div>
           
-          <h2>{{ $t("why") || "Perché Sceglierci" }}</h2>
+          <h2>{{ $t("why") }}</h2>
           
           <div class="content-card">
-            <div class="content-text" v-html="$t('secondPAbout') || 'Offriamo un ambiente unico...'"></div>
+            <div class="content-text" v-html="$t('secondPAbout')"></div>
           </div>
         </section>
 
         <!-- Features Grid -->
         <section class="features-section" data-aos="fade-up">
-          <h2 class="features-title">I Nostri Punti di Forza</h2>
+          <h2 class="features-title">{{ $t("featuresTitle") }}</h2>
           
           <div class="features-grid">
             <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
@@ -75,8 +75,8 @@ export default {
                   <polyline points="9 22 9 12 15 12 15 22"></polyline>
                 </svg>
               </div>
-              <h3>Struttura Moderna</h3>
-              <p>Campi professionali con copertura e illuminazione di ultima generazione</p>
+              <h3>{{ $t("feature1Title") }}</h3>
+              <p>{{ $t("feature1Text") }}</p>
             </div>
 
             <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
@@ -88,8 +88,8 @@ export default {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
-              <h3>Community Attiva</h3>
-              <p>Una comunità di appassionati sempre pronta ad accogliere nuovi giocatori</p>
+              <h3>{{ $t("feature2Title") }}</h3>
+              <p>{{ $t("feature2Text") }}</p>
             </div>
 
             <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
@@ -103,8 +103,8 @@ export default {
                   <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
                 </svg>
               </div>
-              <h3>Tornei & Eventi</h3>
-              <p>Organizziamo regolarmente tornei ed eventi per tutti i livelli</p>
+              <h3>{{ $t("feature3Title") }}</h3>
+              <p>{{ $t("feature3Text") }}</p>
             </div>
 
             <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
@@ -114,8 +114,8 @@ export default {
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
               </div>
-              <h3>Orari Flessibili</h3>
-              <p>Aperti 7 giorni su 7 con orari prolungati per massima comodità</p>
+              <h3>{{ $t("feature4Title") }}</h3>
+              <p>{{ $t("feature4Text") }}</p>
             </div>
 
             <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
@@ -125,8 +125,8 @@ export default {
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
               </div>
-              <h3>Posizione Strategica</h3>
-              <p>Situati nel cuore di Alghero, facilmente raggiungibili</p>
+              <h3>{{ $t("feature5Title") }}</h3>
+              <p>{{ $t("feature5Text") }}</p>
             </div>
 
             <div class="feature-card" data-aos="zoom-in" data-aos-delay="600">
@@ -135,8 +135,8 @@ export default {
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                 </svg>
               </div>
-              <h3>Prezzi Competitivi</h3>
-              <p>Tariffe accessibili con abbonamenti vantaggiosi per tutti</p>
+              <h3>{{ $t("feature6Title") }}</h3>
+              <p>{{ $t("feature6Text") }}</p>
             </div>
           </div>
         </section>
@@ -144,14 +144,14 @@ export default {
         <!-- CTA Section -->
         <section class="cta-section" data-aos="fade-up">
           <div class="cta-content">
-            <h2>Pronto a Giocare con Noi?</h2>
-            <p>Unisciti alla nostra community e vivi la passione del padel</p>
+            <h2>{{ $t("ctaTitle") }}</h2>
+            <p>{{ $t("ctaSubtitle") }}</p>
             <div class="cta-buttons">
               <router-link to="/contacts" class="cta-button primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
-                Contattaci
+                {{ $t("ctaButton1") }}
               </router-link>
               <a href="https://playtomic.io/padel-club-alghero" class="cta-button secondary" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -160,7 +160,7 @@ export default {
                   <line x1="8" y1="2" x2="8" y2="6"></line>
                   <line x1="3" y1="10" x2="21" y2="10"></line>
                 </svg>
-                Prenota Online
+                {{ $t("ctaButton2") }}
               </a>
             </div>
           </div>

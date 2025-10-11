@@ -177,8 +177,8 @@ export default {
       <div class="hero-overlay"></div>
       
       <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-        <h1 class="hero-title">Padel Club Alghero</h1>
-        <p class="hero-subtitle">Vivi la passione del padel nella Riviera del Corallo</p>
+        <h1 class="hero-title">{{ $t("heroTitle") }}</h1>
+        <p class="hero-subtitle">{{ $t("heroSubtitle") }}</p>
         <button @click="prenotaPlaytomic" class="cta-playtomic">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -186,7 +186,7 @@ export default {
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          {{ $t("buttonPlaytomic") || "Prenota su Playtomic" }}
+          {{ $t("buttonPlaytomic") }}
         </button>
       </div>
 
@@ -200,9 +200,9 @@ export default {
       <div class="container">
         <!-- News Section -->
         <section class="news-section" data-aos="fade-up">
-          <div class="news-badge">🆕 Novità</div>
-          <h2>{{ $t("news") || "Ultime Novità" }}</h2>
-          <p class="news-text">{{ $t("pNews") || "Scopri le ultime novità del nostro club!" }}</p>
+          <div class="news-badge">{{ $t("newsBadge") }}</div>
+          <h2>{{ $t("news") }}</h2>
+          <p class="news-text">{{ $t("pNews") }}</p>
           
           <div class="news-image-container" data-aos="zoom-in" data-aos-delay="200">
             <img src="/copertura.jpg" alt="News" class="news-image" />
@@ -212,12 +212,12 @@ export default {
 
         <!-- About Section -->
         <section class="about-section" data-aos="fade-up">
-          <div class="about-content" v-html="$t('pHome') || 'Benvenuti al Padel Club Alghero'"></div>
+          <div class="about-content" v-html="$t('pHome')"></div>
         </section>
 
         <!-- Price List -->
         <section class="price-section" data-aos="fade-up">
-          <h2>Listino Prezzi</h2>
+          <h2>{{ $t("priceListTitle") }}</h2>
           <div class="price-card">
             <img src="/nuova-locandina.jpg" alt="Listino Prezzi" class="price-image" />
           </div>
@@ -226,8 +226,8 @@ export default {
         <!-- Gallery Section -->
         <section class="gallery-section" data-aos="fade-up">
           <div class="section-header">
-            <h2>{{ $t("gallery") || "Galleria Fotografica" }}</h2>
-            <p class="section-subtitle">I momenti migliori del nostro club</p>
+            <h2>{{ $t("gallery") }}</h2>
+            <p class="section-subtitle">{{ $t("gallerySubtitle") }}</p>
           </div>
 
           <!-- Mobile Swiper -->

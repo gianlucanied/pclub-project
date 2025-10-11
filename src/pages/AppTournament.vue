@@ -81,11 +81,11 @@ export default {
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-          {{ $t("tournaments2") || "I Nostri Tornei" }}
+          {{ $t("tournaments2") }}
         </h1>
         <div class="hero-divider" data-aos="fade-up" data-aos-delay="200"></div>
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-          Rivivi le emozioni delle nostre competizioni
+          {{ $t("tournamentsSubtitle") }}
         </p>
       </div>
       <div class="scroll-indicator">
@@ -101,8 +101,8 @@ export default {
         <!-- Tournaments Section -->
         <section class="tournaments-section">
           <div class="section-header" data-aos="fade-up" data-aos-delay="100">
-            <h2>{{ $t("olderTournaments") || "Tornei Passati" }}</h2>
-            <p class="section-description">Una galleria dei momenti più emozionanti</p>
+            <h2>{{ $t("olderTournaments") }}</h2>
+            <p class="section-description">{{ $t("tournamentsDescription") }}</p>
           </div>
 
           <!-- Tournament 1: 2° Open -->
@@ -110,8 +110,8 @@ export default {
             <div class="tournament-header">
               <div class="tournament-badge">🏆</div>
               <div class="tournament-info">
-                <h3>2° OPEN Riviera del Corallo</h3>
-                <span class="tournament-date">Edizione 2024</span>
+                <h3>{{ $t("tournament1Title") }}</h3>
+                <span class="tournament-date">{{ $t("tournament1Date") }}</span>
               </div>
             </div>
             
@@ -151,8 +151,8 @@ export default {
             <div class="tournament-header">
               <div class="tournament-badge">🎾</div>
               <div class="tournament-info">
-                <h3>1° Torneo ALLEANZA ASSICURAZIONI</h3>
-                <span class="tournament-date">Edizione Speciale</span>
+                <h3>{{ $t("tournament2Title") }}</h3>
+                <span class="tournament-date">{{ $t("tournament2Date") }}</span>
               </div>
             </div>
             
@@ -192,8 +192,8 @@ export default {
             <div class="tournament-header">
               <div class="tournament-badge">⭐</div>
               <div class="tournament-info">
-                <h3>1° OPEN Riviera del Corallo</h3>
-                <span class="tournament-date">Prima Edizione</span>
+                <h3>{{ $t("tournament3Title") }}</h3>
+                <span class="tournament-date">{{ $t("tournament3Date") }}</span>
               </div>
             </div>
             

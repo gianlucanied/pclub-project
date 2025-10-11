@@ -16,7 +16,7 @@ export default {
             alt="Padel Club Alghero"
             class="footer-logo"
           />
-          <p class="footer-tagline">La tua passione per il padel nella Riviera del Corallo</p>
+          <p class="footer-tagline">{{ $t("footerTagline") }}</p>
         </div>
 
         <!-- Main Footer Content -->
@@ -28,7 +28,7 @@ export default {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
-              {{ $t("address") || "Dove Siamo" }}
+              {{ $t("address") }}
             </h3>
             <a
               href="https://www.google.it/maps/place/Padel+Club+Alghero/@40.575007,8.3162001,18z/data=!4m15!1m8!3m7!1s0x12dcf1f9e7851add:0xbf96a93a594c1d9c!2sViale+Europa,+07041+Alghero+SS!3b1!8m2!3d40.577633!4d8.3155993!16s%2Fg%2F1v79yj6_!3m5!1s0x12dcf1f65ab63d2b:0x72a4e977da2d13db!8m2!3d40.5748764!4d8.3176214!16s%2Fg%2F11qqvp8y6d?entry=ttu"
@@ -38,8 +38,8 @@ export default {
             >
               <div class="link-content">
                 <span class="link-text">
-                  Viale Europa - Via delle Baleari<br />
-                  Alghero (SS)<br />
+                  {{ $t("addressLine1") }}<br />
+                  {{ $t("addressLine2") }}<br />
                   Italy
                 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-arrow">
@@ -56,7 +56,7 @@ export default {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
               </svg>
-              {{ $t("information") || "Contatti" }}
+              {{ $t("information") }}
             </h3>
             <a href="mailto:padelalghero@gmail.com" class="footer-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -85,7 +85,7 @@ export default {
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
               </svg>
-              {{ $t("social") || "Seguici" }}
+              {{ $t("social") }}
             </h3>
             <div class="social-links">
               <a href="https://www.instagram.com/padelalghero/" class="social-link instagram" target="_blank" rel="noopener">
@@ -114,19 +114,19 @@ export default {
                   <circle cx="8.5" cy="8.5" r="1.5"></circle>
                   <polyline points="21 15 16 10 5 21"></polyline>
                 </svg>
-                Photos by <a href="https://www.instagram.com/campusfederico/" target="_blank" rel="noopener"><strong>Federico Campus</strong></a>
+                {{ $t("photosBy") }} <a href="https://www.instagram.com/campusfederico/" target="_blank" rel="noopener"><strong>Federico Campus</strong></a>
               </p>
               <div class="separator">•</div>
               <p class="credit-item">
-                Made with 
+                {{ $t("madeWith") }} 
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#f7931e" stroke="none" class="heart-icon">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
-                by <a href="https://gianlucanieddu.netlify.app/" target="_blank" rel="noopener"><strong>gianlucanied</strong></a>
+                {{ $t("by") }} <a href="https://gianlucanieddu.netlify.app/" target="_blank" rel="noopener"><strong>gianlucanied</strong></a>
               </p>
             </div>
             <div class="copyright" data-aos="fade-up" data-aos-delay="100">
-              <p>&copy; 2024 Padel Club Alghero. All rights reserved.</p>
+              <p>{{ $t("copyright") }}</p>
             </div>
           </div>
         </div>

@@ -1,44 +1,57 @@
-<script setup>
-import { reactive, ref } from 'vue';
-
-const form = reactive({
-  name: '',
-  email: '',
-  message: ''
-});
-
-const successMessage = ref('');
-const isSubmitting = ref(false);
-
-const submitForm = async () => {
-  if (!form.name || !form.email || !form.message) {
-    successMessage.value = 'Per favore, compila tutti i campi.';
-    setTimeout(() => { successMessage.value = ''; }, 5000);
-    return;
-  }
-  
-  isSubmitting.value = true;
-  try {
-    const response = await fetch('https://formspree.io/f/mldgnyzr', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form)
-    });
-    if (response.ok) {
-      successMessage.value = 'Messaggio inviato con successo! Ti risponderemo al più presto.';
-      form.name = '';
-      form.email = '';
-      form.message = '';
-    } else {
-      successMessage.value = 'Si è verificato un errore. Riprova più tardi.';
+<script>
+export default {
+  name: "AppSponsor",
+  data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        message: ''
+      },
+      successMessage: '',
+      isSubmitting: false
+    };
+  },
+  methods: {
+    async submitForm() {
+      if (!this.form.name || !this.form.email || !this.form.message) {
+        this.successMessage = this.$t('formErrorEmpty');
+        setTimeout(() => { this.successMessage = ''; }, 5000);
+        return;
+      }
+      
+      this.isSubmitting = true;
+      try {
+        const response = await fetch('https://formspree.io/f/mldgnyzr', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(this.form)
+        });
+        if (response.ok) {
+          this.successMessage = this.$t('formSuccess');
+          this.form.name = '';
+          this.form.email = '';
+          this.form.message = '';
+        } else {
+          this.successMessage = this.$t('formError');
+        }
+      } catch (error) {
+        this.successMessage = this.$t('formErrorNetwork');
+      } finally {
+        this.isSubmitting = false;
+        setTimeout(() => {
+          this.successMessage = '';
+        }, 5000);
+      }
+    },
+    isErrorMessage(message) {
+      return message.includes('errore') || 
+             message.includes('compila') || 
+             message.includes('error') || 
+             message.includes('fill') ||
+             message.includes('Errore') ||
+             message.includes('Error');
     }
-  } catch (error) {
-    successMessage.value = 'Errore di connessione. Controlla la tua rete e riprova.';
-  } finally {
-    isSubmitting.value = false;
-    setTimeout(() => {
-      successMessage.value = '';
-    }, 5000);
   }
 };
 </script>
@@ -54,9 +67,9 @@ const submitForm = async () => {
       <div class="hero-overlay"></div>
       
       <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-        <h1 class="hero-title">SPONSOR</h1>
+        <h1 class="hero-title">{{ $t("sponsorHeroTitle") }}</h1>
         <div class="hero-divider"></div>
-        <p class="hero-subtitle">I nostri partner che rendono possibile tutto questo</p>
+        <p class="hero-subtitle">{{ $t("sponsorHeroSubtitle") }}</p>
       </div>
 
       <div class="scroll-indicator">
@@ -69,14 +82,14 @@ const submitForm = async () => {
       <div class="container">
         <!-- Main Sponsors Section -->
         <section class="main-sponsors-section" data-aos="fade-up">
-          <h2>{{ $t("hSponsor") || "Partner Principali" }}</h2>
+          <h2>{{ $t("hSponsor") }}</h2>
           
           <div class="main-sponsors-grid">
             <div class="main-sponsor-card" data-aos="zoom-in" data-aos-delay="100">
               <div class="sponsor-card-wrapper">
                 <img src="/public/sponsor-2/sponsor-1.jpg" alt="Sponsor principale 1" />
                 <div class="sponsor-overlay">
-                  <div class="sponsor-badge">Partner Principale</div>
+                  <div class="sponsor-badge">{{ $t("mainPartnerBadge") }}</div>
                 </div>
               </div>
             </div>
@@ -85,7 +98,7 @@ const submitForm = async () => {
               <div class="sponsor-card-wrapper">
                 <img src="/public/sponsor-2/sponsor-3.jpg" alt="Sponsor principale 2" />
                 <div class="sponsor-overlay">
-                  <div class="sponsor-badge">Partner Principale</div>
+                  <div class="sponsor-badge">{{ $t("mainPartnerBadge") }}</div>
                 </div>
               </div>
             </div>
@@ -101,8 +114,8 @@ const submitForm = async () => {
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
               </div>
-              <h3>{{ $t("h2Sponsor") || "Diventa Nostro Sponsor" }}</h3>
-              <p class="form-description">Compila il form e ti contatteremo per discutere le opportunità di partnership</p>
+              <h3>{{ $t("h2Sponsor") }}</h3>
+              <p class="form-description">{{ $t("sponsorDescription") }}</p>
             </div>
 
             <div class="contact-form">
@@ -112,13 +125,13 @@ const submitForm = async () => {
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
-                  {{ $t("nameForm") || "Nome" }}
+                  {{ $t("nameForm") }}
                 </label>
                 <input 
                   type="text" 
                   id="name" 
                   v-model="form.name" 
-                  placeholder="Il tuo nome o azienda"
+                  :placeholder="$t('namePlaceholder')"
                 />
               </div>
 
@@ -134,7 +147,7 @@ const submitForm = async () => {
                   type="email" 
                   id="email" 
                   v-model="form.email" 
-                  placeholder="tua@email.com"
+                  :placeholder="$t('emailPlaceholder')"
                 />
               </div>
 
@@ -143,30 +156,30 @@ const submitForm = async () => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                   </svg>
-                  {{ $t("messageForm") || "Messaggio" }}
+                  {{ $t("messageForm") }}
                 </label>
                 <textarea 
                   id="message" 
                   v-model="form.message" 
                   rows="5"
-                  placeholder="Raccontaci della tua azienda e del tuo interesse..."
+                  :placeholder="$t('messagePlaceholder')"
                 ></textarea>
               </div>
 
               <button @click="submitForm" class="submit-button" :disabled="isSubmitting">
                 <span v-if="!isSubmitting">
-                  Invia Richiesta
+                  {{ $t("submitButton") }}
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="22" y1="2" x2="11" y2="13"></line>
                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                   </svg>
                 </span>
-                <span v-else>Invio in corso...</span>
+                <span v-else>{{ $t("submitting") }}</span>
               </button>
 
               <transition name="fade">
-                <div v-if="successMessage" class="success-message" :class="{ error: successMessage.includes('errore') || successMessage.includes('compila') }">
-                  <svg v-if="!successMessage.includes('errore') && !successMessage.includes('compila')" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div v-if="successMessage" class="success-message" :class="{ error: isErrorMessage(successMessage) }">
+                  <svg v-if="!isErrorMessage(successMessage)" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
                   </svg>
@@ -184,8 +197,8 @@ const submitForm = async () => {
 
         <!-- All Sponsors Grid -->
         <section class="all-sponsors-section" data-aos="fade-up">
-          <h2>{{ $t("sponsor") || "I Nostri Sponsor" }}</h2>
-          <p class="section-subtitle">Grazie a tutti i partner che sostengono il Padel Club Alghero</p>
+          <h2>{{ $t("allSponsorsTitle") }}</h2>
+          <p class="section-subtitle">{{ $t("allSponsorsSubtitle") }}</p>
           
           <div class="sponsors-grid">
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="50">
