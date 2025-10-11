@@ -1,58 +1,6 @@
 <script>
 export default {
   name: "AppSponsor",
-  data() {
-    return {
-      form: {
-        name: '',
-        email: '',
-        message: ''
-      },
-      successMessage: '',
-      isSubmitting: false
-    };
-  },
-  methods: {
-    async submitForm() {
-      if (!this.form.name || !this.form.email || !this.form.message) {
-        this.successMessage = this.$t('formErrorEmpty');
-        setTimeout(() => { this.successMessage = ''; }, 5000);
-        return;
-      }
-      
-      this.isSubmitting = true;
-      try {
-        const response = await fetch('https://formspree.io/f/mldgnyzr', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(this.form)
-        });
-        if (response.ok) {
-          this.successMessage = this.$t('formSuccess');
-          this.form.name = '';
-          this.form.email = '';
-          this.form.message = '';
-        } else {
-          this.successMessage = this.$t('formError');
-        }
-      } catch (error) {
-        this.successMessage = this.$t('formErrorNetwork');
-      } finally {
-        this.isSubmitting = false;
-        setTimeout(() => {
-          this.successMessage = '';
-        }, 5000);
-      }
-    },
-    isErrorMessage(message) {
-      return message.includes('errore') || 
-             message.includes('compila') || 
-             message.includes('error') || 
-             message.includes('fill') ||
-             message.includes('Errore') ||
-             message.includes('Error');
-    }
-  }
 };
 </script>
 
@@ -105,93 +53,27 @@ export default {
           </div>
         </section>
 
-        <!-- Contact Form Section -->
-        <section class="form-section" data-aos="fade-up">
-          <div class="form-container">
-            <div class="form-header">
-              <div class="form-icon">
+        <!-- Contact Email Section -->
+        <section class="contact-section" data-aos="fade-up">
+          <div class="contact-container">
+            <div class="contact-header">
+              <div class="contact-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
               </div>
               <h3>{{ $t("h2Sponsor") }}</h3>
-              <p class="form-description">{{ $t("sponsorDescription") }}</p>
+              <p class="contact-description">{{ $t("sponsorDescription") }}</p>
             </div>
 
-            <div class="contact-form">
-              <div class="form-group">
-                <label for="name">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                  {{ $t("nameForm") }}
-                </label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  v-model="form.name" 
-                  :placeholder="$t('namePlaceholder')"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="email">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                  Email
-                </label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  v-model="form.email" 
-                  :placeholder="$t('emailPlaceholder')"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="message">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                  {{ $t("messageForm") }}
-                </label>
-                <textarea 
-                  id="message" 
-                  v-model="form.message" 
-                  rows="5"
-                  :placeholder="$t('messagePlaceholder')"
-                ></textarea>
-              </div>
-
-              <button @click="submitForm" class="submit-button" :disabled="isSubmitting">
-                <span v-if="!isSubmitting">
-                  {{ $t("submitButton") }}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                  </svg>
-                </span>
-                <span v-else>{{ $t("submitting") }}</span>
-              </button>
-
-              <transition name="fade">
-                <div v-if="successMessage" class="success-message" :class="{ error: isErrorMessage(successMessage) }">
-                  <svg v-if="!isErrorMessage(successMessage)" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                  <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="15" y1="9" x2="9" y2="15"></line>
-                    <line x1="9" y1="9" x2="15" y2="15"></line>
-                  </svg>
-                  {{ successMessage }}
-                </div>
-              </transition>
-            </div>
+            <a href="mailto:padelalghero@gmail.com" class="email-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              padelalghero@gmail.com
+            </a>
           </div>
         </section>
 
@@ -452,27 +334,27 @@ export default {
   font-size: 0.9rem;
 }
 
-/* Form Section */
-.form-section {
+/* Contact Section */
+.contact-section {
   margin-bottom: 8rem;
 }
 
-.form-container {
+.contact-container {
   max-width: 700px;
   margin: 0 auto;
   background: white;
-  padding: 3rem;
+  padding: 4rem 3rem;
   border-radius: 30px;
   box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
   border: 2px solid rgba(247, 147, 30, 0.2);
+  text-align: center;
 }
 
-.form-header {
-  text-align: center;
+.contact-header {
   margin-bottom: 3rem;
 }
 
-.form-icon {
+.contact-icon {
   width: 80px;
   height: 80px;
   margin: 0 auto 1.5rem;
@@ -483,126 +365,48 @@ export default {
   justify-content: center;
 }
 
-.form-icon svg {
+.contact-icon svg {
   color: #f7931e;
 }
 
-.form-header h3 {
+.contact-header h3 {
   font-size: 2rem;
   color: #101e39;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
-.form-description {
+.contact-description {
   color: #666;
   font-size: 1.1rem;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.form-group label {
-  display: flex;
+.email-button {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: #101e39;
-  font-size: 1rem;
-}
-
-.form-group label svg {
-  color: #f7931e;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 1rem 1.2rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #f7931e;
-  box-shadow: 0 0 0 4px rgba(247, 147, 30, 0.1);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.submit-button {
-  padding: 1.2rem 2rem;
+  gap: 1rem;
+  padding: 1.5rem 3rem;
   background: linear-gradient(135deg, #f7931e, #ff6b35);
   color: white;
-  border: none;
+  text-decoration: none;
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(247, 147, 30, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
+  box-shadow: 0 8px 25px rgba(247, 147, 30, 0.3);
 }
 
-.submit-button:hover:not(:disabled) {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(247, 147, 30, 0.4);
+.email-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(247, 147, 30, 0.5);
 }
 
-.submit-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.submit-button svg {
+.email-button svg {
   transition: transform 0.3s ease;
 }
 
-.submit-button:hover:not(:disabled) svg {
-  transform: translateX(3px);
-}
-
-.success-message {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 1rem 1.5rem;
-  background: #10b981;
-  color: white;
-  border-radius: 12px;
-  font-weight: 600;
-  margin-top: 1rem;
-}
-
-.success-message.error {
-  background: #ef4444;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
+.email-button:hover svg {
+  transform: scale(1.1);
 }
 
 /* All Sponsors Section */
@@ -693,8 +497,8 @@ export default {
     grid-template-columns: 1fr;
   }
 
-  .form-container {
-    padding: 2rem;
+  .contact-container {
+    padding: 3rem 2rem;
   }
 
   .sponsors-grid {
@@ -722,8 +526,13 @@ export default {
     font-size: 2.2rem;
   }
 
-  .form-container {
-    padding: 1.5rem;
+  .contact-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .email-button {
+    font-size: 1rem;
+    padding: 1.2rem 2rem;
   }
 
   .sponsors-grid {
