@@ -278,6 +278,17 @@ export default {
 </template>
 
 <style scoped>
+/* Global Fix for Mobile Overflow */
+* {
+  box-sizing: border-box;
+}
+
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 /* Fullscreen Overlay */
 .fullscreen-overlay {
   position: fixed;
@@ -384,6 +395,7 @@ export default {
 .hero-section {
   position: relative;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -439,6 +451,7 @@ export default {
   text-align: center;
   color: white;
   padding: 2rem;
+  max-width: 100%;
 }
 
 .hero-title {
@@ -539,11 +552,15 @@ export default {
   background-position: center;
   background-attachment: fixed;
   padding: 6rem 2rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 /* News Section */
@@ -819,6 +836,10 @@ export default {
     font-size: 1.2rem;
   }
 
+  .hero-content {
+    padding: 1rem;
+  }
+
   .cta-playtomic {
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -826,6 +847,10 @@ export default {
 
   .main-content {
     padding: 4rem 1rem;
+  }
+
+  .container {
+    padding: 0;
   }
 
   .news-section h2,
