@@ -512,12 +512,13 @@ export default {
 .slide-content img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Cambiato da cover a contain */
+  background-color: #000; /* Aggiunto sfondo nero per le lettere nere */
   transition: transform 0.5s ease;
 }
 
 .slide-content:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02); /* Ridotto da 1.05 a 1.02 per zoom più leggero */
 }
 
 .slide-overlay {
