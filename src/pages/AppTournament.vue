@@ -51,6 +51,14 @@ export default {
       "/2-Open/FE977729.jpg",
       "/2-Open/FE977794.jpg",
     ];
+    const thirdOpen = [
+      "/3-Open/1.jpeg",
+      "/3-Open/2.jpeg",
+      "/3-Open/3.jpeg",
+      "/3-Open/4.jpeg",
+      "/3-Open/5.jpeg",
+      "/3-Open/6.jpeg",
+    ];
     const alleanzaImages = [
       "/FE972250.jpg",
       "/FE973166.jpg",
@@ -67,6 +75,7 @@ export default {
     return {
       primoOpen,
       secondOpen,
+      thirdOpen,
       alleanzaImages,
       modules: [Navigation, Pagination, Mousewheel, Keyboard, EffectCoverflow, Autoplay],
     };
@@ -105,7 +114,49 @@ export default {
             <p class="section-description">{{ $t("tournamentsDescription") }}</p>
           </div>
 
-          <!-- Tournament 1: 2° Open -->
+          <!-- Tournament 1: 3° Open -->
+          <div class="tournament-block" data-aos="fade-up" data-aos-delay="100">
+            <div class="tournament-header">
+              <div class="tournament-badge">🏆</div>
+              <div class="tournament-info">
+                <h3>{{ $t("tournament4Title") }}</h3>
+                <span class="tournament-date">{{ $t("tournament4Date") }}</span>
+                <span class="tournament-date tournament-description" v-html="$t('ptorneo')"></span>
+              </div>
+            </div>
+            
+            <swiper
+              :effect="'coverflow'"
+              :grabCursor="true"
+              :centeredSlides="true"
+              :slidesPerView="'auto'"
+              :coverflowEffect="{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }"
+              :navigation="true"
+              :pagination="{ clickable: true }"
+              :mousewheel="true"
+              :keyboard="true"
+              :autoplay="{ delay: 3000, disableOnInteraction: false }"
+              :modules="modules"
+              class="tournament-swiper"
+            >
+              <swiper-slide v-for="(image, index) in thirdOpen" :key="index">
+                <div class="slide-content">
+                  <img :src="image" :alt="`3° Open - Foto ${index + 1}`" />
+                  <div class="slide-overlay">
+                    <span class="slide-number">{{ index + 1 }} / {{ thirdOpen.length }}</span>
+                  </div>
+                </div>
+              </swiper-slide>
+            </swiper>
+          </div>
+
+          <!-- Tournament 2: 2° Open -->
           <div class="tournament-block" data-aos="fade-up" data-aos-delay="100">
             <div class="tournament-header">
               <div class="tournament-badge">🏆</div>
@@ -146,7 +197,7 @@ export default {
             </swiper>
           </div>
 
-          <!-- Tournament 2: Alleanza -->
+          <!-- Tournament 3: Alleanza -->
           <div class="tournament-block" data-aos="fade-up" data-aos-delay="100">
             <div class="tournament-header">
               <div class="tournament-badge">🎾</div>
@@ -187,7 +238,7 @@ export default {
             </swiper>
           </div>
 
-          <!-- Tournament 3: 1° Open -->
+          <!-- Tournament 4: 1° Open -->
           <div class="tournament-block" data-aos="fade-up" data-aos-delay="100">
             <div class="tournament-header">
               <div class="tournament-badge">⭐</div>
@@ -402,17 +453,35 @@ export default {
   flex-shrink: 0;
 }
 
+.tournament-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .tournament-info h3 {
   font-size: 1.8rem;
   color: #1a1a1a;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .tournament-date {
   color: #666;
   font-size: 1rem;
   font-weight: 500;
+  display: block;
+}
+
+.tournament-parag {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 0.3rem;
+  line-height: 1.5;
+  max-width: 600px;
 }
 
 /* Swiper Styles */
@@ -633,6 +702,10 @@ export default {
 
   .tournament-info h3 {
     font-size: 1.4rem;
+  }
+
+  .tournament-parag {
+    max-width: 100%;
   }
 
   .tournament-swiper .swiper-slide {
