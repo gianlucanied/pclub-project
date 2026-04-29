@@ -287,18 +287,14 @@ export default {
 }
 
 .sponsor-card-wrapper {
-  position: relative;
-  padding-bottom: 66.67%;
   overflow: hidden;
 }
 
 .sponsor-card-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
+
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+display: block;
   transition: transform 0.5s ease;
 }
 
