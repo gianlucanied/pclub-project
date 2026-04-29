@@ -147,7 +147,7 @@ export default {
             >
               <swiper-slide v-for="(image, index) in thirdOpen" :key="index">
                 <div class="slide-content">
-                  <img :src="image" :alt="`3° Open - Foto ${index + 1}`" />
+                  <img :src="image" :alt="`3° Open - Foto ${index + 1}`" loading="lazy" />
                   <div class="slide-overlay">
                     <span class="slide-number">{{ index + 1 }} / {{ thirdOpen.length }}</span>
                   </div>
@@ -188,7 +188,7 @@ export default {
             >
               <swiper-slide v-for="(image, index) in secondOpen" :key="index">
                 <div class="slide-content">
-                  <img :src="image" :alt="`2° Open - Foto ${index + 1}`" />
+                  <img :src="image" :alt="`2° Open - Foto ${index + 1}`" loading="lazy" />
                   <div class="slide-overlay">
                     <span class="slide-number">{{ index + 1 }} / {{ secondOpen.length }}</span>
                   </div>
@@ -229,7 +229,7 @@ export default {
             >
               <swiper-slide v-for="(image, index) in alleanzaImages" :key="index">
                 <div class="slide-content">
-                  <img :src="image" :alt="`Alleanza - Foto ${index + 1}`" />
+                  <img :src="image" :alt="`Alleanza - Foto ${index + 1}`" loading="lazy" />
                   <div class="slide-overlay">
                     <span class="slide-number">{{ index + 1 }} / {{ alleanzaImages.length }}</span>
                   </div>
@@ -270,7 +270,7 @@ export default {
             >
               <swiper-slide v-for="(image, index) in primoOpen" :key="index">
                 <div class="slide-content">
-                  <img :src="image" :alt="`1° Open - Foto ${index + 1}`" />
+                  <img :src="image" :alt="`1° Open - Foto ${index + 1}`" loading="lazy" />
                   <div class="slide-overlay">
                     <span class="slide-number">{{ index + 1 }} / {{ primoOpen.length }}</span>
                   </div>

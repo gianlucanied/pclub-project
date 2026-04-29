@@ -120,7 +120,7 @@ export default {
           <!-- Image Column -->
           <div class="contact-image" data-aos="fade-left" data-aos-delay="300">
             <div class="image-wrapper">
-              <img src="/public/FE972520.jpg" alt="Padel Club Alghero" />
+              <img src="/public/FE972520.jpg" alt="Padel Club Alghero" loading="lazy" />
               <div class="image-overlay">
                 <div class="overlay-content">
                   <i class="fa-solid fa-location-dot"></i>
