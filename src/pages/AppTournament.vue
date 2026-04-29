@@ -305,7 +305,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%);
   z-index: 1;
 }
 
@@ -367,11 +367,7 @@ export default {
 
 /* Main Content */
 .main-content {
-  background-image: url("/public/Animated-Shape10.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #faf9f7;
   padding: 6rem 2rem;
   min-height: 100vh;
 }
@@ -402,9 +398,9 @@ export default {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
   border-radius: 2px;
 }
 
@@ -416,19 +412,18 @@ export default {
 
 /* Tournament Block */
 .tournament-block {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 30px;
+  background: #fff;
+  border-radius: 16px;
   padding: 3rem;
-  margin-bottom: 5rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 4rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0ebe3;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .tournament-block:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .tournament-header {
@@ -441,16 +436,16 @@ export default {
 }
 
 .tournament-badge {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #fdf4e7;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  font-size: 1.6rem;
   flex-shrink: 0;
+  border: 1px solid #f0ebe3;
 }
 
 .tournament-info {
@@ -546,20 +541,20 @@ export default {
 /* Swiper Navigation */
 :deep(.swiper-button-next),
 :deep(.swiper-button-prev) {
-  color: #ff6b35;
-  background: rgba(255, 255, 255, 0.9);
-  width: 50px;
-  height: 50px;
+  color: #f7931e;
+  background: rgba(255, 255, 255, 0.95);
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
 }
 
 :deep(.swiper-button-next):hover,
 :deep(.swiper-button-prev):hover {
-  background: #ff6b35;
+  background: #f7931e;
   color: white;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 :deep(.swiper-button-next::after),
@@ -578,9 +573,9 @@ export default {
 
 :deep(.swiper-pagination-bullet-active) {
   opacity: 1;
-  width: 30px;
+  width: 28px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  background: #f7931e;
 }
 
 /* CTA Section */

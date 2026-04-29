@@ -151,7 +151,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(16, 30, 57, 0.8) 0%, rgba(16, 30, 57, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%);
   z-index: 1;
 }
 
@@ -229,10 +229,7 @@ export default {
 
 /* Main Content */
 .main-content {
-  background-image: url("/public/Animated-Shape-2.svg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #faf9f7;
   padding: 6rem 2rem;
 }
 
@@ -264,9 +261,9 @@ export default {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
   border-radius: 2px;
 }
 
@@ -314,7 +311,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(16, 30, 57, 0.9), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
   padding: 2rem;
   transform: translateY(100%);
   transition: transform 0.4s ease;
@@ -326,12 +323,14 @@ export default {
 
 .sponsor-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #f7931e, #ff6b35);
+  background: #f7931e;
   color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Contact Section */
@@ -344,9 +343,9 @@ export default {
   margin: 0 auto;
   background: white;
   padding: 4rem 3rem;
-  border-radius: 30px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-  border: 2px solid rgba(247, 147, 30, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0ebe3;
   text-align: center;
 }
 
@@ -355,11 +354,11 @@ export default {
 }
 
 .contact-icon {
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 72px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, rgba(247, 147, 30, 0.1), rgba(255, 107, 53, 0.1));
-  border-radius: 50%;
+  background: #fdf4e7;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,21 +383,22 @@ export default {
 .email-button {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.5rem 3rem;
-  background: linear-gradient(135deg, #f7931e, #ff6b35);
+  gap: 0.75rem;
+  padding: 1.1rem 2.5rem;
+  background: #f7931e;
   color: white;
   text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.2rem;
+  border-radius: 10px;
+  font-size: 1rem;
   font-weight: 700;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 25px rgba(247, 147, 30, 0.3);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(247, 147, 30, 0.3);
 }
 
 .email-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(247, 147, 30, 0.5);
+  background: #e07c0a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(247, 147, 30, 0.4);
 }
 
 .email-button svg {
@@ -432,9 +432,9 @@ export default {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
   border-radius: 2px;
 }
 
@@ -449,11 +449,12 @@ export default {
 .sponsors-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3rem;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4rem 3rem;
-  border-radius: 24px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0ebe3;
 }
 
 .sponsor-item {
@@ -461,16 +462,17 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  background: white;
-  border-radius: 16px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid transparent;
+  background: #faf9f7;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid #f0ebe3;
 }
 
 .sponsor-item:hover {
-  transform: scale(1.15);
-  box-shadow: 0 15px 40px rgba(247, 147, 30, 0.2);
+  transform: scale(1.08);
+  box-shadow: 0 6px 25px rgba(247, 147, 30, 0.15);
   border-color: #f7931e;
+  background: white;
   z-index: 10;
 }
 

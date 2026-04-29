@@ -201,7 +201,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(16, 30, 57, 0.8) 0%, rgba(16, 30, 57, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%);
   z-index: 1;
 }
 
@@ -281,10 +281,7 @@ export default {
 
 /* Main Content */
 .main-content {
-  background-image: url("/public/Animated-Shape10.svg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #faf9f7;
   padding: 6rem 2rem;
 }
 
@@ -328,26 +325,24 @@ export default {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
   border-radius: 2px;
 }
 
 .content-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: #fff;
   padding: 3rem;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(247, 147, 30, 0.2);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0ebe3;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .content-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
-  border-color: #f7931e;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
 }
 
 .content-text {
@@ -389,9 +384,9 @@ export default {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
   border-radius: 2px;
 }
 
@@ -404,11 +399,11 @@ export default {
 .feature-card {
   background: white;
   padding: 2.5rem 2rem;
-  border-radius: 20px;
+  border-radius: 14px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border: 2px solid transparent;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0ebe3;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -419,10 +414,10 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  height: 3px;
+  background: #f7931e;
   transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .feature-card:hover::before {
@@ -430,36 +425,35 @@ export default {
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(247, 147, 30, 0.2);
-  border-color: #f7931e;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, rgba(247, 147, 30, 0.1), rgba(255, 107, 53, 0.1));
-  border-radius: 50%;
+  background: #fdf4e7;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .feature-icon svg {
   color: #f7931e;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .feature-card:hover .feature-icon {
-  background: linear-gradient(135deg, #f7931e, #ff6b35);
-  transform: scale(1.1);
+  background: #f7931e;
+  transform: scale(1.05);
 }
 
 .feature-card:hover .feature-icon svg {
   color: white;
-  transform: rotate(10deg);
+  transform: rotate(8deg);
 }
 
 .feature-card h3 {
@@ -477,31 +471,14 @@ export default {
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #f7931e, #ff6b35);
-  border-radius: 30px;
+  background: #111;
+  border-radius: 20px;
   padding: 5rem 3rem;
   text-align: center;
   margin-top: 6rem;
-  box-shadow: 0 25px 80px rgba(247, 147, 30, 0.3);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
-}
-
-.cta-section::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: movePattern 20s linear infinite;
-}
-
-@keyframes movePattern {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
 }
 
 .cta-content {
@@ -514,6 +491,7 @@ export default {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .cta-section h2::after {
@@ -534,8 +512,8 @@ export default {
 }
 
 .cta-button {
-  padding: 1.2rem 2.5rem;
-  border-radius: 50px;
+  padding: 1rem 2.2rem;
+  border-radius: 10px;
   font-weight: 700;
   font-size: 1.1rem;
   text-decoration: none;
@@ -547,26 +525,27 @@ export default {
 }
 
 .cta-button.primary {
-  background: white;
-  color: #f7931e;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #f7931e;
+  color: white;
+  box-shadow: 0 4px 20px rgba(247, 147, 30, 0.4);
 }
 
 .cta-button.primary:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  background: #e07c0a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(247, 147, 30, 0.5);
 }
 
 .cta-button.secondary {
   background: transparent;
   color: white;
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .cta-button.secondary:hover {
-  background: white;
-  color: #f7931e;
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-2px);
 }
 
 .cta-button svg {
