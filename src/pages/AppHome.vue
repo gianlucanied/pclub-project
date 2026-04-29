@@ -354,8 +354,8 @@ export default {
 }
 
 .close-btn:hover {
-  background: #ff6b35;
-  border-color: #ff6b35;
+  background: #f7931e;
+  border-color: #f7931e;
   transform: rotate(90deg);
 }
 
@@ -388,7 +388,7 @@ export default {
 .nav-btn:hover {
   background: #f7931e;
   border-color: #f7931e;
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.05);
 }
 
 /* Hero Section */
@@ -441,7 +441,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.55) 100%);
   z-index: 1;
 }
 
@@ -458,12 +458,9 @@ export default {
   font-size: 5rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
   letter-spacing: -2px;
-  background: linear-gradient(135deg, #fff, #f7931e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
 }
 
 .hero-subtitle {
@@ -474,24 +471,25 @@ export default {
 }
 
 .cta-playtomic {
-  padding: 1.2rem 3rem;
-  background: linear-gradient(135deg, #f7931e, #ff6b35);
+  padding: 1.1rem 2.5rem;
+  background: #f7931e;
   color: white;
   border: none;
-  border-radius: 50px;
-  font-size: 1.2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 40px rgba(247, 147, 30, 0.4);
+  gap: 0.75rem;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(247, 147, 30, 0.35);
 }
 
 .cta-playtomic:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 50px rgba(247, 147, 30, 0.6);
+  background: #e07c0a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(247, 147, 30, 0.45);
 }
 
 .scroll-indicator {
@@ -547,10 +545,7 @@ export default {
 
 /* Main Content */
 .main-content {
-  background-image: url("/public/Animated-Shape-2.svg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #faf9f7;
   padding: 6rem 2rem;
   width: 100%;
   overflow-x: hidden;
@@ -572,14 +567,15 @@ export default {
 
 .news-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: #f7931e;
   color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
+  padding: 0.4rem 1.2rem;
+  border-radius: 6px;
   font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .news-section h2 {
@@ -631,12 +627,12 @@ export default {
 
 /* About Section */
 .about-section {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: #fff;
   padding: 4rem 3rem;
-  border-radius: 24px;
+  border-radius: 16px;
   margin-bottom: 6rem;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0ebe3;
 }
 
 .about-content {
@@ -703,9 +699,9 @@ export default {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
   border-radius: 2px;
 }
 
@@ -785,12 +781,12 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.9), rgba(247, 147, 30, 0.9));
+  background: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-overlay svg {

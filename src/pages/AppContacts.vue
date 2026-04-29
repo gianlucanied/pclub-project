@@ -166,7 +166,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(16, 30, 57, 0.8) 0%, rgba(16, 30, 57, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.6) 100%);
   z-index: 1;
 }
 
@@ -244,10 +244,7 @@ export default {
 
 /* Main Content */
 .main-content {
-  background-image: url("/public/Animated-Shape1.svg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #faf9f7;
   padding: 6rem 2rem;
 }
 
@@ -267,21 +264,23 @@ export default {
 .contact-info {
   background: white;
   padding: 3rem;
-  border-radius: 30px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0ebe3;
 }
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #101e39;
+  color: #111;
   margin-bottom: 1rem;
   font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .header-divider {
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #f7931e, #ff6b35);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
   border-radius: 2px;
   margin-bottom: 2rem;
 }
@@ -305,20 +304,20 @@ export default {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(247, 147, 30, 0.05), rgba(255, 107, 53, 0.05));
-  border-radius: 20px;
-  border: 2px solid transparent;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.25rem;
+  background: #faf9f7;
+  border-radius: 12px;
+  border: 1px solid #f0ebe3;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   text-decoration: none;
   color: inherit;
 }
 
 .contact-card:hover {
-  transform: translateX(10px);
+  transform: translateX(5px);
   border-color: #f7931e;
   background: white;
-  box-shadow: 0 10px 40px rgba(247, 147, 30, 0.2);
+  box-shadow: 0 4px 20px rgba(247, 147, 30, 0.12);
 }
 
 .card-icon {
@@ -333,7 +332,7 @@ export default {
 }
 
 .card-icon.email {
-  background: linear-gradient(135deg, #f7931e, #ff6b35);
+  background: #f7931e;
   color: white;
 }
 
@@ -354,10 +353,12 @@ export default {
 }
 
 .card-content h4 {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #101e39;
+  color: #111;
   margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .card-content p {
@@ -456,9 +457,9 @@ export default {
 
 .image-wrapper {
   position: relative;
-  border-radius: 30px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
 }
 
 .image-wrapper img {
@@ -478,7 +479,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(16, 30, 57, 0.95), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
   padding: 2rem;
   transform: translateY(100%);
   transition: transform 0.4s ease;

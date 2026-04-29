@@ -137,7 +137,7 @@ export default {
 
 <style scoped>
 .app-footer {
-  background: linear-gradient(135deg, #101e39 0%, #1a2d50 100%);
+  background: #111;
   color: white;
   position: relative;
   overflow: hidden;
@@ -216,12 +216,14 @@ export default {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #f7931e;
+  color: white;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(247, 147, 30, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 .footer-column h3 svg {
@@ -289,13 +291,13 @@ export default {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  padding: 0.9rem 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
   color: white;
   text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -346,7 +348,7 @@ export default {
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(247, 147, 30, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
 }
 
