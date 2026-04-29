@@ -205,7 +205,7 @@ export default {
           <p class="news-text">{{ $t("pNews") }}</p>
           
           <div class="news-image-container" data-aos="zoom-in" data-aos-delay="200">
-            <img src="/copertura.jpg" alt="News" class="news-image" />
+            <img src="/copertura.jpg" alt="News" class="news-image" loading="lazy" />
             <div class="image-shine"></div>
           </div>
         </section>
@@ -219,7 +219,7 @@ export default {
         <section class="price-section" data-aos="fade-up">
           <h2>{{ $t("priceListTitle") }}</h2>
           <div class="price-card">
-            <img src="/nuova-locandina.jpg" alt="Listino Prezzi" class="price-image" />
+            <img src="/nuova-locandina.jpg" alt="Listino Prezzi" class="price-image" loading="lazy" />
           </div>
         </section>
 
@@ -240,7 +240,7 @@ export default {
             class="mobile-swiper"
           >
             <swiper-slide v-for="(image, index) in homepageImages" :key="index">
-              <img :src="image" :alt="`Gallery ${index + 1}`" />
+              <img :src="image" :alt="`Gallery ${index + 1}`" loading="lazy" />
             </swiper-slide>
           </swiper>
 
@@ -259,7 +259,7 @@ export default {
               :data-aos-delay="index * 50"
             >
               <div class="gallery-item-wrapper">
-                <img :src="image" :alt="`Gallery ${index + 1}`" />
+                <img :src="image" :alt="`Gallery ${index + 1}`" loading="lazy" />
                 <div class="gallery-overlay">
                   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="11" cy="11" r="8"></circle>
