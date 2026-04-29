@@ -198,17 +198,6 @@ export default {
     <!-- Main Content -->
     <div class="main-content">
       <div class="container">
-        <!-- News Section -->
-        <section class="news-section" data-aos="fade-up">
-          <div class="news-badge">{{ $t("newsBadge") }}</div>
-          <h2>{{ $t("news") }}</h2>
-          <p class="news-text">{{ $t("pNews") }}</p>
-          
-          <div class="news-image-container" data-aos="zoom-in" data-aos-delay="200">
-            <img src="/copertura.jpg" alt="News" class="news-image" loading="lazy" />
-            <div class="image-shine"></div>
-          </div>
-        </section>
 
         <!-- About Section -->
         <section class="about-section" data-aos="fade-up">
