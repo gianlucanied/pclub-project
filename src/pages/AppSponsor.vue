@@ -28,6 +28,50 @@ export default {
     <!-- Main Content -->
     <div class="main-content">
       <div class="container">
+        <!-- Teams Section -->
+<!-- Teams Section -->
+<section class="teams-section" data-aos="fade-up">
+  <h2>{{ $t("teamsTitle") }}</h2>
+  <p class="section-subtitle">{{ $t("teamsSubtitle") }}</p>
+
+  <swiper
+    :modules="modules"
+    :slides-per-view="1"
+    :space-between="24"
+    :pagination="{ clickable: true }"
+    :autoplay="{ delay: 3500, disableOnInteraction: false }"
+    :breakpoints="{
+      768: { slidesPerView: 2 },
+      1200: { slidesPerView: 3 }
+    }"
+    class="teams-swiper"
+  >
+    <swiper-slide>
+  <div class="team-card">
+    <img src="/squadra2.jpeg" alt="Squadra 1" loading="lazy" />
+  </div>
+</swiper-slide>
+
+<swiper-slide>
+  <div class="team-card">
+    <img src="/squadra1.jpeg" alt="Squadra 2" loading="lazy" />
+  </div>
+</swiper-slide>
+
+<swiper-slide>
+  <div class="team-card">
+    <img src="/squadra3.jpeg" alt="Squadra 3" loading="lazy" />
+  </div>
+</swiper-slide>
+
+<swiper-slide>
+  <div class="team-card">
+    <img src="/squadra4.jpeg" alt="Squadra 4" loading="lazy" />
+  </div>
+</swiper-slide>
+
+  </swiper>
+</section>
         <!-- Main Sponsors Section -->
         <section class="main-sponsors-section" data-aos="fade-up">
           <h2>{{ $t("hSponsor") }}</h2>
@@ -403,6 +447,80 @@ display: block;
 
 .email-button:hover svg {
   transform: scale(1.1);
+}
+
+/* Teams Section */
+.teams-section {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.teams-section h2 {
+  font-size: 3rem;
+  color: #101e39;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+}
+
+.teams-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #f7931e;
+  border-radius: 2px;
+}
+
+.teams-swiper {
+  width: 100%;
+  margin-top: 3rem;
+  padding-bottom: 3.5rem !important;
+}
+
+.teams-swiper :deep(.swiper-pagination-bullet) {
+  background: #101e39;
+  opacity: 0.3;
+}
+
+.teams-swiper :deep(.swiper-pagination-bullet-active) {
+  background: #f7931e;
+  opacity: 1;
+}
+
+.team-card {
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .teams-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .team-card img {
+    height: 320px;
+  }
 }
 
 /* All Sponsors Section */

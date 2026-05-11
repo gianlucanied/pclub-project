@@ -204,6 +204,45 @@ export default {
           <div class="about-content" v-html="$t('pHome')"></div>
         </section>
 
+        <!-- Coaches Section -->
+<section class="coaches-section" data-aos="fade-up">
+  <div class="section-header">
+    <h2>{{ $t("coachesTitle") }}</h2>
+    <p class="section-subtitle">{{ $t("coachesSubtitle") }}</p>
+  </div>
+
+  <div class="coaches-grid">
+    <div class="coach-card" data-aos="fade-up" data-aos-delay="300">
+  <div class="coach-image-wrapper">
+    <img src="/maestro21.jpg" alt="Roberto Bassu" class="coach-image" />
+  </div>
+  <div class="coach-info">
+    <h3>Roberto Bassu</h3>
+    <span class="coach-badge">{{ $t("coachLevelNational") }}</span>
+  </div>
+</div>
+    <div class="coach-card" data-aos="fade-right" data-aos-delay="100">
+      <div class="coach-image-wrapper">
+        <img src="/giulia2.jpg" alt="Giulia Pisano" class="coach-image" />
+      </div>
+      <div class="coach-info">
+        <h3>Giulia Pisano</h3>
+        <span class="coach-badge">{{ $t("coachLevel1") }}</span>
+      </div>
+    </div>
+
+    <div class="coach-card" data-aos="fade-left" data-aos-delay="200">
+      <div class="coach-image-wrapper">
+        <img src="/gennaro1.jpeg" alt="Gennaro Marrazzo" class="coach-image" />
+      </div>
+      <div class="coach-info">
+        <h3>Gennaro Marrazzo</h3>
+        <span class="coach-badge">{{ $t("coachLevel") }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
         <!-- Price List -->
         <section class="price-section" data-aos="fade-up">
           <h2>{{ $t("priceListTitle") }}</h2>
@@ -220,14 +259,15 @@ export default {
           </div>
 
           <!-- Mobile Swiper -->
-          <swiper
-            v-if="isSmallScreen"
-            :effect="'cards'"
-            :grabCursor="true"
-            :modules="modules"
-            :autoplay="{ delay: 3000, disableOnInteraction: false }"
-            class="mobile-swiper"
-          >
+<swiper
+  v-if="isSmallScreen"
+  :effect="'cards'"
+  :grabCursor="true"
+  :modules="modules"
+  :autoplay="{ delay: 3000, disableOnInteraction: false }"
+  :touchStartPreventDefault="false"
+  class="mobile-swiper"
+>
             <swiper-slide v-for="(image, index) in homepageImages" :key="index">
               <img :src="image" :alt="`Gallery ${index + 1}`" loading="lazy" />
             </swiper-slide>
@@ -341,7 +381,95 @@ export default {
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
+/* Coaches Section */
+.coaches-section {
+  margin-bottom: 6rem;
+}
 
+.coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* era repeat(2, 1fr) */
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.coach-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0ebe3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coach-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.13);
+}
+
+.coach-image-wrapper {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+.coach-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .coach-image-wrapper {
+    height: 500px; /* era 280px */
+  }
+}
+
+.coach-card:hover .coach-image {
+  transform: scale(1.05);
+}
+
+.coach-info {
+  padding: 2rem;
+  text-align: center;
+}
+
+.coach-info h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.coach-badge {
+  display: inline-block;
+  background: #f7931e;
+  color: white;
+  padding: 0.35rem 1.1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.coach-info p {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .coaches-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .coach-image-wrapper {
+    height: 280px;
+  }
+}
 .close-btn:hover {
   background: #f7931e;
   border-color: #f7931e;
@@ -644,7 +772,6 @@ export default {
 }
 
 .price-card {
-  max-width: 1000px;
   margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;

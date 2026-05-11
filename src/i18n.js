@@ -51,7 +51,10 @@ const messages = {
     tournament4Title: "3° Torneo Open Riviera del corallo by Key Estate",
     tournament4Date: "2025 Edition",
     ptorneo: `5 September 2025 Padel: the triumph of the Open Riviera del Corallo in Alghero — a record-breaking edition. <br /> The event, organized by Padel Club Alghero in collaboration with the Autonomous Region of Sardinia and sponsored by “Key Estate,” exceeded all expectations, establishing itself as one of the most followed sporting events of the island’s summer. <br /> The third edition of the Open Riviera del Corallo, Sardinia’s premier padel event, has come to a close with a resounding success. <br />  Organized by Padel Club Alghero and sponsored by “Key Estate,” the tournament surpassed every expectation, confirming its status as one of the most popular sporting events of the Sardinian summer. From August 27 to 31, the Alghero club was transformed into a vibrant arena of passion and competition. <br />  The 2025 edition marked a true record, with over 200 registered athletes, including many international players—clear evidence of the tournament’s growing global appeal. A large and enthusiastic crowd attended, witnessing matches of an exceptionally high technical and competitive level, never before seen in Sardinia. <br />  With a total prize pool of €6,000, the tournament attracted world-class champions, including several players ranked within the top 150 of the international rankings. The nine competition categories allowed padel players of all ages and experience levels to take to the court, fostering an inclusive atmosphere marked by great sportsmanship. <br /> The success is largely due to ASD Ball Don’t Lie, the local association that, through vision and impeccable organization, transformed the event into one of the most important fixtures on the Sardinian sports calendar. Alghero, with its stunning setting, once again proved to be the perfect location, combining sport, tourism, and territorial promotion in a winning formula. <br /> With this record-breaking edition now behind it, the Open Riviera del Corallo is already looking ahead, aiming to consolidate its position and become one of the most prestigious and eagerly awaited tournaments at the national level.`,
-
+"teamsTitle": "Our Teams",
+"teamsSubtitle": "Competing with passion at every level",
+"teamMale": "Men's",
+"teamFemale": "Women's",
     
     // About Page
     aboutSubtitle: "Our story, our passion",
@@ -68,12 +71,23 @@ const messages = {
         Our club is the ideal place to make new friends, participate in local tournaments, and enjoy a relaxed and fun atmosphere. </span><br /><br />
 
         <span><b>Quality Instruction:</b> 
-        Our padel coaches, Roberto Bassu, National Coach, and Luca Caminiti, Second-Level Instructor, are true experts in the field. Their dedication and passion for padel shine through in every lesson, helping players of all ages and skill levels improve their abilities. </span> <br /><br /> 
-
-        <span><b>Activities and Tournaments:</b> 
+Our padel coaches, Roberto Bassu, 3rd Level Padel Coach, Giulia Pisano, 1st Level Padel Coach and Gennaro Marrazzo, 1st Level Padel Coach are a true excellence in the field. Their dedication and passion for padel are reflected in every lesson, helping players of all ages and levels improve their skills. </span> <br /><br />        <span><b>Activities and Tournaments:</b> 
         We offer a wide range of activities, from private and group lessons to competitive tournaments. 
         Participating in our events is a great way to test your skills and have fun with other enthusiasts. </span>
     `,
+
+    "teamsTitle": "Our Teams",
+"serieC": "Serie C Team",
+"serieD": "Serie D",
+"teamMale": "Men's",
+"teamFemale": "Women's",
+    "coachesTitle": "Our Coaches",
+"coachesSubtitle": "Certified professionals at your service",
+"coachLevel": "1st Level Padel Coach",
+"coachLevel1": "1st Level Padel Coach",
+
+"coachGiuliaDesc": "Giulia brings enthusiasm and technical precision to every lesson, guiding players with care and dedication.",
+"coachGennaroDesc": "Gennaro supports players with experience and passion, helping them grow step by step in the world of padel.",
     
     // About Page - Features
     featuresTitle: "Our Strengths",
@@ -111,6 +125,7 @@ const messages = {
     address: "Where We Are",
     information: "Contact",
     social: "Follow Us",
+    "coachLevelNational": "3rd Level Padel Coach",
     contactsSubtitle: "We are here to answer all your questions",
     phone1Label: "Phone 1",
     phone2Label: "Phone 2",
@@ -161,7 +176,7 @@ const messages = {
     about2: "CHI SIAMO",
     contacts: "Contatti",
     contacts2: "CONTATTI",
-    sponsor1: "Sponsor",
+    sponsor1: "Sponsor e Squadre",
     
     // Home Page - Hero
     heroTitle: "Padel Club Alghero",
@@ -182,7 +197,24 @@ const messages = {
     // Home Page - Gallery Section
     gallery: "Galleria Fotografica",
     gallerySubtitle: "I momenti migliori del nostro club.",
-    
+
+    "coachLevelNational": "Maestro Nazionale",
+    "coachesTitle": "I Nostri Istruttori",
+"coachesSubtitle": "Professionisti certificati al tuo servizio",
+"coachLevel1": "Istruttrice di 1° Livello",
+"coachLevel": "Istruttore di 1° Livello",
+"coachGiuliaDesc": "Giulia porta entusiasmo e precisione tecnica in ogni lezione, seguendo i giocatori con attenzione e dedizione.",
+"coachGennaroDesc": "Gennaro affianca i giocatori con esperienza e passione, aiutandoli a crescere passo dopo passo nel mondo del padel.",
+    "teamsTitle": "Le Nostre Squadre",
+
+    "teamsTitle": "Le Nostre Squadre",
+"teamsSubtitle": "Competiamo con passione a ogni livello",
+"teamMale": "Maschile",
+"teamFemale": "Femminile",
+"serieC": "Squadra Serie C",
+"serieD": "Serie D",
+"teamMale": "Maschile",
+"teamFemale": "Femminile",
     // Tournaments Page
     nextTournaments: "Prossimi Tornei:",
     descriptionTournaments: "",
@@ -214,9 +246,7 @@ const messages = {
         Il nostro circolo è il luogo ideale per fare nuove amicizie, partecipare a tornei locali e goderti l'atmosfera rilassata e divertente. </span><br /><br />
 
         <span><b>Insegnamento di qualità:</b> 
-        I nostri maestri di padel, Roberto Bassu, Maestro Nazionale e Luca Caminiti, Istruttore di Secondo Livello sono una vera eccellenza nel campo. 
-        La loro dedizione e passione per il padel si riflettono in ogni lezione, aiutando i giocatori di tutte le età e livelli a migliorare le proprie abilità. </span> <br /><br /> 
-
+I nostri maestri di padel, Roberto Bassu, Maestro Nazionale, Giulia Pisano, Istruttrice di 1° Livello e Gennaro Marrazzo, Istruttore di 1° Livello sono una vera eccellenza nel campo. La loro dedizione e passione per il padel si riflettono in ogni lezione, aiutando i giocatori di tutte le età e livelli a migliorare le proprie abilità. </span> <br /><br />
         <span><b>Attività e tornei:</b> 
         Offriamo una vasta gamma di attività, dalle lezioni private e di gruppo ai tornei competitivi. 
         Partecipare ai nostri eventi è un ottimo modo per mettere alla prova le tue capacità e divertirti con altri appassionati. </span>
