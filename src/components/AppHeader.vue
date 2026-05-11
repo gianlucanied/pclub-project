@@ -70,7 +70,7 @@ export default {
       <div class="nav-container">
         <!-- Logo -->
         <router-link :to="{ name: 'home' }" class="logo" @click="closeMobileMenu">
-          <img src="/public/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg" alt="Padel Club Alghero" />
+          <img src="/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg" alt="Padel Club Alghero" />
           <span class="logo-text">
             Padel Club
             <small>Alghero</small>
@@ -115,7 +115,7 @@ export default {
       <div class="mobile-menu" v-if="mobileMenuOpen" @click.self="closeMobileMenu">
         <div class="mobile-menu-content">
           <div class="mobile-menu-header">
-            <img src="/public/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg" alt="Logo" />
+            <img src="/6c6bb5ba-64b6-44b2-bae6-aff2efa521de.jpeg" alt="Logo" />
             <button @click="closeMobileMenu" class="close-mobile-menu" aria-label="Chiudi menu">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="18" y1="6" x2="6" y2="18"></line>

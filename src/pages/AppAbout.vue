@@ -9,7 +9,7 @@ export default {
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-slideshow">
-        <img src="/public/FE973089.jpg" alt="Padel Club Alghero" class="hero-image" />
+        <img src="/FE973089.jpg" alt="Padel Club Alghero" class="hero-image" />
       </div>
       
       <div class="hero-overlay"></div>

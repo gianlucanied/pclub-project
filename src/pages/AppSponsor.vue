@@ -9,7 +9,7 @@ export default {
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-image-wrapper">
-        <img src="/public/sponsor-2/jumbo-sponsor.jpg" alt="Sponsor" class="hero-image" />
+        <img src="/sponsor-2/jumbo-sponsor.jpg" alt="Sponsor" class="hero-image" />
       </div>
       
       <div class="hero-overlay"></div>
@@ -79,7 +79,7 @@ export default {
           <div class="main-sponsors-grid">
             <div class="main-sponsor-card" data-aos="zoom-in" data-aos-delay="100">
               <div class="sponsor-card-wrapper">
-                <img src="/public/sponsor-2/sponsor-1.jpg" alt="Sponsor principale 1" loading="lazy" />
+                <img src="/sponsor-2/sponsor-1.jpg" alt="Sponsor principale 1" loading="lazy" />
                 <div class="sponsor-overlay">
                   <div class="sponsor-badge">{{ $t("mainPartnerBadge") }}</div>
                 </div>
@@ -88,7 +88,7 @@ export default {
             
             <div class="main-sponsor-card" data-aos="zoom-in" data-aos-delay="200">
               <div class="sponsor-card-wrapper">
-                <img src="/public/sponsor-2/sponsor-3.jpg" alt="Sponsor principale 2" loading="lazy" />
+                <img src="/sponsor-2/sponsor-3.jpg" alt="Sponsor principale 2" loading="lazy" />
                 <div class="sponsor-overlay">
                   <div class="sponsor-badge">{{ $t("mainPartnerBadge") }}</div>
                 </div>
@@ -128,34 +128,34 @@ export default {
           
           <div class="sponsors-grid">
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="50">
-              <img src="/public/sponsor/aragon-removebg-preview.png" alt="Aragon" loading="lazy" />
+              <img src="/sponsor/aragon-removebg-preview.png" alt="Aragon" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="100">
-              <img src="/public/sponsor/De-filippis-removebg-preview.png" alt="De Filippis" loading="lazy" />
+              <img src="/sponsor/De-filippis-removebg-preview.png" alt="De Filippis" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="150">
-              <img src="/public/sponsor/hotel-florida-removebg-preview.png" alt="Hotel Florida" loading="lazy" />
+              <img src="/sponsor/hotel-florida-removebg-preview.png" alt="Hotel Florida" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="200">
-              <img src="/public/sponsor/vibra-removebg-preview.png" alt="Vibra" loading="lazy" />
+              <img src="/sponsor/vibra-removebg-preview.png" alt="Vibra" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="250">
-              <img src="/public/sponsor/Rent_a_Car_express_Alghero-removebg-preview.png" alt="Rent a Car Express" loading="lazy" />
+              <img src="/sponsor/Rent_a_Car_express_Alghero-removebg-preview.png" alt="Rent a Car Express" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="300">
-              <img src="/public/sponsor/logudoro.png" alt="Logudoro" loading="lazy" />
+              <img src="/sponsor/logudoro.png" alt="Logudoro" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="350">
-              <img src="/public/sponsor/nautilus-Logo-02.png" alt="Nautilus" loading="lazy" />
+              <img src="/sponsor/nautilus-Logo-02.png" alt="Nautilus" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="400">
-              <img src="/public/sponsor/mp-finance-removebg-preview.png" alt="MP Finance" loading="lazy" />
+              <img src="/sponsor/mp-finance-removebg-preview.png" alt="MP Finance" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="450">
-              <img src="/public/sponsor/businco-removebg-preview.png" alt="Businco" loading="lazy" />
+              <img src="/sponsor/businco-removebg-preview.png" alt="Businco" loading="lazy" />
             </div>
             <div class="sponsor-item" data-aos="zoom-in" data-aos-delay="500">
-              <img src="/public/sponsor/trova-removebg-preview.png" alt="Trova" loading="lazy" />
+              <img src="/sponsor/trova-removebg-preview.png" alt="Trova" loading="lazy" />
             </div>
           </div>
         </section>

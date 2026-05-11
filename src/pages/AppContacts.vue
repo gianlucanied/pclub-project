@@ -9,7 +9,7 @@ export default {
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-image-wrapper">
-        <img src="/public/FE973051.jpg" alt="Contatti" class="hero-image" />
+        <img src="/FE973051.jpg" alt="Contatti" class="hero-image" />
       </div>
       
       <div class="hero-overlay"></div>
@@ -79,7 +79,7 @@ export default {
                 data-aos-delay="450"
               >
                 <div class="card-icon playtomic-icon">
-                  <img src="../../public/playtomic2.png" alt="Playtomic" />
+                  <img src="../../playtomic2.png" alt="Playtomic" />
                 </div>
                 <div class="card-content">
                   <h4>{{ $t("buttonPlaytomic") }}</h4>
@@ -120,7 +120,7 @@ export default {
           <!-- Image Column -->
           <div class="contact-image" data-aos="fade-left" data-aos-delay="300">
             <div class="image-wrapper">
-              <img src="/public/FE972520.jpg" alt="Padel Club Alghero" loading="lazy" />
+              <img src="/FE972520.jpg" alt="Padel Club Alghero" loading="lazy" />
               <div class="image-overlay">
                 <div class="overlay-content">
                   <i class="fa-solid fa-location-dot"></i>

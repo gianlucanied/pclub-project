@@ -5,7 +5,7 @@
       :class="{ active: $i18n.locale === 'en' }"
     >
       <img
-        src="/public/Flag_of_the_United_Kingdom_(3-5).svg.png"
+        src="/Flag_of_the_United_Kingdom_(3-5).svg.png"
         alt="UK Flag"
       />
     </button>
@@ -13,7 +13,7 @@
       @click="changeLanguage('it')"
       :class="{ active: $i18n.locale === 'it' }"
     >
-      <img src="/public/Flag_of_Italy.svg.webp" alt="Italy Flag" />
+      <img src="/Flag_of_Italy.svg.webp" alt="Italy Flag" />
     </button>
   </div>
 </template>

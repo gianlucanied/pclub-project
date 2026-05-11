@@ -12,7 +12,7 @@ export default {
         <!-- Logo Section -->
         <div class="footer-logo-section" data-aos="fade-up">
           <img
-            src="/public/db548ce9-9c0d-4174-8d4d-0e5146bffbe0-removebg-preview.png"
+            src="/db548ce9-9c0d-4174-8d4d-0e5146bffbe0-removebg-preview.png"
             alt="Padel Club Alghero"
             class="footer-logo"
           />
