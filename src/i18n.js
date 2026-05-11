@@ -22,9 +22,9 @@ const messages = {
     buttonPlaytomic: "Book on Playtomic",
     
     // Home Page - News Section
-    newsBadge: "🆕 News",
-    news: "Latest News",
-    pNews: "We are happy to announce that we have installed a cover for one of our courts! This new feature allows us to offer an even more comfortable playing experience in all weather conditions. We look forward to having you try it out!",
+"newsBadge": "News",
+"newsTitle": "May Tournament",
+"newsText": "Don't miss our upcoming tournament! Sign up and experience the thrill of competitive padel.",
     
     // Home Page - About Section
     pHome: "<b>Welcome to Padel Club Alghero:</b> located in a prime position in Alghero, along Viale Europa and Via delle Baleari. <br/><br/> Surrounded by the stunning beauty of the Sardinian coast and overlooking the crystal-clear sea, it features 2 outdoor courts and 1 indoor court equipped with modern facilities for matches and tournaments. <br/><br/> After the game, unwind on the panoramic terrace or at the bar with drinks and snacks. Come and experience the thrill of playing padel in a breathtaking Sardinian setting for an unforgettable blend of sport, fun, and relaxation!",
@@ -183,10 +183,9 @@ Our padel coaches, Roberto Bassu, 3rd Level Padel Coach, Giulia Pisano, 1st Leve
     heroSubtitle: "Vivi la passione del padel nella Riviera del Corallo.",
     buttonPlaytomic: "Prenota su Playtomic",
     
-    // Home Page - News Section
-    newsBadge: "🆕 Novità",
-    news: "Ultime Novità",
-    pNews: "Siamo felici di annunciare che abbiamo installato una copertura per uno dei nostri campi! Questa novità ci permette di offrire un'esperienza di gioco ancora più confortevole in ogni condizione atmosferica. Vi aspettiamo per provarla!",
+  "newsBadge": "Novità",
+"newsTitle": "Torneo di Maggio",
+"newsText": "Non perdere il nostro prossimo torneo! Iscriviti e vivi l'emozione del padel competitivo.",
     
     // Home Page - About Section
     pHome: "<b>Benvenuti al Padel Club Alghero:</b> situato in una posizione privilegiata ad Alghero, lungo Viale Europa e Via delle Baleari. <br/><br/> Immerso nella bellezza della costa sarda e affacciato sul mare cristallino, offre 2 campi all'aperto e 1 coperto con attrezzature moderne per sfide e tornei. <br/><br/> Dopo il gioco, rilassatevi sulla terrazza panoramica o al bar con bevande e spuntini. Venite a scoprire l'emozione di giocare a padel in un luogo incantevole della Sardegna per un'esperienza indimenticabile di sport, divertimento e relax!",

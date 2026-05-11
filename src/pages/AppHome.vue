@@ -92,10 +92,12 @@ export default {
           (currentImageIndex.value + 1) % jumbotronImages.length;
       }, 4000);
       
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
+AOS.init({
+  duration: 1000,
+  once: true,
+  startEvent: 'DOMContentLoaded',
+  offset: 50,
+});
       
       clickSound.value = new Audio("/tennis-ball-hit-151257.mp3");
       window.addEventListener("resize", handleResize);
@@ -203,6 +205,17 @@ export default {
         <section class="about-section" data-aos="fade-up">
           <div class="about-content" v-html="$t('pHome')"></div>
         </section>
+
+        <!-- News Section -->
+<section class="news-section" data-aos="fade-up">
+  <div class="news-badge">{{ $t("newsBadge") }}</div>
+  <h2>{{ $t("newsTitle") }}</h2>
+  <p class="news-text">{{ $t("newsText") }}</p>
+  <div class="news-image-container">
+    <img src="/torneo-maggio.jpeg" alt="Torneo Maggio" class="news-image" loading="lazy" />
+    <div class="image-shine"></div>
+  </div>
+</section>
 
         <!-- Coaches Section -->
 <section class="coaches-section" data-aos="fade-up">
@@ -744,18 +757,58 @@ export default {
 
 /* About Section */
 .about-section {
-  background: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, #fdf6ee 100%);
   padding: 4rem 3rem;
-  border-radius: 16px;
+  border-radius: 24px;
   margin-bottom: 6rem;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
   border: 1px solid #f0ebe3;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #f7931e, #e07c0a);
+  border-radius: 24px 0 0 24px;
+}
+
+.about-section::after {
+  content: '🎾';
+  position: absolute;
+  bottom: -20px;
+  right: 30px;
+  font-size: 8rem;
+  opacity: 0.04;
+  pointer-events: none;
+  transform: rotate(-15deg);
 }
 
 .about-content {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #333;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #444;
+  padding-left: 1rem;
+}
+
+.about-content strong {
+  color: #f7931e;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2.5rem 1.5rem 2.5rem 2rem;
+  }
+
+  .about-section::after {
+    font-size: 5rem;
+  }
 }
 
 /* Price Section */

@@ -3,6 +3,14 @@
   height: auto;
 }
 
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
 .swiper-slide {
   display: flex;
   align-items: center;
