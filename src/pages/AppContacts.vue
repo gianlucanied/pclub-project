@@ -79,7 +79,7 @@ export default {
                 data-aos-delay="450"
               >
                 <div class="card-icon playtomic-icon">
-                  <img src="../../playtomic2.png" alt="Playtomic" />
+                  <img src="/playtomic2.png" alt="Playtomic" />
                 </div>
                 <div class="card-content">
                   <h4>{{ $t("buttonPlaytomic") }}</h4>
