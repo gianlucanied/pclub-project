@@ -140,6 +140,11 @@ Our padel coaches, Roberto Bassu, 3rd Level Padel Coach, Giulia Pisano, 1st Leve
     madeWith: "Made with",
     by: "by",
     copyright: "© 2024 Padel Club Alghero. All rights reserved.",
+    legalInfo: "Legal Info",
+    companyName: "Registered Name & Address",
+    vatNumber: "VAT No.",
+    fiscalCode: "Fiscal Code",
+    pecEmail: "PEC",
     
     // Sponsor Page
     sponsor: "Our Sponsors:",
@@ -301,6 +306,11 @@ I nostri maestri di padel, Roberto Bassu, Maestro Nazionale, Giulia Pisano, Istr
     madeWith: "Realizzato con",
     by: "da",
     copyright: "© 2024 Padel Club Alghero. Tutti i diritti riservati.",
+    legalInfo: "Dati Societari",
+    companyName: "Ragione Sociale e Sede",
+    vatNumber: "P. IVA",
+    fiscalCode: "Codice Fiscale",
+    pecEmail: "PEC",
     
     // Sponsor Page
     sponsor: "I nostri Sponsor:",

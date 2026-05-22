@@ -248,6 +248,7 @@ export default {
   font-size: 0.9rem;
   border-radius: 7px;
   transition: color 0.2s ease, background 0.2s ease;
+  margin-right: 5px;
 }
 
 .nav-links li a:hover {
