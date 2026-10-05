@@ -71,7 +71,7 @@ const messages = {
         Our club is the ideal place to make new friends, participate in local tournaments, and enjoy a relaxed and fun atmosphere. </span><br /><br />
 
         <span><b>Quality Instruction:</b> 
-Our padel coaches, Roberto Bassu, 3rd Level Padel Coach, Giulia Pisano, 1st Level Padel Coach and Gennaro Marrazzo, 1st Level Padel Coach are a true excellence in the field. Their dedication and passion for padel are reflected in every lesson, helping players of all ages and levels improve their skills. </span> <br /><br />        <span><b>Activities and Tournaments:</b> 
+Our padel coaches, Roberto Bassu, National Coach, and Luca Caminiti, 2nd Level Coach are a true excellence in the field. Their dedication and passion for padel are reflected in every lesson, helping players of all ages and levels improve their skills. </span> <br /><br />        <span><b>Activities and Tournaments:</b> 
         We offer a wide range of activities, from private and group lessons to competitive tournaments. 
         Participating in our events is a great way to test your skills and have fun with other enthusiasts. </span>
     `,
@@ -250,7 +250,7 @@ Our padel coaches, Roberto Bassu, 3rd Level Padel Coach, Giulia Pisano, 1st Leve
         Il nostro circolo è il luogo ideale per fare nuove amicizie, partecipare a tornei locali e goderti l'atmosfera rilassata e divertente. </span><br /><br />
 
         <span><b>Insegnamento di qualità:</b> 
-I nostri maestri di padel, Roberto Bassu, Maestro Nazionale, Giulia Pisano, Istruttrice di 1° Livello e Gennaro Marrazzo, Istruttore di 1° Livello sono una vera eccellenza nel campo. La loro dedizione e passione per il padel si riflettono in ogni lezione, aiutando i giocatori di tutte le età e livelli a migliorare le proprie abilità. </span> <br /><br />
+I nostri maestri di padel, Roberto Bassu, Maestro Nazionale, e Luca Caminiti, Istruttore di 2° Livello sono una vera eccellenza nel campo. La loro dedizione e passione per il padel si riflettono in ogni lezione, aiutando i giocatori di tutte le età e livelli a migliorare le proprie abilità. </span> <br /><br />
         <span><b>Attività e tornei:</b> 
         Offriamo una vasta gamma di attività, dalle lezioni private e di gruppo ai tornei competitivi. 
         Partecipare ai nostri eventi è un ottimo modo per mettere alla prova le tue capacità e divertirti con altri appassionati. </span>

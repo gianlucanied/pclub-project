@@ -206,55 +206,13 @@ AOS.init({
           <div class="about-content" v-html="$t('pHome')"></div>
         </section>
 
-        <!-- News Section -->
-<section class="news-section" data-aos="fade-up">
-  <div class="news-badge">{{ $t("newsBadge") }}</div>
-  <h2>{{ $t("newsTitle") }}</h2>
-  <p class="news-text">{{ $t("newsText") }}</p>
-  <div class="news-image-container">
-    <img src="/torneo-maggio.jpeg" alt="Torneo Maggio" class="news-image" loading="lazy" />
-    <div class="image-shine"></div>
-  </div>
-</section>
-
-        <!-- Coaches Section -->
-<section class="coaches-section" data-aos="fade-up">
-  <div class="section-header">
-    <h2>{{ $t("coachesTitle") }}</h2>
-    <p class="section-subtitle">{{ $t("coachesSubtitle") }}</p>
-  </div>
-
-  <div class="coaches-grid">
-    <div class="coach-card" data-aos="fade-up" data-aos-delay="300">
-  <div class="coach-image-wrapper">
-    <img src="/maestro21.jpg" alt="Roberto Bassu" class="coach-image" />
-  </div>
-  <div class="coach-info">
-    <h3>Roberto Bassu</h3>
-    <span class="coach-badge">{{ $t("coachLevelNational") }}</span>
-  </div>
-</div>
-    <div class="coach-card" data-aos="fade-right" data-aos-delay="100">
-      <div class="coach-image-wrapper">
-        <img src="/giulia2.jpg" alt="Giulia Pisano" class="coach-image" />
-      </div>
-      <div class="coach-info">
-        <h3>Giulia Pisano</h3>
-        <span class="coach-badge">{{ $t("coachLevel1") }}</span>
-      </div>
-    </div>
-
-    <div class="coach-card" data-aos="fade-left" data-aos-delay="200">
-      <div class="coach-image-wrapper">
-        <img src="/gennaro1.jpeg" alt="Gennaro Marrazzo" class="coach-image" />
-      </div>
-      <div class="coach-info">
-        <h3>Gennaro Marrazzo</h3>
-        <span class="coach-badge">{{ $t("coachLevel") }}</span>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Maestri Image Section -->
+        <section class="maestri-image-section" data-aos="fade-up">
+          <div class="maestri-image-container">
+            <img src="/maestri_new.jpg" alt="I nostri maestri" class="maestri-image" loading="lazy" />
+            <div class="image-shine"></div>
+          </div>
+        </section>
 
         <!-- Price List -->
         <section class="price-section" data-aos="fade-up">
@@ -394,94 +352,34 @@ AOS.init({
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
-/* Coaches Section */
-.coaches-section {
+/* Maestri Image Section */
+.maestri-image-section {
   margin-bottom: 6rem;
-}
-
-.coaches-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* era repeat(2, 1fr) */
-  gap: 2.5rem;
-  margin-top: 3rem;
-}
-
-.coach-card {
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
-  border: 1px solid #f0ebe3;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.coach-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.13);
-}
-
-.coach-image-wrapper {
-  width: 100%;
-  height: 700px;
-  overflow: hidden;
-}
-
-.coach-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-@media (max-width: 768px) {
-  .coach-image-wrapper {
-    height: 500px; /* era 280px */
-  }
-}
-
-.coach-card:hover .coach-image {
-  transform: scale(1.05);
-}
-
-.coach-info {
-  padding: 2rem;
   text-align: center;
 }
 
-.coach-info h3 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin-bottom: 0.75rem;
+.maestri-image-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
 }
 
-.coach-badge {
-  display: inline-block;
-  background: #f7931e;
-  color: white;
-  padding: 0.35rem 1.1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 0.3px;
+.maestri-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.coach-info p {
-  font-size: 1.05rem;
-  color: #666;
-  line-height: 1.7;
+.maestri-image-container:hover .maestri-image {
+  transform: scale(1.03);
 }
 
-@media (max-width: 768px) {
-  .coaches-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .coach-image-wrapper {
-    height: 280px;
-  }
+.maestri-image-container:hover .image-shine {
+  left: 100%;
 }
 .close-btn:hover {
   background: #f7931e;
@@ -688,58 +586,6 @@ AOS.init({
   padding: 0 1rem;
 }
 
-/* News Section */
-.news-section {
-  text-align: center;
-  margin-bottom: 8rem;
-  position: relative;
-}
-
-.news-badge {
-  display: inline-block;
-  background: #f7931e;
-  color: white;
-  padding: 0.4rem 1.2rem;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 0.8rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.news-section h2 {
-  font-size: 3.5rem;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.news-text {
-  font-size: 1.3rem;
-  color: #666;
-  margin-bottom: 3rem;
-}
-
-.news-image-container {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-}
-
-.news-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.news-image-container:hover .news-image {
-  transform: scale(1.05);
-}
 
 .image-shine {
   position: absolute;
@@ -749,10 +595,6 @@ AOS.init({
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s;
-}
-
-.news-image-container:hover .image-shine {
-  left: 100%;
 }
 
 /* About Section */
